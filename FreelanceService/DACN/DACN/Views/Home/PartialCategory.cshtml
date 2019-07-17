@@ -1,0 +1,10 @@
+﻿@model DACN.Models.BusinessModel.Navigation
+
+<ul class="cat-list">
+    @for (int i = 0; i < Model.listCTDM.Count; i++)
+    {
+        <li>
+            <a href="#">@Model.listCTDM[i].TenCTDM</a>
+        </li>
+    }
+    </ul>

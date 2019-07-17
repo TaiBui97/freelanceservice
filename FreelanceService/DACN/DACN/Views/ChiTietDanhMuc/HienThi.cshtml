@@ -1,0 +1,55 @@
+﻿@model DACN.Models.DataModel.CTDM
+
+@{
+    ViewBag.Title = "HienThi";
+    Layout = "~/Views/Shared/_Layout _Admin.cshtml";
+}
+
+
+
+<div class="col-lg-9">
+    <div class="card">
+        <div class="card-header">
+            <strong>Hiển thị chi tiết danh mục</strong>
+        </div>
+        <div class="card-body card-block">
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="hf-email" class=" form-control-label">Tên Chi Tiết Danh Mục</label>
+                </div>
+                <div class="col-12 col-md-9">
+            @Html.DisplayFor(model => model.TenCTDM)
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="hf-email" class=" form-control-label">Mã Danh Mục</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    @Html.DisplayFor(model => model.MaDM)
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="hf-email" class=" form-control-label">Tên Danh Mục</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    @Html.DisplayFor(model => model.DanhMuc.TenDM)
+                </div>
+            </div>
+
+        </div>
+        <div class="card-footer">
+            <button style="height:38px" type="submit" class="btn btn-success btn-sm btn-custom">
+                <i class="fa fa-dot-circle-o"></i><a style="color:white; margin-left:5px;" href="@Url.Action("ChinhSua", "ChiTietDanhMuc", new {  @mactdm = Model.MaCTDM }) ">Chỉnh sửa</a>
+            </button>
+
+            <label style="margin-bottom:0!important;" class="btn btn-danger btn-custom">
+                <i class="ti-arrow-left"></i>
+                <a style="color:white; " href="@Url.Action("Index", "ChiTietDanhMuc")">Trở về</a>
+            </label>
+
+        </div>
+    </div>
+
+</div>

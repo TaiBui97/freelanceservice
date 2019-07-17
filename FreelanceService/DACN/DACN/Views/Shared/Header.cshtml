@@ -1,0 +1,477 @@
+﻿<div class="header">
+    <div class="logo-menu">
+        <nav class="navbar navbar-default main-navigation" role="navigation" data-spy="affix" data-offset-top="50">
+            <div class="container">
+
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand logo" href="@Url.Action("Index","Home")"><img src="~/assets/img/logo.png" alt=""></a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar">
+                    <ul class="nav navbar-nav navbar-left-out">
+                        @*<li>
+                                <a href="#" class="active">
+                                    Candidates <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="dropdown">
+                                    <li>
+                                        <a href="browse-jobs.html">
+                                            Browse Jobs
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="browse-categories.html">
+                                            Browse Categories
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="add-resume.html">
+                                            Add Resume
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="manage-resumes.html">
+                                            Manage Resumes
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="job-alerts.html">
+                                            Job Alerts
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    Employers <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="dropdown">
+                                    <li>
+                                        <a href="post-job.html">
+                                            Add Job
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="manage-jobs.html">
+                                            Manage Jobs
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="manage-applications.html">
+                                            Manage Applications
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="browse-resumes.html">
+                                            Browse Resumes
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="blog.html">
+                                    Blog <i class="fa fa-angle-down"></i>
+                                </a>
+                                <ul class="dropdown">
+                                    <li>
+                                        <a href="blog.html">
+                                            Blog - Right Sidebar
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="blog-left-sidebar.html">
+                                            Blog - Left Sidebar
+                                        </a>
+                                    </li>
+                                    <li><a href="blog-full-width.html">Blog - Full Width</a></li>
+                                    <li>
+                                        <a href="single-post.html">
+                                            Blog Single Post
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>*@
+                        <li class="left">
+                            <div class="search-container2">
+                                <form action="/Home/Search">
+                                    <input class="tesst" type="text" placeholder="Tìm kiếm..." name="search" style="color:black">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </form>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right float-right2">
+
+
+
+                        @if (Session["mataikhoan"] != null)
+                        {
+                            <li class="right login-right" style="border:none!important">
+                                <a class="login-right-text align-item" href="#">
+                                    <div class="user-info-index" style="display:inline-flex;">
+                                        <img src="~/assets/img/jobs/img-5.jpg">
+                                        @Session["tentaikhoan"]
+                                    </div>
+                                </a>
+
+                            </li>
+                            <li class="right login-right" style="border:none!important">
+                                <a class="login-right-text" href="@Url.Action("Service","BaiDang")">Trang Chủ</a>
+                            </li>
+                            <li class="right login-right" style="border:none!important;background-color:#ff4f57;color:white!important">
+                                <a style="color:white!important" class="login-right-text" href="@Url.Action("Service","BaiDang")"><i class="ti-write" style="padding-right:5px;"></i>Đăng Tin</a>
+                            </li>
+
+                            <li class="msg-chat align-item-left" style="border:none!important; margin-left:15px;">
+                                <a onclick="msgbox()" href="#" class="dropbtnmsg ">
+                                    <i class="fa fa-bell-o" style="font-size:22px!important"></i>
+                                    <span class="notication-count"><label id="noti">0</label></span>
+                                </a>
+                                <div id="myDropdown2" class="dropdown-content3">
+                                    <div class="col-md-12">
+                                        <div class="title-box">
+                                            <ul class="nav nav-tabs-service">
+                                                <li class="active col-md-6"><a data-toggle="tab" href="#service1">Messages(2)</a></li>
+                                                <li class="col-md-6"><a data-toggle="tab" href="#service2">Notification(2)</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div id="service2" class="tab-pane fade in active">
+                                                <ul class="msg-content">
+                                                    <li class="msg-content-box">
+                                                        <label class="icon-float-left">
+                                                            <img src="~/assets/img/icon-noti.png" alt="">
+                                                        </label>
+                                                        <p class="left-msg">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, inventore.
+                                                        </p>
+                                                    </li>
+                                                    <li class="msg-content-box">
+                                                        <label class="icon-float-left">
+                                                            <img src="~/assets/img/icon-noti.png" alt="">
+                                                        </label>
+                                                        <p class="left-msg">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, inventore.
+                                                        </p>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                            <div id="service1" class="tab-pane fade in active">
+                                                <ul class="msg-content">
+                                                    <li class="msg-content-box">
+                                                        <label class="icon-float-left msg-img">
+                                                            <img src="~/assets/img/testimonial/img3.jpg" alt="">
+                                                        </label>
+                                                        <div class="top-name">
+                                                            <div class="name-msg">
+                                                                <p> Lorem ipsum</p>
+                                                            </div>
+                                                            <div class="content-msg">
+                                                                <p class="left-msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, inventore.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="msg-content-box">
+                                                        <label class="icon-float-left msg-img">
+                                                            <img src="~/assets/img/testimonial/img2.jpg" alt="">
+                                                        </label>
+                                                        <div class="top-name">
+                                                            <div class="name-msg">
+                                                                <p> Lorem ipsum</p>
+                                                            </div>
+                                                            <div class="content-msg">
+                                                                <p class="left-msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, inventore.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="msg-chat" style="border:none!important;    padding-right: 7px!important;">
+                                <a onclick="msgbox2()" href="#" class="dropbtnmsg">
+                                    <i class="fa fa-weixin" style="font-size:22px!important"></i>
+                                    <span class="notication-count"><label id="noti">0</label></span>
+                                </a>
+                                @*<div id="myDropdown2" class="dropdown-content3">
+                                    <div class="col-md-12">
+                                        <div class="title-box">
+                                            <ul class="nav nav-tabs-service">
+                                                <li class="active col-md-6"><a data-toggle="tab" href="#service1">Messages(2)</a></li>
+                                                <li class="col-md-6"><a data-toggle="tab" href="#service2">Notification(2)</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-content">
+                                            <div id="service2" class="tab-pane fade in active">
+                                                <ul class="msg-content">
+                                                    <li class="msg-content-box">
+                                                        <label class="icon-float-left">
+                                                            <img src="~/assets/img/icon-noti.png" alt="">
+                                                        </label>
+                                                        <p class="left-msg">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, inventore.
+                                                        </p>
+                                                    </li>
+                                                    <li class="msg-content-box">
+                                                        <label class="icon-float-left">
+                                                            <img src="~/assets/img/icon-noti.png" alt="">
+                                                        </label>
+                                                        <p class="left-msg">
+                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, inventore.
+                                                        </p>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                            <div id="service1" class="tab-pane fade in active">
+                                                <ul class="msg-content">
+                                                    <li class="msg-content-box">
+                                                        <label class="icon-float-left msg-img">
+                                                            <img src="~/assets/img/testimonial/img3.jpg" alt="">
+                                                        </label>
+                                                        <div class="top-name">
+                                                            <div class="name-msg">
+                                                                <p> Lorem ipsum</p>
+                                                            </div>
+                                                            <div class="content-msg">
+                                                                <p class="left-msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, inventore.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                    <li class="msg-content-box">
+                                                        <label class="icon-float-left msg-img">
+                                                            <img src="~/assets/img/testimonial/img2.jpg" alt="">
+                                                        </label>
+                                                        <div class="top-name">
+                                                            <div class="name-msg">
+                                                                <p> Lorem ipsum</p>
+                                                            </div>
+                                                            <div class="content-msg">
+                                                                <p class="left-msg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, inventore.</p>
+                                                            </div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>*@
+                            </li>
+                            <li class="right dropright">
+                                <div class="dropdown2">
+                                    <i class="fa fa-bars" style="font-size:24px;padding-top:5px" aria-hidden="true"></i>
+
+                                    <i class="fa fa-caret-down"></i>
+                                    <ul class="dropdown-content2">
+                                        <li class="desc"><a href="@Url.Action("ServiceAccount","BaiDang")">Thông tin cá nhân</a></li>
+                                        <li class="desc"><a href="@Url.Action("OrderManager","BaiDang")">Quản lí bài đăng</a></li>
+                                        <li class="desc"><a href="@Url.Action("Logout","Home")">Đăng xuất</a></li>
+                                        <li class="desc"><a href="">Giúp đỡ</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        }
+                        else
+                        {
+                            <li style="border:none!important; " class="right login-right"><a class="login-right-text become-login" href="@Url.Action("Service","BaiDang")">Tham gia freelance</a></li>
+                            <li style="border:none!important; " class="right login-right"><a class="login-right-text" href="@Url.Action("Service","BaiDang")">FAQ</a></li>
+
+                            <li style="border:none!important; " class="right login-right"><a class="login-right-text" href="@Url.Action("Service","BaiDang")">Đăng Tin</a></li>
+
+                            <li class="right login-right"><a class="login-right-text become-login" href="@Url.Action("DangKy","Home")"><i style="padding-right:5px" class="ti-lock"></i>Đăng nhập</a></li>
+                        }
+                    </ul>
+                </div>
+                <div class="js-category-nav category-nav" id="navbar">
+                    <nav class="slider-box">
+                        <ul class="slider-hider scroll-nav">
+                            @Html.Action("NavigationLoad", "Home")
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <ul class="wpb-mobile-menu">
+                <li>
+                    <a href="index-2.html">Category</a>
+                    <ul>
+                        <li><a href="">Graphics & Design </a></li>
+                        <li><a href="">Digital Marketing</a></li>
+                        <li><a href="">Writing & Translation</a></li>
+                        <li><a href="">Video & Animation</a></li>
+                        <li><a href="">Music & Audio</a></li>
+                        <li><a href="">Program & Tech</a></li>
+                        <li><a href="">Music & Audio</a></li>
+                        <li><a href="">Fun & Lifestyle</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="@Url.Action("Service","BaiDang")">Đăng Bài</a>
+                </li>
+
+                <!-- Kiem tra tuong tu login -->
+
+                @if (Session["mataikhoan"] != null)
+                {
+                    <li>
+                        <a href="#"><i class="ti-lock"></i>Tài Khoản</a>
+                        <ul>
+                            <li><a href="@Url.Action("ServiceAccount","BaiDang")">Quản lí tài khoản</a></li>
+                            <li><a href="@Url.Action("OrderManager","BaiDang")">Quản lí bài đăng</a></li>
+                            <li><a href="@Url.Action("Logout","Home")">Đăng xuất</a></li>
+                            <li><a href="">Giúp đỡ</a></li>
+                        </ul>
+                    </li>
+                }
+                else
+                {
+
+                    <li>
+                        <a href="@Url.Action("DangKy","Home")">Đăng Ký</a>
+                    </li>
+                    <li>
+                        <a href="@Url.Action("DangKy","Home")">Đăng Nhập</a>
+                    </li>
+
+                }
+                <li>
+                    <a href="#">Blog</a>
+                </li>
+                <!-- <li class="btn-m"><a href="my-account.html"><i class="ti-lock"></i> Log In</a></li> -->
+
+            </ul>
+
+        </nav>
+
+        @*<div class="navmenu navmenu-default navmenu-fixed-left offcanvas">
+
+                <div class="close" data-toggle="offcanvas" data-target=".navmenu">
+                    <i class="ti-close"></i>
+                </div>
+                <h3 class="title-menu">All Pages</h3>
+                <ul class="nav navmenu-nav">
+                    <li><a href="index-2.html">Home</a></li>
+                    <li><a href="index-02.html">Home Page 2</a></li>
+                    <li><a href="index-03.html">Home Page 3</a></li>
+                    <li><a href="index-04.html">Home Page 4</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="job-page.html">Job Page</a></li>
+                    <li><a href="job-details.html">Job Details</a></li>
+                    <li><a href="resume.html">Resume Page</a></li>
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="pricing.html">Pricing Tables</a></li>
+                    <li><a href="browse-jobs.html">Browse Jobs</a></li>
+                    <li><a href="browse-categories.html">Browse Categories</a></li>
+                    <li><a href="add-resume.html">Add Resume</a></li>
+                    <li><a href="manage-resumes.html">Manage Resumes</a></li>
+                    <li><a href="job-alerts.html">Job Alerts</a></li>
+                    <li><a href="post-job.html">Add Job</a></li>
+                    <li><a href="manage-jobs.html">Manage Jobs</a></li>
+                    <li><a href="manage-applications.html">Manage Applications</a></li>
+                    <li><a href="browse-resumes.html">Browse Resumes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="faq.html">Faq</a></li>
+                    <li><a href="my-account.html">Login</a></li>
+                </ul>
+            </div>
+            <div class="tbtn wow pulse" id="menu" data-wow-iteration="infinite" data-wow-duration="500ms" data-toggle="offcanvas" data-target=".navmenu">
+                <p><i class="ti-files"></i> All Pages</p>
+            </div>*@
+    </div>
+</div>
+<script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function msgbox() {
+        var id = '@Html.Raw(Session["mataikhoan"])';
+        var data = { UID: id };
+            var tat = JSON.stringify(data);
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("ThongBao","BaiDang")',
+                contentType: "application/json; charset=utf-8",
+                data: tat,
+                success: function (response) {
+                    option = "";
+                    var link = '@Html.Raw(@Url.Action("OrderManager", "BaiDang"))';
+                    option += "<div class='col-md-12'>"
+                        + "<div class='title-box'>"
+                        + "<ul class='nav nav-tabs-service'>"
+                        + "<li class='active col-md-6'><a data-toggle='tab' href='#service1'>Messages(" + response.First.length + ")</a></li>"
+                        + "<li class='col-md-6'><a data-toggle='tab' href='#service2'>Notification(" + response.Second.length + ")</a></li>"
+                        + "</ul>"
+                        + "</div>"
+                        + "<div class='tab-content tab-cus-head'>"
+                        + "<div id='service2' class='tab-pane fade in active'>"
+                        + "<ul class='msg-content'>";
+                    if (response.Second.length > 0) {
+                        for (var i = 0; i < response.Second.length; i++) {
+                            option += "<li class='msg-content-box'>"
+                                + "<label class='icon-float-left msg-img'>"
+                                + "<img src='/assets/images/" + response.Four[i].TenHinhAnh + "' alt=''>"
+                                + "</label>"
+                                + "<a href='" + link+"'>"
+                                + "<p class='left-msg'>"
+                                + response.Second[i].NoiDung
+                                + "</p>"
+                                +"</a>"
+                                + "</li>";
+                        }
+                    }
+                    option += "</ul>" + " </div>" + " <div id='service1' class='tab-pane fade in active'>" + " <ul class='msg-content'>";
+                    if (response.First.length > 0) {
+                        for (var i = 0; i < response.First.length; i++) {
+                            var link2 = '@Html.Raw(@Url.Action("OrderDetails", "BaiDang"))' + '?ma=' + response.Five[i].MaDDH;
+                            console.log(link2);
+                            option += " <li class='msg-content-box'>"
+                                + "<label class='icon-float-left msg-img'>"
+                                + "<img src='/assets/images/" + response.Four[i].TenHinhAnh + "' alt=''>"
+                                + "</label>"
+
+                                + " <div class='top-name'>"
+                                + "<div class='name-msg'>"
+                                + "<p>" + response.Third[i].TenTaiKhoan + "</p>"
+                                + "</div>"
+                                + "<div class='content-msg'>"
+                                + "<a href='" + link2 + "'>"
+                                + "<p class='left-msg'>" + response.First[i].NoiDung + "</p>"
+                                + "</a>"
+                                + "</div>"
+                                + " </div>"
+                                + "</li>";
+                        }
+                    }
+                    option += "</ul>" + "</div>" + " </div>" + "</div>" + "</div >";
+                    $('#myDropdown2').removeAttr('disabled').html(option);
+
+                }
+                 
+        });
+                      document.getElementById("myDropdown2").classList.toggle("show");
+ 
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function (event) {
+        if (!event.target.matches('.dropbtnmsg')) {
+
+            var dropdowns = document.getElementsByClassName("dropdown-content3");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>

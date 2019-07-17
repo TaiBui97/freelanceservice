@@ -1,0 +1,96 @@
+﻿@model DACN.Models.DataModel.TaiKhoan
+
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h3>Bạn có thật sự muốn xóa tài khoản này?</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TenTaiKhoan)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTaiKhoan)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MatKhau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatKhau)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoTien)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoTien)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SoTKNganHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoTKNganHang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TenTkNganHang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTkNganHang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaMatKhau)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaMatKhau)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Xóa" class="btn btn-default" /> |
+            @Html.ActionLink("Trở về", "Index")
+        </div>
+    }
+</div>

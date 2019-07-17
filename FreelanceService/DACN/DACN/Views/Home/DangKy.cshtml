@@ -1,0 +1,196 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Jobboard">
+    <title>Chợ kĩ năng</title>
+    <link rel="shortcut icon" href="~/assets/img/favicon.png">
+    @Styles.Render("~/bundles/core")
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+
+    <link rel="stylesheet" href="~/assets/fonts/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/assets/fonts/themify-icons.css">
+    <style>
+        .alert {
+            padding: 20px;
+            background-color: #f44336;
+            color: white;
+            text-align: center;
+        }
+
+            .alert strong {
+                font-size: 15px;
+            }
+
+        .closebtn {
+            margin-left: 15px;
+            color: white;
+            font-weight: bold;
+            float: right;
+            font-size: 22px;
+            line-height: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+            .closebtn:hover {
+                color: black;
+            }
+    </style>
+</head>
+<body>
+
+    @RenderPage("~/Views/Shared/Header.cshtml")
+    <div class="page-header" style="background: url('../../assets/img/banner1.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumb-wrapper">
+                        <h2 class="product-title">Tài Khoản</h2>
+                        <ol class="breadcrumb">
+                            <li><a href="#"><i class="ti-home"></i> Home</a></li>
+                            <li class="current">Tài Khoản</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content" class="my-account">
+        <div class="container">
+            <div class="row">
+                @if (@ViewBag.ThongBao != null)
+                {
+                    <div class="alert">
+                        <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                        <strong>Tên đăng nhập hoặc mật khẩu không đúng!!</strong>
+                    </div>
+                }
+
+
+                <div class="col-md-6 col-md-offset-3 col-sm-6 col-sm-offset-6 cd-user-modal">
+                    <div class="my-account-form">
+                        <ul class="cd-switcher">
+                            <li><a class="selected" href="#0">ĐĂNG NHẬP</a></li>
+                            <li><a href="#0">ĐĂNG KÍ</a></li>
+                        </ul>
+
+                        <div id="cd-login" class="is-selected">
+                            <div class="page-login-form">
+                                <form role="form" class="login-form" method="post" action="/Home/Login">
+                                    <div class="form-group">
+                                        <div class="input-icon">
+                                            <i class="ti-user"></i>
+                                            <input type="text" id="sender-email" class="form-control" name="tentaikhoan" placeholder="Tên tài khoản" required>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-icon">
+                                            <i class="ti-lock"></i>
+                                            <input type="password" class="form-control" name="matkhau" placeholder="Mật khẩu" required>
+                                        </div>
+                                    </div>
+                                    <button type="submit" id="btnDangNhap" class="btn btn-common log-btn">Đăng nhập</button>
+                                    <div class="checkbox-item">
+                                        <div class="checkbox">
+                                            <label for="rememberme" class="rememberme">
+                                                <input name="rememberme" id="rememberme" value="forever" type="checkbox">Ghi nhớ
+                                            </label>
+                                        </div>
+                                        <a href="@Url.Action("QuenMatKhau","Home")">Quên mật khẩu</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <div id="cd-signup">
+                            <div class="page-login-form register">
+                                <div role="form" method="post" class="login-form">
+                                    @using (Html.BeginForm("DangKy", "Home", FormMethod.Post, new { @enctype = "multipart/form-data" }))
+                                    {
+                                        @Html.ValidationSummary(true)
+                                        <div class="form-group">
+                                            <div class="input-icon">
+                                                <i class="ti-user"></i>
+                                                @Html.TextBox("tentaikhoan", null, new { @class = "form-control", placeholder = "Tên tài khoản", required = "required" })
+                                                @ViewData["Loi1"]
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-icon">
+                                                <i class="ti-email"></i>
+                                                @Html.TextBox("email", null, new { @class = "form-control", placeholder = "Email", required = "required" })
+                                                @ViewData["Loi4"]
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-icon">
+                                                <i class="ti-home"></i>
+                                                @Html.TextBox("diachi", null, new { @class = "form-control", placeholder = "Địa chỉ", required = "required" })
+                                                @ViewData["Loi6"]
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-icon">
+                                                <i class="ti-mobile"></i>
+                                                @Html.TextBox("sdt", null, new { @class = "form-control", placeholder = "Số điện thoại", required = "required" })
+                                                @ViewData["Loi5"]
+                                            </div>
+                                        </div>
+                                        @*<div class="form-group">
+                                                <div class="input-icon">
+                                                    <i class="ti-credit-card"></i>
+                                                    @Html.TextBox("sotknganhang", null, new { @class = "form-control", placeholder = "Số tài khoản ngân hàng", required = "required" })
+                                                    @ViewData["Loi5"]
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="input-icon">
+                                                    <i class="ti-layout-cta-btn-right"></i>
+                                                    @Html.TextBox("tentknganhang", null, new { @class = "form-control", placeholder = "Tên tài khoản ngân hàng", required = "required" })
+                                                    @ViewData["Loi7"]
+                                                </div>
+                                            </div>*@
+                                        <div class="form-group">
+                                            <div class="input-icon">
+                                                <i class="ti-lock"></i>
+                                                @Html.Password("matkhau", null, new { @class = "form-control", placeholder = "Mật khẩu", required = "required" })
+                                                @ViewData["Loi8"]
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-icon">
+                                                <i class="ti-lock"></i>
+                                                @Html.Password("matkhaunhaplai", null, new { @class = "form-control", placeholder = "Nhập lại mật khẩu", required = "required" })
+                                                @ViewData["Loi3"]
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-common log-btn">Đăng kí</button>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    @RenderPage("~/Views/Shared/Footer.cshtml")
+    @Scripts.Render("~/bundles/js")
+
+</body>
+
+</html>

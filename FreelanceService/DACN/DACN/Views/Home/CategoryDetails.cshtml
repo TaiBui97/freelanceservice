@@ -1,0 +1,80 @@
+﻿@model DACN.Models.BusinessModel.Navigation
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Jobboard">
+    <title>JobBoard - Bootstrap HTML5 Job Portal Template</title>
+
+    <link rel="shortcut icon" href="~/assets/img/favicon.png">
+    <link rel="stylesheet" href="~/assets/fonts/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/assets/fonts/themify-icons.css">
+    @Styles.Render("~/Bundles/core")
+
+</head>
+<body>
+    @RenderPage("~/Views/Shared/Header.cshtml")
+
+    <section class="section">
+        <div class="container">
+           
+
+                <h2 class="section-title"></h2>
+                <div class="row">
+                    <div class="col-md-9">
+                        @for (int i=0; i < Model.listCTDM.Count;i++)
+                        {
+
+                            <div class="col-md-3 col-sm-3 col-xs-12 f-category">
+                                <a href="@Url.Action("ServiceCategory", "BaiDang", new { id = Model.listCTDM[i].MaCTDM })">
+                        
+                                            <div class="icon">
+
+                                                <label class="lbforicon"><h1>@i</h1></label>
+
+                                             </div>
+                                    
+                                        <h5>@Model.listCTDM[i].TenCTDM</h5>
+                                        <p>4286 jobs</p>
+                                    
+                                </a>
+                            </div>
+                        }
+
+                    </div>
+                    <div class="col-md-3 col-sm-4">
+                        <aside>
+                            <div class="sidebar">
+                                <div class="inner-box">
+                                    <h2 style="color:#ff4f57; padding-bottom:10px;">Thể Loại</h2>
+                                    <ul class="cat-list cate-detail">
+                                        @for (int i = 0; i < Model.listCTDM.Count; i++)
+                                        {
+                                            <li>
+                                                <a href="@Url.Action("ServiceCategory", "BaiDang", new { id = Model.listCTDM[i].MaCTDM })" style="font-size:12px;">@Model.listCTDM[i].TenCTDM</a>
+                                            </li>
+                                        }
+                                        </ul>
+                                </div>
+
+                            </div>
+                        </aside>
+                    </div>
+
+                </div>
+                 
+            </div>
+    </section>
+    @RenderPage("~/Views/Shared/Footer.cshtml")
+    @Scripts.Render("~/Bundles/js")
+</body>
+</html>

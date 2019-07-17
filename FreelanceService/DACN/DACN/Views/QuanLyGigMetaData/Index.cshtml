@@ -1,0 +1,79 @@
+﻿
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.PagedList<DACN.Models.DataModel.GigMetaData>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout _Admin.cshtml";
+}
+
+
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+
+                    <div class="card-body">
+                        <div class="card-title-cs">
+                            <strong class="card-title">Thêm mới GigMetaData : </strong>
+                            <button class="btn btn-success btn-custom" type="submit">
+                                <a style="color:white; border-radius:8px" href="@Url.Action("ThemMoi", "QuanLyGigMetaData") ">Add </a>
+                            </button>
+
+                        </div>
+                        <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Mã Gig MetaData</th>
+                                    <th>Tên Gig MetaData</th>
+                                    <th>Mô tả</th>
+                                    <th>Thuộc chi tiết danh mục</th>
+                                    <th style="text-align:center" colspan="3">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MaGigMetaData)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TenGigMetaData)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MotaGigMetaData)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CTDM.TenCTDM)
+                                    </td>
+
+                                    <td style="text-align:center">
+                                        <button class="btn btn-success btn-custom" type="submit"><a style="color:white" href="@Url.Action("ChinhSua", "QuanLyGigMetaData", new {  @magigmeta = item.MaGigMetaData }) ">Edit </a></button>
+                                    </td>
+                                    <td style="text-align:center">
+                                        <button class="btn btn-info btn-custom" type="submit"><a style="color:white" href="@Url.Action("HienThi", "QuanLyGigMetaData", new {  @magigmeta = item.MaGigMetaData }) ">View </a></button>
+                                    </td>
+                                    <td style="text-align:center">
+                                        <button class="btn btn-danger btn-custom" type="submit"><a style="color:white" href="@Url.Action("Xoa", "QuanLyGigMetaData", new {  @magigmeta = item.MaGigMetaData }) ">Delete </a></button>
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <div class="MenuTrang">
+                            @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div><!-- .animated -->
+    </div>
+
+</div>

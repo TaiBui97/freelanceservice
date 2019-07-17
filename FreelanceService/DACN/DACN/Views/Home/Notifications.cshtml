@@ -1,0 +1,166 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Jobboard">
+    <title>JobBoard - Bootstrap HTML5 Job Portal Template</title>
+    <link rel="shortcut icon" href="~/assets/img/favicon.png">
+    <link rel="stylesheet" href="~/assets/fonts/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/assets/fonts/themify-icons.css">
+    @Styles.Render("~/bundles/core")
+
+</head>
+<body>
+
+
+    @RenderPage("~/Views/Shared/Header.cshtml")
+
+
+    <div id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="right-sideabr">
+                        <div class="inner-box">
+                            <a href="service-show.html">
+                                <img src="~/assets/img/resume/img-1.jpg" class="img-circle" alt="" width="250" height="250">
+                            </a>
+                            <a href="service-show.html" class="name-account"><h3>John</h3></a>
+                            <div class="button-wrap">
+                                <a class="btn-large-standard" href="">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i>Chỉnh sữa thông tin
+                                </a>
+                            </div>
+                            <hr>
+                            <ul class="lest item">
+                                <li>
+                                    <div id="flex-info-account">
+                                        <p><i class="fa fa-map-marker" aria-hidden="true"></i>Đến từ</p>
+                                    </div>
+                                    <strong>Ha Noi</strong>
+                                </li>
+                                <li>
+                                    <div id="flex-info-account">
+                                        <p><i class="fa fa-user" aria-hidden="true"></i>Thành viên</p>
+                                    </div>
+                                    <strong>2018</strong>
+                                </li>
+                            </ul>
+                            <ul class="lest">
+                                <li><a href="update-info.html">Cập nhật tài khoản</a></li>
+                                <li><a href="bookmarked.html">Đã lưu</a></li>
+                                <li><a href="notifications.html">Thông báo<span class="notinumber">2</span></a></li>
+                                <li><a href="change-password.html">Thay đỗi mật khẩu</a></li>
+                                <li><a href="index-2.html">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+                        <div class="inner-box">
+
+                            <ul class="lest item">
+                                <li>
+                                    <aside>
+                                        <h5>
+                                            Mô tả
+                                            <a class="add" href="">Chỉnh sữa mô tả</a>
+                                        </h5>
+                                    </aside>
+                                    <hr>
+                                    <section>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa voluptatum eveniet eum repellendus aliquam, similique a maiores deserunt.</p>
+                                    </section>
+                                </li>
+                                <li>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    <div class="job-alerts-item notification">
+                        <h3 class="alerts-title">Your Notifications</h3>
+                        <div class="notification-item">
+                            <div class="thums">
+                                <img src="~/assets/img/jobs/img-1.jpg" alt="">
+                            </div>
+                            <div class="text-left">
+                                <p>Your Bookmarked job "Web designer needed" from Banana Inc, has expired.</p>
+                                <span class="time"><i class="ti-time"></i>3 Hours ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="thums">
+                                <img src="~/assets/img/jobs/img-2.jpg" alt="">
+                            </div>
+                            <div class="text-left">
+                                <p>Your Bookmarked job "Web designer needed" from Banana Inc, has expired.</p>
+                                <span class="time"><i class="ti-time"></i>3 Hours ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="thums">
+                                <img src="~/assets/img/jobs/img-3.jpg" alt="">
+                            </div>
+                            <div class="text-left">
+                                <p>Your Bookmarked job "Web designer needed" from Banana Inc, has expired.</p>
+                                <span class="time"><i class="ti-time"></i>3 Hours ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="thums">
+                                <img src="~/assets/img/jobs/img-4.jpg" alt="">
+                            </div>
+                            <div class="text-left">
+                                <p>Your Bookmarked job "Web designer needed" from Banana Inc, has expired.</p>
+                                <span class="time"><i class="ti-time"></i>3 Hours ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="thums">
+                                <img src="~/assets/img/jobs/img-5.jpg" alt="">
+                            </div>
+                            <div class="text-left">
+                                <p>Your Bookmarked job "Web designer needed" from Banana Inc, has expired.</p>
+                                <span class="time"><i class="ti-time"></i>3 Hours ago</span>
+                            </div>
+                        </div>
+                        <div class="notification-item">
+                            <div class="thums">
+                                <img src="~/assets/img/jobs/img-4.jpg" alt="">
+                            </div>
+                            <div class="text-left">
+                                <p>Your Bookmarked job "Web designer needed" from Banana Inc, has expired.</p>
+                                <span class="time"><i class="ti-time"></i>3 Hours ago</span>
+                            </div>
+                        </div>
+
+                        <ul class="pagination">
+                            <li class="active"><a href="#" class="btn btn-common"><i class="ti-angle-left"></i> Trước</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li class="active"><a href="#" class="btn btn-common">Kế tiếp <i class="ti-angle-right"></i></a></li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @RenderPage("~/Views/Shared/Footer.cshtml")
+    @Scripts.Render("~/bundles/js")
+</body>
+
+</html>

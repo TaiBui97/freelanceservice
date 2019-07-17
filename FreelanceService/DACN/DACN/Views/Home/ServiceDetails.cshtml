@@ -1,0 +1,407 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from demo.graygrids.com/themes/jobboard-demo/job-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Oct 2018 04:43:17 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Jobboard">
+    <title>Chợ kĩ năng</title>
+    @Styles.Render("~/bundles/core")
+
+    <link rel="shortcut icon" href="~/assets/img/favicon.png">
+    <link rel="stylesheet" href="~/assets/fonts/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/assets/fonts/themify-icons.css">
+</head>
+<body>
+
+    @RenderPage("~/Views/Shared/Header.cshtml")
+
+    <section class="job-detail section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <div class="header-detail">
+                        <div class="header-content pull-left">
+                            <h4><a href="#">I Will Write A Cover Letter That Gets You That Job</a></h4>
+                            <p><span>Date Posted: Feb 20, 2018</span></p>
+                            <div class="ratings-wrapper">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                        <div class="detail-company pull-right text-right">
+                            <div class="img-thum">
+                                <img class="img-responsive" src="~/assets/img/testimonial/img1.jpg" alt="">
+                            </div>
+                            <div class="name">
+                                <h4>John</h4>
+                                <h5>Ha Noi</h5>
+                                <p>8 Current jobs openings</p>
+                            </div>
+                        </div>
+                        <div class="clearfix">
+                            <div class="meta">
+                                <span><a class="btn btn-border btn-sm" href="#"><i class="ti-email"></i> Email</a></span>
+                                <span><a class="btn btn-border btn-sm" href="#"><i class="ti-info-alt"></i> Job Aleart</a></span>
+                                <span><a class="btn btn-border btn-sm" href="#"><i class="ti-save"></i> Save This job</a></span>
+                                <span><a class="btn btn-border btn-sm" href="#"><i class="ti-alert"></i> Report Abuse</a></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-12 col-xs-12">
+
+                    <div class="content-area">
+                        <div class="clearfix">
+                            <div class="box">
+                                <!-- modal img -->
+                                <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+                                    <div class="modal-dialog modal-lg" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="" class="enlargeImageModalSource" style="width: 100%;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end modal img -->
+                                <div class="product-slider">
+                                    <div id="carousel" class="carousel slide" data-ride="carousel">
+                                        <div class="carousel-inner">
+                                            <div class="item active"> <img src="~/assets/img/b1.jpg"> </div>
+                                            <div class="item"> <img src="~/assets/img/b2.jpg"> </div>
+                                            <div class="item"> <img src="~/assets/img/b3.jpg"> </div>
+
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                        <div id="thumbcarousel" class="carousel slide" data-interval="false">
+                                            <div class="carousel-inner">
+                                                <div class="item active">
+                                                    <div data-target="#carousel" data-slide-to="0" class="thumb"><img src="~/assets/img/b1.jpg"></div>
+                                                    <div data-target="#carousel" data-slide-to="1" class="thumb"><img src="~/assets/img/b2.jpg"></div>
+                                                    <div data-target="#carousel" data-slide-to="2" class="thumb"><img src="~/assets/img/b3.jpg"></div>
+
+                                                </div>
+                                            </div>
+                                            <!-- /carousel-inner -->
+                                            <!-- /thumbcarousel -->
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="box">
+                                <h4>Job Description</h4>
+                                <p>LemonKids LLC. In marketing communications, we dream it and create it. All of the company’s promotional and communication needs are completed in-house by these “creatives” in an advertising agency-based set-up. This includes everything from advertising, promotions and print production to media relations, exhibition coordination and website maintenance. Everyone from artists, writers, designers, media buyers, event coordinators, video producers/editors and public relations specialists work together to bring campaigns and product-centric promotions to life.</p>
+                                <p>If you’re a dreamer, gather up your portfolio and show us your vision. Garmin is adding one more enthusiastic individual to our in-house Communications expert team.</p>
+                                <h4>Qualification</h4>
+                                <p>Minimum of 5 years creative experience in a graphic design studio or advertising ad agency environment is required. Qualified candidates for this role will possess the following education, experience and skills:</p>
+                                <ul>
+                                    <li><i class="ti-check-box"></i>Demonstrated strong and effective verbal, written, and interpersonal communication skills</li>
+                                    <li><i class="ti-check-box"></i>Must be team-oriented, possess a positive attitude and work well with others</li>
+                                    <li><i class="ti-check-box"></i>Ability to prioritize and multi-task in a flexible, fast paced and challenging environment</li>
+                                </ul>
+
+                            </div>
+                            <div class="box">
+                                <header>
+                                    <h4 class="header-box">About The Seller</h4>
+                                </header>
+                                <div class="seller-component">
+                                    <div class="user-profile-info">
+                                        <div class="user-profile-img">
+                                            <label class="user-pict">
+                                                <img src="~/assets/img/testimonial/img1.jpg" alt="" class="user-pict-img">
+                                            </label>
+                                        </div>
+                                        <div class="user-profile-label">
+                                            <div class="username-line">
+                                                <a href="#" class="seller-link">John</a>
+                                            </div>
+                                            <div class="oneliner-wrapper">
+                                                <small class="oneliner">
+                                                    Transforming your resume to help you land the right job!
+                                                </small>
+                                                <div class="ratings-wrapper">
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star checked"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <span class="fa fa-star"></span>
+                                                    <p><strong>4,9</strong>(20 đánh giá)</p>
+                                                </div>
+                                            </div>
+                                            <div class="buttons-wrapper">
+                                                <a href="#" class="btn-contact" data-toggle="modal" data-target="#exampleModal" data-whatever="@*@mdo*@">Liên hệ ngay</a>
+                                            </div>
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                                                    <input type="text" class="form-control" id="recipient-name">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="message-text" class="col-form-label">Message:</label>
+                                                                    <textarea class="form-control" id="message-text"></textarea>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                            <button type="button" class="btn btn-primary">Send message</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="user-details">
+                                            <ul class="user-stats">
+                                                <li class="location">From<strong>Ha Noi</strong></li>
+                                                <li class="member-since">Since<strong>2018</strong></li>
+                                                <li class="recent-delivery">Recent Delivery<strong>about 3 hours</strong></li>
+                                            </ul>
+                                            <article>
+                                                <ul>
+                                                    <li>
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta, totam!
+                                                    </li>
+                                                    <li>
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. In quia accusantium, ipsum repellendus accusamus fugiat vel, quidem praesentium perferendis a!
+                                                    </li>
+                                                    <li>
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicin
+                                                    </li>
+                                                </ul>
+                                            </article>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <header>
+                                    <h4 class="header-box">Reviews Seller</h4>
+                                </header>
+                                <div class="card">
+                                    <div class="card-body">
+
+                                        <div class="row">
+
+                                            <div class="col-md-2">
+                                                <img src="~/assets/img/testimonial/img2.jpg" class="img img-rounded img-fluid" />
+                                                <p class="text-secondary text-center">15 Minutes Ago</p>
+                                            </div>
+                                            <div class="col-md-10 cmt">
+                                                <p>
+                                                    <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Maniruzzaman Akash</strong></a>
+                                                    <span class="float-right"><i class="fa fa-star"></i></span>
+                                                    <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                                                    <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                                                    <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+                                                    <span class="float-right"><i class="text-warning fa fa-star"></i></span>
+
+
+
+                                                </p>
+                                                <div class="clearfix"></div>
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus eaque deleniti molestiae enim, animi iure.</p>
+
+                                            </div>
+                                        </div>
+                                        <div class="card card-inner">
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-md-2">
+                                                        <img src="~/assets/img/testimonial/img1.jpg" class="img img-rounded img-fluid" />
+                                                        <p class="text-secondary text-center">15 Minutes Ago</p>
+                                                    </div>
+                                                    <div class="col-md-10">
+                                                        <p><a href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>Maniruzzaman Akash</strong></a></p>
+                                                        <p>Lorem ipsum dolor sit amet.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <h2 class="medium-title">Related Jobs</h2>
+                        <div class="job-post-wrapper">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="job-list">
+                                        <div class="thumb">
+                                            <a href="job-details.html"><img src="~/assets/img/jobs/img-1.jpg" alt=""></a>
+                                        </div>
+                                        <div class="job-list-content">
+                                            <h4><a href="job-details.html">We need a web designer</a><span class="full-time">Full-Time</span></h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
+                                            <div class="job-tag">
+                                                <div class="pull-left">
+                                                    <div class="meta-tag">
+                                                        <span><a href="browse-categories.html"><i class="ti-brush"></i>Art/Design</a></span>
+                                                        <span><i class="ti-location-pin"></i>Cupertino, CA, USA</span>
+                                                        <span><i class="ti-time"></i>60/Hour</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pull-right">
+                                                    <div class="icon">
+                                                        <i class="ti-heart"></i>
+                                                    </div>
+                                                    <div class="btn btn-common btn-rm">Apply Job</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="job-list">
+                                        <div class="thumb">
+                                            <a href="job-details.html"><img src="~/assets/img/jobs/img-2.jpg" alt=""></a>
+                                        </div>
+                                        <div class="job-list-content">
+                                            <h4><a href="job-details.html">Front-end developer needed</a><span class="full-time">Full-Time</span></h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
+                                            <div class="job-tag">
+                                                <div class="pull-left">
+                                                    <div class="meta-tag">
+                                                        <span><a href="browse-categories.html"><i class="ti-desktop"></i>Technologies</a></span>
+                                                        <span><i class="ti-location-pin"></i>Cupertino, CA, USA</span>
+                                                        <span><i class="ti-time"></i>60/Hour</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pull-right">
+                                                    <div class="icon">
+                                                        <i class="ti-heart"></i>
+                                                    </div>
+                                                    <div class="btn btn-common btn-rm">Apply Job</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="job-list">
+                                        <div class="thumb">
+                                            <a href="job-details.html"><img src="~/assets/img/jobs/img-3.jpg" alt=""></a>
+                                        </div>
+                                        <div class="job-list-content">
+                                            <h4><a href="job-details.html">Software Enginner</a><span class="part-time">Part-Time</span></h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum quaerat aut veniam molestiae atque dolorum omnis temporibus consequuntur saepe. Nemo atque consectetur saepe corporis odit in dicta reprehenderit, officiis, praesentium?</p>
+                                            <div class="job-tag">
+                                                <div class="pull-left">
+                                                    <div class="meta-tag">
+                                                        <span><a href="browse-categories.html"><i class="ti-desktop"></i>Technologies</a></span>
+                                                        <span><i class="ti-location-pin"></i>Cupertino, CA, USA</span>
+                                                        <span><i class="ti-time"></i>60/Hour</span>
+                                                    </div>
+                                                </div>
+                                                <div class="pull-right">
+                                                    <div class="icon">
+                                                        <i class="ti-heart"></i>
+                                                    </div>
+                                                    <div class="btn btn-common btn-rm">Apply Job</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 col-xs-12 sticky">
+                    <aside>
+                        <div class="sidebar">
+                            <div class="box sticky">
+                                <div class="text-box">
+                                    <h4><a href="#">Cover Letter Writingt</a></h4>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. maiores aperiam quam perspiciatis.</p>
+                                    <ul>
+                                        <li>
+                                            <span><i class="fa fa-check"></i>Cover Letter </span>
+                                        </li>
+                                        <li>
+                                            <span><i class="fa fa-check"></i>Review & Critique</span>
+                                        </li>
+                                        <li>
+                                            <span><i class="fa fa-check"></i>Edit & Rewrite </span>
+                                        </li>
+                                        <li>
+                                            <span><i class="fa fa-check"></i>Editable File</span>
+                                        </li>
+                                    </ul>
+                                    <div class="cover-title">
+                                        <div>
+                                            <a href="#" class="text"><i class="fa fa-map-marker"></i>Ha Noi</a>
+                                        </div>
+                                        <div>
+                                            <a href="#" z class="text"><i class="fa fa-calendar"></i>3 day delivery</a>
+                                        </div>
+                                        <div>
+                                            <a href="#" z class="text"><i class="fa fa-refresh fa-lg"></i>2 Division</a>
+                                        </div>
+                                        <div>
+                                            <strong class="price"><i class="fa fa-money"></i>$195</strong>
+                                        </div>
+                                    </div>
+                                    <a href="#" class="btn btn-common btn-sm">Continue ($195)</a>
+                                </div>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+    @RenderPage("~/Views/Shared/Footer.cshtml")
+    @Scripts.Render("~/bundles/js")
+
+    <!-- 	modal for img full width -->
+    <script>
+        $(function () {
+            $('.item>img').on('click', function () {
+                $('.enlargeImageModalSource').attr('src', $(this).attr('src'));
+                $('#enlargeImageModal').modal('show');
+            });
+        });
+    </script>
+
+    <!-- 	modal for massage -->
+    <script>
+        $('#exampleModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var recipient = button.data('whatever') // Extract info from data-* attributes
+
+            var modal = $(this)
+            modal.find('.modal-title').text('New message to ' + recipient)
+            modal.find('.modal-body input').val(recipient)
+        })
+    </script>
+
+</body>
+
+</html>

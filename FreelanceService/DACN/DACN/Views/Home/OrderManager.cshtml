@@ -1,0 +1,391 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from demo.graygrids.com/themes/jobboard-demo/job-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Oct 2018 04:43:17 GMT -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Jobboard">
+    <title>JobBoard - Bootstrap HTML5 Job Portal Template</title>
+    <link rel="shortcut icon" href="~/assets/img/favicon.png">
+    <link rel="stylesheet" href="~/assets/fonts/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/assets/fonts/themify-icons.css">
+    @Styles.Render("~/bundles/core")
+</head>
+<body>
+    @RenderPage("~/Views/Shared/Header.cshtml")
+
+
+
+
+    <section class="job-detail section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12">
+                    <article class="db-new-content">
+                        <header class="db-new-header">
+                            <h1 class="alt">Manage Sales</h1>
+                            <div class="search fake-hint-wrap rf">
+                                <form action="">
+                                    <input name="act_search_query" type="search" value="" placeholder="Search My History...">
+                                    <a href="#!" class="btn-search"><i class="ti-search"></i></a>
+                                </form>
+                            </div>
+                        </header>
+                        <div class="db-new-filters">
+                            <ul class="tabs js-db-status-tabs">
+                                <li class="active"><a data-toggle="tab" href="#priority">PRIORITY</a></li>
+                                <li><a data-toggle="tab" href="#new">NEW</a></li>
+                                <li><a data-toggle="tab" href="#active">ACTIVE</a></li>
+                                <li><a data-toggle="tab" href="#late">LATE</a></li>
+                                <li><a data-toggle="tab" href="#delivered">DELIVERED</a></li>
+                                <li><a data-toggle="tab" href="#completed">COMPLETED </a></li>
+                                <li><a data-toggle="tab" href="#cancelled">CANCELLED</a></li>
+                                <li><a data-toggle="tab" href="#starred">STARRED</a></li>
+                            </ul>
+                        </div>
+                        <div class="tab-content">
+                            <div class="db-new-main-table tab-pane fade in active" id="priority">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>BUYER</th>
+                                            <th>GIG</th>
+                                            <th>DUE ON</th>
+                                            <th>TOTAL</th>
+                                            <th>NOTE</th>
+                                            <th>STATUS</th>
+                                            <th></th>
+
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                            <td class="btn-table">
+                                                <input type="button" class="btn btn-common" value="Edit" />
+                                                <input type="button" class="btn btn-common" value="Delete" />
+                                            </td>
+                                            
+                                        </tr>
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="db-new-main-table tab-pane fade" id="snew">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>BUYER</th>
+                                            <th>GIG</th>
+                                            <th>DUE ON</th>
+                                            <th>TOTAL</th>
+                                            <th>NOTE</th>
+                                            <th>STATUS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mary</td>
+                                            <td>Moe</td>
+                                            <td>mary@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>July</td>
+                                            <td>Dooley</td>
+                                            <td>july@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="db-new-main-table tab-pane fade" id="active">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>BUYER</th>
+                                            <th>GIG</th>
+                                            <th>DUE ON</th>
+                                            <th>TOTAL</th>
+                                            <th>NOTE</th>
+                                            <th>STATUS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mary</td>
+                                            <td>Moe</td>
+                                            <td>mary@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>July</td>
+                                            <td>Dooley</td>
+                                            <td>july@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="db-new-main-table tab-pane fade" id="late">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>BUYER</th>
+                                            <th>GIG</th>
+                                            <th>DUE ON</th>
+                                            <th>TOTAL</th>
+                                            <th>NOTE</th>
+                                            <th>STATUS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mary</td>
+                                            <td>Moe</td>
+                                            <td>mary@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>July</td>
+                                            <td>Dooley</td>
+                                            <td>july@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="db-new-main-table tab-pane fade" id="delivered">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>BUYER</th>
+                                            <th>GIG</th>
+                                            <th>DUE ON</th>
+                                            <th>TOTAL</th>
+                                            <th>NOTE</th>
+                                            <th>STATUS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mary</td>
+                                            <td>Moe</td>
+                                            <td>mary@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>July</td>
+                                            <td>Dooley</td>
+                                            <td>july@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="db-new-main-table tab-pane fade" id="completed">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>BUYER</th>
+                                            <th>GIG</th>
+                                            <th>DUE ON</th>
+                                            <th>TOTAL</th>
+                                            <th>NOTE</th>
+                                            <th>STATUS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mary</td>
+                                            <td>Moe</td>
+                                            <td>mary@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>July</td>
+                                            <td>Dooley</td>
+                                            <td>july@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="db-new-main-table tab-pane fade" id="cancelled">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>BUYER</th>
+                                            <th>GIG</th>
+                                            <th>DUE ON</th>
+                                            <th>TOTAL</th>
+                                            <th>NOTE</th>
+                                            <th>STATUS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mary</td>
+                                            <td>Moe</td>
+                                            <td>mary@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>July</td>
+                                            <td>Dooley</td>
+                                            <td>july@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="db-new-main-table tab-pane fade" id="starred">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>BUYER</th>
+                                            <th>GIG</th>
+                                            <th>DUE ON</th>
+                                            <th>TOTAL</th>
+                                            <th>NOTE</th>
+                                            <th>STATUS</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Mary</td>
+                                            <td>Moe</td>
+                                            <td>mary@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                        <tr>
+                                            <td>July</td>
+                                            <td>Dooley</td>
+                                            <td>july@example.com</td>
+                                            <td>John</td>
+                                            <td>Doe</td>
+                                            <td>john@example.com</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    @RenderPage("~/Views/Shared/Footer.cshtml")
+    @Scripts.Render("~/bundles/js")
+    <script>
+        function gigincluded() {
+            var x = document.getElementById("package");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+<!-- Mirrored from demo.graygrids.com/themes/jobboard-demo/job-details.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 14 Oct 2018 04:43:24 GMT -->
+</html>

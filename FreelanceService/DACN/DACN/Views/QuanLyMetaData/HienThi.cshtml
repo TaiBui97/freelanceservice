@@ -1,0 +1,70 @@
+﻿@model DACN.Models.DataModel.MetaData
+
+@{
+    ViewBag.Title = "HienThi";
+    Layout = "~/Views/Shared/_Layout _Admin.cshtml";
+}
+
+
+<div class="col-lg-9">
+    <div class="card">
+        <div class="card-header">
+            <strong>Hiển thị MetaData</strong>
+        </div>
+        <div class="card-body card-block">
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="hf-email" class=" form-control-label">Tên MetaData</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    @Html.DisplayFor(model => model.TenMetaData)
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="hf-email" class=" form-control-label">Mã Chi tiết danh mục</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    @Html.DisplayFor(model => model.MaCTDM)
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="hf-email" class=" form-control-label">Tên Chi tiết danh mục</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    @Html.DisplayFor(model => model.CTDM.TenCTDM)
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="hf-email" class=" form-control-label">Mã loại metadata</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    @Html.DisplayFor(model => model.MaLoaiMetaData)
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="hf-email" class=" form-control-label">Tên loại metadata</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    @Html.DisplayFor(model => model.LoaiMetaData.TenLoaiMetaData)
+                </div>
+            </div>
+
+        </div>
+        <div class="card-footer">
+            <button style="height:38px" type="submit" class="btn btn-success btn-sm btn-custom">
+                <i class="fa fa-dot-circle-o"></i><a style="color:white; margin-left:5px;" href="@Url.Action("ChinhSua", "QuanLyMetaData", new {  @mamd = Model.MaMetaData }) ">Chỉnh sửa</a>
+            </button>
+
+            <label style="margin-bottom:0!important;" class="btn btn-danger btn-custom">
+                <i class="ti-arrow-left"></i>
+                <a style="color:white; " href="@Url.Action("Index", "QuanLyMetaData")">Trở về</a>
+            </label>
+
+        </div>
+    </div>
+
+</div>

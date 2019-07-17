@@ -1,0 +1,66 @@
+﻿@model DACN.Models.DataModel.GigMetaData
+
+@{
+    ViewBag.Title = "Xoa";
+    Layout = "~/Views/Shared/_Layout _Admin.cshtml";
+}
+
+<div class="col-lg-9">
+    <div class="card">
+        <div class="card-header">
+            <strong>Xóa chi tiết danh mục</strong>
+        </div>
+        <div class="card-body card-block">
+            <h3>Bạn có thật sự muốn xóa GigMetaData này?</h3>
+
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="hf-email" class=" form-control-label">Mã GigMetaData</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    @Html.DisplayFor(model => model.MaGigMetaData)
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="hf-email" class=" form-control-label">Tên GigMetaData</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    @Html.DisplayFor(model => model.TenGigMetaData)
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="hf-email" class=" form-control-label">Mô tả GigMetaData</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    @Html.DisplayFor(model => model.MotaGigMetaData)
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="hf-email" class=" form-control-label">Thuộc chi tiết danh mục</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    @Html.DisplayFor(model => model.CTDM.TenCTDM)
+                </div>
+            </div>
+        </div>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="card-footer">
+                <button style="height:38px;margin-right:10px;" type="submit" class="btn btn-danger btn-sm btn-custom">
+                    <i style="padding-right:5px;" class="fa fa-dot-circle-o"></i>Xóa
+                </button>
+
+                <label style="margin-bottom:0!important;" class="btn btn-success btn-custom">
+                    <i class="ti-arrow-left"></i>
+                    <a style="color:white; " href="@Url.Action("Index", "QuanLyGigMetaData")">Trở về</a>
+                </label>
+
+            </div>
+        }
+    </div>
+
+</div>

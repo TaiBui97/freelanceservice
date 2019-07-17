@@ -1,0 +1,691 @@
+﻿@model  DACN.Models.BusinessModel.BaiDang
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="author" content="Chợ kỹ năng">
+    <title>Chợ kỹ năng</title>
+    <link rel="shortcut icon" href="~/assets/img/favicon.png">
+    <link rel="stylesheet" href="~/assets/fonts/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/assets/fonts/themify-icons.css">
+    @Styles.Render("~/bundles/core")
+    @Scripts.Render("~/bundles/js")
+    <script src="~/assets/plusins/ckeditor/ckeditor.js"></script>
+</head>
+<body>
+    @RenderPage("~/Views/Shared/Header.cshtml")
+    <section id="content">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-8 col-md-8 col-md-offset-2">
+                    <div class="page-ads box">
+
+                        @using (Html.BeginForm("Service", "BaiDang", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+                            <ul id="progressbar">
+                                <li class="active"><span>Tổng quan</span></li>
+                                <li><span>Giá</span></li>
+                                <li><span>Yêu cầu</span></li>
+                            </ul>
+                            <fieldset>
+                                <div class="tool-tip">
+                                    <div class="form-group">
+                                        <label class="control-label">Tiêu đề</label>
+                                        <input type="text" class="form-control" name="TieuDe" required>
+                                        <span style="color:red">@ViewData["TitleError"] </span>
+                                    </div>
+                                    <div class="fake-hint-blue fake-top-1 arrow-1">
+                                        <aside class="js-sticky-tooltip sticky-tooltip fake-hint blue visible-element">
+                                            <figure>
+                                                <figcaption>
+                                                    <div class="icn">
+                                                        <i  class="fa fa-lightbulb-o" style="font-size: 3em;color:white"></i>
+                                                    </div>
+                                                    <div class="title-gig">
+                                                        <h3 class="fs-18">Tiêu đề hiển thị của dịch vụ</h3>
+                                                    </div>
+                                                    <ul>
+                                                        <li>Tiêu đề phải đủ ít nhất 4 kí tự.</li>
+                                                        <li>Tiêu đề không được chứa ký tự đặc biệt hoặc vi phạm quy tắc ngôn từ</li>
+                                                        <li>Gợi ý : Thiết kế logo 3D, Dịch thuật tiếng pháp, Website bán hàng PHP, ... </li>
+
+                                                    </ul>
+                                                </figcaption>
+                                            </figure>
+                                        </aside>
+                                    </div>
+                                </div>
+                                <div class="tool-tip-two">
+                                    <div class="form-group">
+                                        <label class="control-label">Mô tả</label>
+                                        <textarea class="form-control" name="MoTa2" required></textarea>
+                                    </div>
+                                    <div class="fake-hint-blue fake-top-2 arrow-2">
+                                        <aside class="js-sticky-tooltip sticky-tooltip fake-hint blue visible-element">
+                                            <figure>
+                                                <figcaption>
+                                                    <div class="icn">
+                                                        <i class="fa fa-lightbulb-o" style="font-size: 3em;color:white"></i>
+                                                    </div>
+                                                    <div class="title-gig">
+                                                        <h3 class="fs-18">Mô tả dịch vụ</h3>
+                                                    </div>
+                                                    <ul>
+                                                        <li>Đây sẽ là mô tả gói hàng của bạn ít nhất sẽ có những gì.</li>
+                                                        <li>Mô tả không quá dài (tối đa 30 từ)</li>
+                                                        <li>Gợi ý : Đơn hàng bao gồm 2 logo minimalist. File gồm có jpeg,vector và transparent</li>
+                                                    </ul>
+                                                </figcaption>
+                                            </figure>
+                                        </aside>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Ngành nghề</label>
+                                    <div class="search-category-container">
+                                        <select class="form-control" id="danhmuc" onchange="sad()">
+                                            <option>Vui lòng chọn</option>
+                                            @foreach (var item in Model.danhmuc)
+                                            {
+                                                if (item.TenDM != null)
+                                                {
+                                                    <option>@item.TenDM</option>
+                                                }
+                                            }
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group" id="chitietDM">
+                                    <label class="control-label">Danh mục</label>
+                                    <div class="search-category-container">
+                                        <select class="form-control" id="chitietDM2" onchange="sad2()" name="chitietDM">
+                                            <option selected="selected">Vui lòng chọn</option>
+                                            @if (Model.listctdm != null)
+                                            {
+                                                foreach (var item in Model.listctdm)
+                                                {
+                                                    if (item.TenCTDM != null)
+                                                    {
+                                                        <option>@item.TenCTDM</option>
+                                                    }
+                                                }
+                                            }
+
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="tool-tip-three">
+                                    <div class="from-group" id="metadata">
+                                        <table class="table table-bordered">
+                                            <thead>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th class="clearfix">Metadata <i class="fa fa-check"></i></th>
+                                                    <td>
+                                                        <div class="input-metada">
+                                                            <section>
+                                                                <h4 class="loaimetadata">
+                                                                    @if (Model.LoaiMetadata != null)
+                                                                    {
+                                                                        @Model.LoaiMetadata.TenLoaiMetaData
+                                                                    }
+                                                                </h4>
+                                                                <ul class="metadata">
+                                                                    @if (Model.Metadata != null)
+                                                                    {
+                                                                        foreach (var item in Model.Metadata)
+                                                                        {
+                                                                            if (item.TenMetaData != null)
+                                                                            {
+                                                                                <li>
+
+                                                                                    <label>
+                                                                                        <input type="checkbox" name="checkMetaData" value="@item.TenMetaData">
+                                                                                        <span>@item.TenMetaData</span>
+                                                                                    </label>
+                                                                                </li>
+                                                                            }
+
+                                                                        }
+                                                                    }
+
+                                                                </ul>
+                                                            </section>
+
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="fake-hint-blue fake-top-3 arrow-2">
+                                        <aside class="js-sticky-tooltip sticky-tooltip fake-hint blue visible-element">
+                                            <figure>
+                                                <figcaption>
+                                                    <div class="icn">
+                                                        <i class="fa fa-lightbulb-o" style="font-size: 3em;color:white"></i>
+                                                    </div>
+                                                    <div class="title-gig">
+                                                        <h3 class="fs-18">Làm cho dịch vụ có thể tìm thấy dễ dàng</h3>
+                                                    </div>
+                                                    <ul>
+                                                        <li>Bằng cách xác định metadata bạn sẽ giúp người mua tìm thấy đơn hàng một cách dễ dàng và thu hút người mua hơn</li>
+                                                       
+                                                    </ul>
+                                                </figcaption>
+                                            </figure>
+                                        </aside>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="control-label">Tải ảnh lên</label>
+                                    <input type="file" name="fileUpload" multiple />
+                                    <p style="color:red">@ViewBag.ThongBao</p>
+                                </div>
+                                <input type="button" name="next" class="next action-button" value="Tiếp tục" />
+                            </fieldset>
+                            <fieldset name="tubaongu">
+                                <div class="from-group" id="gigmetadata">
+                                    <label class="control-lable">Packages</label>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+                                            @if (Model.GigMetadata != null)
+                                            {
+                                                foreach (var item in Model.GigMetadata)
+                                                {
+                                                    if (item.TenGigMetaData != null)
+                                                    {
+                                                        <tr>
+                                                            <th class="">@item.TenGigMetaData</th>
+                                                            <td>
+                                                                <input data-group="chkmetadata" type="checkbox" value="@item.TenGigMetaData" name="checkGigMetadata" />
+                                                            </td>
+                                                        </tr>
+                                                    }
+                                                }
+
+                                            }
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="form-group" name="tuoccho" id="gigmetadata2">
+
+                                    <label class="control-label">GigMetaData</label>
+                                    @if (Model.GigMetadata != null)
+                                    {
+                                        foreach (var item in Model.GigMetadata)
+                                        {
+
+                                            if (item.TenGigMetaData != null)
+                                            {
+                                                <input data-group="js-extra-checkbox" type="checkbox" value="@item.TenGigMetaData" name="checkGigMetadata2" />
+                                                <div class="show-hide-metadata">
+
+                                                    @*<input data-group="js-extra-checkbox" id="js-extra-checkbox" type="checkbox" value="@item.TenGigMetaData" name="checkGigMetadata2" />*@
+                                                    <label for="js-extra-checkbox">@item.TenGigMetaData</label>
+                                                    <div id="item-cell">
+                                                        <label class="lb-for-form-add">Thêm tiền</label>
+                                                        <div class="dropdown">
+                                                            <select class="form-add" id="btnadd" name="TienMetaData2">
+                                                                <option>0</option>
+                                                                <option>100.000</option>
+                                                                <option>150.000</option>
+                                                                <option>200.000</option>
+                                                                <option>250.000</option>
+                                                                <option>300.000</option>
+                                                                <option>350.000</option>
+                                                                <option>400.000</option>
+                                                                <option>450.000</option>
+                                                                <option>500.000</option>
+                                                            </select>
+                                                        </div>
+                                                        <label class="lb-for-form-add">
+                                                            Số lượng ngày
+                                                        </label>
+                                                        <div class="dropdown">
+                                                            <select class="form-add" id="btnadd" name="SlMetaData2">
+                                                                <option>0</option>
+                                                                <option>1</option>
+                                                                <option>2</option>
+                                                                <option>3</option>
+                                                                <option>4</option>
+                                                                <option>5</option>
+                                                                <option>6</option>
+                                                                <option>7</option>
+                                                                <option>8</option>
+                                                                <option>9</option>
+                                                                <option>10</option>
+
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            }
+                                        }
+                                    }
+
+                                </div>
+                                <input type="button" name="previous" id="previous" class="previous action-button" value="Trở lại" />
+                                <input type="button" name="next" class="next action-button" value="Tiếp tục" />
+
+                            </fieldset>
+                            <fieldset>
+                                <div class="from-group">
+                                    <label class="control-lable">Packages</label>
+                                    <table class="table table-bordered">
+                                        <thead>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th class="clearfix">Mô tả</th>
+                                                <td>
+
+                                                    <textarea id="MoTa" name="MoTa" rows="10" cols="80"></textarea>
+
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="clear">Thời gian giao</th>
+                                                <td class="clearfix">
+                                                    <div class="dropdown" id="add-extra">
+                                                        <select class="form-control" id="sel1" name="NgayGiao" required>
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                            <option>6</option>
+                                                            <option>7</option>
+                                                            <option>8</option>
+                                                            <option>9</option>
+                                                            <option>10</option>
+                                                            <option>11</option>
+                                                            <option>12</option>
+                                                            <option>13</option>
+                                                            <option>14</option>
+                                                            <option>15</option>
+                                                            <option>16</option>
+                                                            <option>17</option>
+                                                            <option>18</option>
+                                                            <option>19</option>
+                                                            <option>20</option>
+                                                            <option>21</option>
+                                                            <option>22</option>
+                                                            <option>23</option>
+                                                            <option>24</option>
+                                                            <option>25</option>
+                                                            <option>26</option>
+                                                            <option>27</option>
+                                                            <option>28</option>
+                                                            <option>29</option>
+                                                            <option>30</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th class="clear">Số lần chỉnh sửa</th>
+                                                <td class="clearfix">
+                                                    <div class="dropdown">
+                                                        <select class="form-control" id="sel1" name="ChinhSua">
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            <option>3</option>
+                                                            <option>4</option>
+                                                            <option>5</option>
+                                                            <option>6</option>
+                                                            <option>7</option>
+                                                            <option>8</option>
+                                                            <option>9</option>
+                                                            <option>Unlimit</option>
+                                                        </select>
+                                                    </div>
+                                                </td>
+                                            </tr>
+
+                                            <tr>
+                                                <th>Giá</th>
+                                                <td>
+                                                    <input type="text" id="number" name="Tien" />
+                                                    <span>VNĐ</span>
+
+                                                </td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <input type="button" name="previous" id="previous" class="previous action-button" value="Trở Lại" />
+                                <input type="submit" class="btn btn-common" value="Đăng" onclick="test()" />
+                            </fieldset>
+
+
+                        }
+                    </div>
+                </div>
+                <div class="col-sm-4 col-md-4 tooltip" style="display:none;">
+                    <aside class="tooltip-div sticky-tooltip fake-hint blue visible-element">
+                        <figure>
+                            <figcaption>
+                                <div class="icn"><i class="fa fa-lightbulb-o"></i></div>
+                                <h3 class="fs-18">Start Defining Your Gig</h3>
+                                <div class="js-education-video thumbnail overview"></div>
+                                <ul><li>Create a catchy title.</li><li>Choose a category that fits your Gig.</li><li>Add meta data to help buyers find more information regarding your Gig.</li><li>Add tags to help buyers find your Gig while searching.</li></ul>
+                            </figcaption>
+                        </figure>
+                    </aside>
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+    @RenderPage("~/Views/Shared/Footer.cshtml")
+    @*replace ckeditor*@
+    <script>
+        CKEDITOR.replace('MoTa');
+        CKEDITOR.config.autoParagraph = false;
+    </script>
+
+    <script>
+
+
+        //jQuery time
+        var current_fs, next_fs, previous_fs; //fieldsets
+        var left, opacity, scale; //fieldset properties which we will animate
+        var animating; //flag to prevent quick multi-click glitches
+
+        $(".next").click(function () {
+            if (animating) return false;
+            animating = true;
+
+            current_fs = $(this).parent();
+            next_fs = $(this).parent().next();
+
+            //activate next step on progressbar using the index of next_fs
+            $("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+            //show the next fieldset
+            next_fs.show();
+            //hide the current fieldset with style
+            current_fs.animate({ opacity: 0 }, {
+                step: function (now, mx) {
+                    //as the opacity of current_fs reduces to 0 - stored in "now"
+                    //1. scale current_fs down to 80%
+                    scale = 1 - (1 - now) * 0.2;
+                    //2. bring next_fs from the right(50%)
+                    left = (now * 50) + "%";
+                    //3. increase opacity of next_fs to 1 as it moves in
+                    opacity = 1 - now;
+                    current_fs.css({
+                        'transform': 'scale(' + scale + ')',
+                    });
+                    next_fs.css({ 'left': left, 'opacity': opacity });
+                },
+                duration: 800,
+                complete: function () {
+                    current_fs.hide();
+                    animating = false;
+                },
+                //this comes from the custom easing plugin
+                easing: 'easeInOutBack'
+            });
+        });
+
+        $(".previous").click(function () {
+            if (animating) return false;
+            animating = true;
+
+            current_fs = $(this).parent();
+            previous_fs = $(this).parent().prev();
+
+            //de-activate current step on progressbar
+            $("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+            //show the previous fieldset
+            previous_fs.show();
+            //hide the current fieldset with style
+            current_fs.animate({ opacity: 0 }, {
+                step: function (now, mx) {
+                    //as the opacity of current_fs reduces to 0 - stored in "now"
+                    //1. scale previous_fs from 80% to 100%
+                    scale = 0.8 + (1 - now) * 0.2;
+                    //2. take current_fs to the right(50%) - from 0%
+                    left = ((1 - now) * 50) + "%";
+                    //3. increase opacity of previous_fs to 1 as it moves in
+                    opacity = 1 - now;
+                    current_fs.css({
+                        'left': left,
+                    });
+                    previous_fs.css({ 'transform': 'scale(' + scale + ')', 'opacity': opacity });
+                },
+                duration: 800,
+                complete: function () {
+                    current_fs.hide();
+                    animating = false;
+                },
+                //this comes from the custom easing plugin
+                easing: 'easeInOutBack'
+            });
+        });
+
+        $(".submit").click(function () {
+            return false;
+        })
+
+    </script>
+
+    <script src="~/assets/js/jquery.easing.min.js"></script>
+
+    <script type="text/javascript">
+
+    </script>
+    @*format currency*@
+    <script>
+        $('#number').on('input', function (e) {
+            $(this).val(formatCurrency(this.value.replace(/[,]/g, '')));
+        }).on('keypress', function (e) {
+            if (!$.isNumeric(String.fromCharCode(e.which))) e.preventDefault();
+        }).on('paste', function (e) {
+            var cb = e.originalEvent.clipboardData || window.clipboardData;
+            if (!$.isNumeric(cb.getData('text'))) e.preventDefault();
+        });
+        function formatCurrency(number) {
+            var n = number.split('').reverse().join("");
+            var n2 = n.replace(/\d\d\d(?!$)/g, "$&,");
+            return n2.split('').reverse().join('');
+        }
+    </script>
+
+
+    <script type="text/javascript">
+        $('#chitietDM').hide();
+        function sad() {
+                var x = document.getElementById("danhmuc").value;
+                var dad = { TenDM : x };
+                 var tat = JSON.stringify(dad);
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("check","BaiDang")',
+                    contentType: "application/json; charset=utf-8",
+                    data: tat,
+                    success: function (response) {
+                        var options = '<option>Vui lòng chọn</option>';
+                        for (var i = 0; i < response.length; i++) {
+                            if (response[i].TenCTDM != null) {
+                                options += "<option value='" + response[i].TenCTDM + "'>"
+                                    + response[i].TenCTDM + "</option>";
+                            }
+
+                        }
+                        $('#chitietDM2').removeAttr('disabled').html(options);
+                    }
+
+            });
+            $('#chitietDM').show();
+        };
+    </script>
+    <script type="text/javascript">
+        $('#metadata').hide();
+        function sad2() {
+            var a = document.getElementById("chitietDM2").value;
+                var dad = { TenCTDM : a };
+                 var tat = JSON.stringify(dad);
+                $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("check2","BaiDang")',
+                    contentType: "application/json; charset=utf-8",
+                    data: tat,
+                    success: function (response) {
+                        console.log(response.Third.TenLoaiMetaData);
+                        var options3 = "";
+                        var options4 = response.Third.TenLoaiMetaData;
+                        for (var i = 0; i < response.Second.length; i++) {
+                            if (response.Second[i].TenMetaData != null) {
+                                options3 += "<li><label><input type='checkbox' name='checkMetaData' value='" + response.Second[i].TenMetaData + "'><span> " + response.Second[i].TenMetaData +" </span></label ></li >";
+
+                            }
+                        }
+                        $('.metadata').removeAttr('disabled').html(options3);
+                        $('.loaimetadata').removeAttr('disabled').html(options4);
+                        var options2 = "<label class='control-label'>MetaData</label>";
+                        var options = "<label class='control-lable'>Packages</label>"
+                            + "<table class='table table-bordered'>"
+                            + "<thead>"
+                            + "</thead>"
+                            + "<tbody>";
+                        for (var i = 0; i < response.First.length; i++) {
+                            if (response.First[i].TenGigMetaData != null) {
+                                if (response.First[i].MaCTDM != null) {
+                                    options += "<tr><th class='hide-div-gig'>" + response.First[i].TenGigMetaData + "<div class='fake-hint-blue-two arrow-1'><aside class='js-sticky-tooltip sticky-tooltip fake-hint blue visible-element'><figure><figcaption><div class='icn'><i class='fa fa-lightbulb-o' style='font-size: 3em;color:white'></i></div><div class='title-gig'><h3 class='fs-18'>" + response.First[i].TenGigMetaData +"</h3></div><ul><li>"+ response.First[i].MotaGigMetaData +"</li></ul></figcaption></figure></aside></div></th><td><input data-group='chkmetadata' type='checkbox' value='" + response.First[i].TenGigMetaData + "' name='checkGigMetadata' /></td></tr>";
+                                }
+                                options2 += "<div class='show-hide-metadata'>"
+                                    + "<input onclick='ktcheckbox(" + i + ")' id='js-extra-checkbox' data-group='js-extra-checkbox' type='checkbox' value='" + response.First[i].TenGigMetaData + "' name='checkGigMetadata2' />"
+                                    + "<label for='js-extra-checkbox'>" + response.First[i].TenGigMetaData + "</label>"
+                                    + "<div id='item-cell'>"
+                                    + "<label class='lb-for-form-add'>Thêm tiền</label>"
+                                    + "<div class='dropdown'>"
+                                    + "<select onchange='ktselect(this,"+i+")' class='form-add' id='btnadd' name='TienMetaData2'>"
+                                    + "<option>0</option>"
+                                    + "<option>100.000</option>"
+                                    + "<option>150.000</option>"
+                                    + "<option>200.000</option>"
+                                    + "<option>250.000</option>"
+                                    + "<option>300.000</option>"
+                                    + "<option>350.000</option>"
+                                    + "<option>400.000</option>"
+                                    + "<option>450.000</option>"
+                                    + "<option>500.000</option>"
+                                    + "</select>"
+                                    + "</div >"
+                                    + "<label class='lb-for-form-add'>Số lượng ngày</label>"
+                                    +"<div class='dropdown'>"
+                                    + "<select onchange='ktselect2(this," + i +")' class='form-add' id='btnadd' name='SlMetaData2'>"
+                                    + "<option value='0'>0</option>"
+                                    +"<option value='1'>1</option>"
+                                    +"<option value='2'>2</option>"
+                                    +"<option value='3'>3</option>"
+                                    +"<option value='4'>4</option>"
+                                    +"<option value='5'>5</option>"
+                                    +"<option value='6'>6</option>"
+                                    +"<option value='7'>7</option>"
+                                    +"<option value='8'>8</option>"
+                                    +"<option value='9'>9</option>"
+                                    +"<option value='10'>10</option>"
+
+                                    +"</select>"
+                                    +"</div >"
+                                    + "</div>"
+                                    + "</div>";
+                            }
+                        }
+                        options += "</tbody></table></div>";
+                        $('#gigmetadata').removeAttr('disabled').html(options);
+                        $('#gigmetadata2').removeAttr('disabled').html(options2);
+                        $(function () {
+                            $('input[data-group="chkmetadata"]').change(function () {
+
+                                if (this.checked) {
+                                    $('.show-hide-metadata>input[data-group="js-extra-checkbox"][value="' + $(this).val() + '"]').parent().hide(1000);
+                                } else {
+                                    $('.show-hide-metadata>input[data-group="js-extra-checkbox"][value="' + $(this).val() + '"]').parent().show(1000);
+                                }
+                            });
+                        });
+                        $(function() {
+
+                        });
+                    }
+
+            });
+            $('#metadata').show();
+        };
+        var prev = Array();
+
+        function ktcheckbox(id) {
+            var index = prev.findIndex(x=>x.id == id);
+            if (index== -1) {
+                prev.push({ id: id, value: null, value2: null});
+            } else {
+                prev.splice(index);
+            }
+            console.log(prev);
+
+        };
+
+        function ktselect(slb, index) {
+            console.log(index);
+            var i = prev.findIndex(x => x.id == index);
+            prev.forEach(function (entry) {
+                console.log(entry);
+                if (entry.id == index) {
+                    entry.value = slb.selectedIndex;
+                };
+
+            });
+            console.log(prev[i]);
+
+        };
+        function ktselect2(slb2, index) {
+            console.log(index);
+            var i = prev.findIndex(x => x.id == index);
+            prev.forEach(function (entry) {
+                console.log(entry);
+                if (entry.id == index) {
+                    entry.value2 = slb2.selectedIndex;
+                };
+
+            });
+            console.log(prev[i]);
+
+        };
+        function test() {
+            var i;
+            for (i = 0; i < prev.length; i++) {
+                console.log(prev[i]);
+                if (prev[i].value == null || prev[i].value2 == null || prev[i].value == "0" || prev[i].value2 == "0" ) {
+                    alert("Vui Lòng Chọn Giá Tiền Và  tại phần MetaData");
+                    event.preventDefault();
+                }
+            }
+        };
+
+
+    </script>
+</body>
+
+</html>

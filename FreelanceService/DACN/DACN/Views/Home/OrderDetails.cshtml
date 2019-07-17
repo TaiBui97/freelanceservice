@@ -1,0 +1,228 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Jobboard">
+    <title>JobBoard - Bootstrap HTML5 Job Portal Template</title>
+    @Styles.Render("~/bundles/core")
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/fonts/themify-icons.css">
+</head>
+<body>
+
+    @RenderPage("~/Views/Shared/Header.cshtml")
+
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Order Customer</h2>
+            <div class="row">
+                <div class="col-md-3 col-sm-4">
+                    <aside>
+                        <div class="sidebar">
+                            <div class="inner-box">
+                                <h2 class="small-title">Decriptions Customer</h2>
+                                <ul class="cat-list decrip">
+                                    <li>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus porro nesciunt distinctio corrupti cupiditate vitae neque amet inventore dolorum, ipsum dignissimos magnam, dolorem magni enim.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="inner-box">
+                                <h2 class="small-title">Add extras</h2>
+                                <ul class="cat-list cate-detail">
+                                    <li>
+                                        <a href="#">Extra Fast 4 Days Delivery</a>
+                                        <span class="num-posts">($60)</span>
+
+                                    </li>
+                                    <li>
+                                        <a href="#">Additional Revision (+2 Days)</a>
+                                        <span class="num-posts">($20)</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+                <div class="col-md-6">
+                    <div class="content-area">
+                        <div class="clearfix">
+                            <div class="box">
+                                <h2 class="small-title"> Your Package</h2>
+                                <div>
+                                    <div class="gig-summary">
+                                        <a href="">
+                                            <img src="assets/img/b1.jpg" alt="" width="150px">
+                                            <div class="user-profile-label">
+                                                <div class="username-line">
+                                                    <a href="#" class="seller-link"><small>I Will Design Your Business Card And Letterhead</small></a>
+                                                </div>
+                                                <div class="oneliner-wrapper">
+                                                    <div class="ratings-wrapper">
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star"></span>
+                                                        <span class="fa fa-star"></span>
+                                                    </div>
+                                                </div>
+                                                <a href="#" onclick="gigincluded()">View what's included</a>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                    <div id="package">
+                                        <h5 class="small-title">Decription Package</h5>
+                                        <ul>
+                                            <li><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia, eaque provident natus rerum iste suscipit officiis enim porro inventore laborum ut. Libero tenetur repellendus accusantium necessitatibus facere enim, dolorum vero.</p></li>
+                                        </ul>
+                                    </div>
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="content-messaging">
+                        <div class="messaging">
+                            <div class="inbox_msg">
+                                <div class="col-md-12">
+                                    <div class="recent_heading header-msg">
+                                        <div class="img-chat-header">
+                                            <img src="assets/img/testimonial/img2.jpg" alt="">
+                                        </div>
+                                        <div class="online-chat">
+                                            <small><i></i></small>
+                                        </div>
+                                        <div class="img-chat-name">
+                                            <h4>John</h4>
+                                        </div>
+                                    </div>
+                                    <div class="mesgs msg-full-witdh">
+                                        <div class="msg_history">
+                                            <div class="incoming_msg">
+                                                <div class="incoming_msg_img">
+                                                    <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
+                                                </div>
+                                                <div class="received_msg">
+                                                    <div class="received_withd_msg">
+                                                        <p>
+                                                            Test which is a new approach to have all
+                                                            solutions
+                                                        </p>
+                                                        <span class="time_date"> 11:01 AM    |    June 9</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="outgoing_msg">
+                                                <div class="sent_msg">
+                                                    <p>
+                                                        Test which is a new approach to have all
+                                                        solutions
+                                                    </p>
+                                                    <span class="time_date"> 11:01 AM    |    June 9</span>
+                                                </div>
+                                            </div>
+                                            <div class="incoming_msg">
+                                                <div class="incoming_msg_img">
+                                                    <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
+                                                </div>
+                                                <div class="received_msg">
+                                                    <div class="received_withd_msg">
+                                                        <p>Test, which is a new approach to have</p>
+                                                        <span class="time_date"> 11:01 AM    |    Yesterday</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="outgoing_msg">
+                                                <div class="sent_msg">
+                                                    <p>Apollo University, Delhi, India Test</p>
+                                                    <span class="time_date"> 11:01 AM    |    Today</span>
+                                                </div>
+                                            </div>
+                                            <div class="incoming_msg">
+                                                <div class="incoming_msg_img">
+                                                    <img src="https://ptetutorials.com/images/user-profile.png" alt="sunil">
+                                                </div>
+                                                <div class="received_msg">
+                                                    <div class="received_withd_msg">
+                                                        <p>
+                                                            We work directly with our designers and suppliers,
+                                                            and sell direct to you, which means quality, exclusivev products, at a price anyone can afford.
+                                                        </p>
+                                                        <span class="time_date"> 11:01 AM    |    Today</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="type_msg">
+                                            <div class="input_msg_write">
+                                                <input type="text" class="write_msg" placeholder="Type a message" />
+                                                <button class="msg_send_btn" type="button"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-4">
+                    <aside>
+                        <div class="sidebar">
+                            <div class="inner-box">
+                                <h2 class="small-title">Decriptions</h2>
+                                <ul class="cat-list decrip">
+                                    <li>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus porro nesciunt distinctio corrupti cupiditate vitae neque amet inventore dolorum, ipsum dignissimos magnam, dolorem magni enim.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="inner-box">
+                                <h2 class="small-title">Metadata</h2>
+                                <ul class="cat-list cate-detail detail-meta">
+                                    <li><i class="ti-check-box"></i>10 Days Delivery</li>
+                                    <li><i class="ti-check-box"></i>2 Revisions</li>
+                                    <li><i class="ti-check-box"></i>2 Concepts</li>
+                                    <li><i class="ti-check-box"></i>Files Ready For Print</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+    @RenderPage("~/Views/Shared/Footer.cshtml")
+    @Scripts.Render("~/bundles/js")
+    <script>
+        function gigincluded() {
+            var x = document.getElementById("package");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        function getTotal() {
+            var priceQty = document.getElementById
+        }
+
+    </script>
+</body>
+
+</html>

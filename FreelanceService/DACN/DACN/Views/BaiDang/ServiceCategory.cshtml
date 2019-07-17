@@ -1,0 +1,1002 @@
+﻿
+
+@model DACN.Models.BusinessModel.DanhSachBaiDang
+@using Newtonsoft.Json
+@using System.Linq
+@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+
+
+
+<style>
+
+    .slick-arrow {
+        opacity: 0;
+        background-color: #fff;
+        position: absolute;
+        z-index: 4;
+        top: 50%;
+        width: 32px;
+        height: 29px;
+        margin-top: -80px;
+        text-align: center;
+        margin-right: 20px;
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+        border: 0;
+    }
+
+    .wrap-slider:hover .slick-arrow {
+        opacity: 0.9;
+        top: 130px;
+        -webkit-transition: top .1s;
+        -o-transition: top .1s;
+        transition: top .1s;
+    }
+
+
+    .lSPager {
+        display: none;
+    }
+
+    .slick-arrow:after {
+        content: "";
+        display: inline-block;
+        background: url('../../assets/img/arrows.svg') no-repeat;
+        background-size: 16px 64px;
+        width: 16px;
+        height: 16px;
+        margin-top: 5px;
+    }
+
+    .slick-arrow.slick-next:after {
+        background-position: 0 -48px;
+    }
+
+    .slick-next {
+        border-radius: 15px 3px 3px 15px;
+    }
+
+    .slick-prev {
+        border-radius: 3px 15px 15px 3px;
+    }
+
+
+    .lSAction > a {
+        margin-right: 27px;
+    }
+
+    .lSAction > .lSPrev {
+        background-position: 0 0;
+        left: 0px !important;
+    }
+
+    .lSAction > .lSNext {
+        background-position: 0 0;
+        right: -20px !important;
+    }
+
+    .slick-arrow {
+        opacity: 0;
+        background-color: #fff;
+        position: absolute;
+        z-index: 4;
+        top: 50%;
+        width: 32px;
+        height: 29px;
+        margin-top: -80px;
+        text-align: center;
+        margin-right: 20px;
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+        border: 0;
+    }
+
+    .wrap-slider:hover .slick-arrow {
+        opacity: 0.9;
+        top: 130px;
+        -webkit-transition: top .1s;
+        -o-transition: top .1s;
+        transition: top .1s;
+    }
+
+
+    .lSPager {
+        display: none;
+    }
+
+    .slick-arrow:after {
+        content: "";
+        display: inline-block;
+        background: url('../../assets/img/arrow2.JPG') no-repeat;
+        background-size: 16px 64px;
+        width: 16px;
+        height: 16px;
+        margin-top: 5px;
+    }
+
+    .slick-arrow.slick-next:after {
+        background-position: 0 -48px;
+    }
+
+    .slick-next {
+        border-radius: 15px 3px 3px 15px;
+    }
+
+    .slick-prev {
+        border-radius: 3px 15px 15px 3px;
+    }
+
+
+    .lSAction > a {
+        margin-right: 27px;
+    }
+
+    .lSAction > .lSPrev {
+        background-position: 0 0;
+        left: 0px !important;
+    }
+
+    .lSAction > .lSNext {
+        background-position: 0 0;
+        right: -20px !important;
+    }
+</style>
+<header>
+    <div class="container">
+        <div class="col-md-12">
+            <ul class="breadcrumbs" style="padding-top: 15px;">
+                <li>
+                    <a href="/?source=breadcrumbs"> Home > </a>
+                </li>
+                <li><a href="/categories/graphics-design?source=breadcrumbs"> Thiết kế đồ họa </a></li>
+            </ul>
+            <div class="sub-header">
+                <h1>Thiết Kế Logo</h1>
+                <div class="ct-sub-header">
+                    <p>
+                        Bạn muốn nhiều người biết đến thương hiệu của bạn? Hãy nhận diện thương hiêu thiết kế logo <a data-toggle="modal" data-target="#modelvideocategory" href="#" class="play"><i class="fa fa-play-circle"></i><span>Chợ Kỹ Năng hoạt động</span></a>
+                        <div class="modal fade" id="modelvideocategory" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document" style="width:1300px!important;">
+                                <div class="modal-content">
+
+                                    <div class="modal-body" style="padding:0!important">
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding-top: 40px;float: right;font-size: 36px; line-height: 35px;">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                        <div class="col-md-12">
+
+                                            <video id="video-2" style="width:100%;height:600px" controls>
+                                                <source src="https://cloudinary.fiverrcdn.com/video/upload/w_1.0,q_95/general_assets/categories/videos/fiverr_how_it_works_1.mp4" type="video/mp4">
+                                            </video>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="option-box">
+                    <div class="sort-box-holder">
+
+                        <div class="btn-group pull-left sort-box">
+                            <span>Ưu tiên xem: </span>
+                            <ul class="sort-list">
+
+                                <li class="" data-order="top_seller">
+                                    <a href="javascript:void(0);">ƯA THÍCH</a>
+                                </li>
+                                <li class="active" data-order="price,asc">
+                                    <a href="javascript:void(0);">GIÁ THẤP</a>
+                                </li>
+                                <li class="" data-order="price,desc">
+                                    <a href="javascript:void(0);">GIÁ CAO</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div><hr class="sort-head" />
+            </div>
+        </div>
+    </div>
+
+</header>
+
+<section class="job-browse section" style="padding-top:10px!important">
+    <div class="container">
+
+        <!-- side bar -->
+        <div class="col-md-3 col-sm-3">
+            <aside>
+                <div class="sidebar">
+                    <div class="inner-box result-cate">
+                        <h3>Kết Quả</h3>
+                        <ul>
+                            <li>
+                                <a href="#">Tìm kiếm Thiết Kế Đồ Họa</a>
+                                <label class="check-text lbl-add">
+                                    <a>Thiết Kế Logo</a>
+                                    <span>(1542)</span>
+                                </label>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div class="inner-box filter-rp">
+
+                        <form id="auto-submit-filter">
+                            <h3>Thời gian giao</h3>
+                            <ul class="box-search">
+                                <li class="content-chk-category filter-radio">
+                                    <label class="check-text">
+                                        <input type="radio" class="radio-search" name="thoigiangiao" value="1">
+                                        <span>Trước 24h</span>
+
+                                    </label>
+                                </li>
+                                <li class="content-chk-category filter-radio">
+                                    <label class="check-text">
+                                        <input type="radio" class="radio-search" name="thoigiangiao" value="3">
+                                        <span>3 ngày</span>
+                                    </label>
+                                </li>
+                                <li class="content-chk-category filter-radio">
+                                    <label class="check-text">
+                                        <input type="radio" class="radio-search" name="thoigiangiao" value="7">
+                                        <span>7 ngày</span>
+                                    </label>
+                                </li>
+                                <li class="content-chk-category filter-radio">
+                                    <label class="check-text">
+                                        <input type="radio" class="radio-search" name="thoigiangiao" value="8">
+                                        <span>Hơn 7 ngày</span>
+                                    </label>
+                                </li>
+                                <li class="content-chk-category filter-radio">
+                                    <label class="check-text">
+                                        <input type="radio" class="radio-search" name="thoigiangiao" value="any" checked>
+                                        <span>Mọi ngày</span>
+                                    </label>
+                                </li>
+                                <li class="content-less">
+                                    <a id="btn-radio-add" href="#" onclick="gigincluded()">Xem thêm (+)</a>
+                                </li>
+                            </ul>
+
+                            <hr class="hr-boxsearch" />
+                            <h3>Style</h3>
+                            <ul class="box-search">
+                                @foreach (var item in Model.listMeta)
+                                {
+                                    <li class="content-chk-category  filer-style">
+                                        @*<span class="fl-r">(1283)</span>*@
+                                        <label class="check-text">
+                                            <input type="checkbox" class="check-styles" name="style" value="@item.TenMetaData" />
+                                            <span>@item.TenMetaData</span>
+                                        </label>
+                                    </li>
+                                }
+
+                                <li class="content-less">
+                                    <a id="check-btn" href="#" onclick="gigincluded2()">Xem thêm (+)</a>
+                                </li>
+                            </ul>
+                            <hr class="hr-boxsearch" />
+                            <h3>Dịch vụ đi kèm</h3>
+                            <ul class="box-search">
+                                @foreach (var item in Model.listGig)
+                                {
+                                    <li class="content-chk-category  filer-include">
+                                        @*<span class="fl-r">(1283)</span>*@
+                                        <label class="check-text">
+                                            <input type="checkbox" name="name" value="@item.TenGigMetaData" class="check-sv" />
+                                            <span>@item.TenGigMetaData</span>
+                                        </label>
+                                    </li>
+                                }
+                                <li class="content-less">
+                                    <a id="include-btn" href="#" onclick="gigincluded3()">Xem thêm (+)</a>
+                                </li>
+                            </ul>
+                            <hr class="hr-boxsearch" />
+                            <h3>Price Range</h3>
+                            <ul class="box-search">
+                                <li class="content-chk-category filer-price">
+                                    <div class="range">
+                                        <input type="text" id="number" name="gig_price_range" class="min" value="">
+                                        <span class="light">To</span><br />
+                                        <input type="text" id="numberTwo" name="gig_price_range" class="max" value="">
+                                        <div class="filter-range">
+                                            <i class="fa fa-chevron-right"></i>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
+
+                        <hr class="hr-boxsearch" />
+                        <h3>Seller Location</h3>
+                        <div class="box-search drop-location">
+                            <ul class="box-search">
+                                <li>
+                                    <form class="form-autocomplete" autocomplete="off" action="#">
+                                        <div class="autocomplete" style="width:75%">
+                                            <input id="myInput" type="text" name="myCountry" placeholder="Try Hồ Chí Minh">
+                                        </div>
+                                        <input class="auto-submit" type="button" value="Tìm">
+                                    </form>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-rp" data-toggle="modal" data-target=".bd-example-modal-lg">
+                        <i class="fa fa-filter" aria-hidden="true"></i> Lọc dịch vụ
+                    </button>
+
+                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content modal-rp">
+                                <div class="inner-box">
+
+                                    <form id="auto-submit-filter">
+                                        <h3>Thời gian giao</h3>
+                                        <ul class="box-search">
+                                            <li class="content-chk-category filter-radio">
+                                                <label class="check-text">
+                                                    <input type="radio" class="radio-search" name="thoigiangiao" value="1">
+                                                    <span>Trước 24h</span>
+
+                                                </label>
+                                            </li>
+                                            <li class="content-chk-category filter-radio">
+                                                <label class="check-text">
+                                                    <input type="radio" class="radio-search" name="thoigiangiao" value="3">
+                                                    <span>3 ngày</span>
+                                                </label>
+                                            </li>
+                                            <li class="content-chk-category filter-radio">
+                                                <label class="check-text">
+                                                    <input type="radio" class="radio-search" name="thoigiangiao" value="7">
+                                                    <span>7 ngày</span>
+                                                </label>
+                                            </li>
+                                            <li class="content-chk-category filter-radio">
+                                                <label class="check-text">
+                                                    <input type="radio" class="radio-search" name="thoigiangiao" value="8">
+                                                    <span>Hơn 7 ngày</span>
+                                                </label>
+                                            </li>
+                                            <li class="content-chk-category filter-radio">
+                                                <label class="check-text">
+                                                    <input type="radio" class="radio-search" name="thoigiangiao" value="any" checked>
+                                                    <span>Mọi ngày</span>
+                                                </label>
+                                            </li>
+                                            <li class="content-less">
+                                                <a id="btn-radio-add" href="#" onclick="gigincluded()">Xem thêm (+)</a>
+                                            </li>
+                                        </ul>
+
+                                        <hr class="hr-boxsearch" />
+                                        <h3>Style</h3>
+                                        <ul class="box-search">
+                                            @foreach (var item in Model.listMeta)
+                                            {
+                                                <li class="content-chk-category  filer-style">
+                                                    @*<span class="fl-r">(1283)</span>*@
+                                                    <label class="check-text">
+                                                        <input type="checkbox" class="check-styles" name="style" value="@item.TenMetaData" />
+                                                        <span>@item.TenMetaData</span>
+                                                    </label>
+                                                </li>
+                                            }
+
+                                            <li class="content-less">
+                                                <a id="check-btn" href="#" onclick="gigincluded2()">Xem thêm (+)</a>
+                                            </li>
+                                        </ul>
+                                        <hr class="hr-boxsearch" />
+                                        <h3>Dịch vụ đi kèm</h3>
+                                        <ul class="box-search">
+                                            @foreach (var item in Model.listGig)
+                                            {
+                                                <li class="content-chk-category  filer-include">
+                                                    @*<span class="fl-r">(1283)</span>*@
+                                                    <label class="check-text">
+                                                        <input type="checkbox" name="name" value="@item.TenGigMetaData" class="check-sv" />
+                                                        <span>@item.TenGigMetaData</span>
+                                                    </label>
+                                                </li>
+                                            }
+                                            <li class="content-less">
+                                                <a id="include-btn" href="#" onclick="gigincluded3()">Xem thêm (+)</a>
+                                            </li>
+                                        </ul>
+                                        <hr class="hr-boxsearch" />
+                                        <h3>Price Range</h3>
+                                        <ul class="box-search">
+                                            <li class="content-chk-category filer-price">
+                                                <div class="range">
+                                                    <input type="text" id="number" name="gig_price_range" class="min" value="">
+                                                    <span class="light">To</span><br />
+                                                    <input type="text" id="numberTwo" name="gig_price_range" class="max" value="">
+                                                    <div class="filter-range">
+                                                        <i class="fa fa-chevron-right"></i>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </form>
+
+                                    <hr class="hr-boxsearch" />
+                                    <h3>Seller Location</h3>
+                                    <div class="box-search drop-location">
+                                        <ul class="box-search">
+                                            <li>
+                                                <form class="form-autocomplete" autocomplete="off" action="#">
+                                                    <div class="autocomplete" style="width:75%">
+                                                        <input id="myInput" type="text" name="myCountry" placeholder="Try Hồ Chí Minh">
+                                                    </div>
+                                                    <input class="auto-submit" type="button" value="Tìm">
+                                                </form>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="inner-box category-rp">
+                        <h3>Danh mục khác </h3>
+                        <ul class="cat-list">
+                            @foreach (var item in Model.listCTDM)
+                            {
+
+                                if (item != null)
+                                {
+                                    <li class="fixed-items-category">
+                                        <a href="@Url.Action("ServiceCategory", "BaiDang", new { id = @item.MaCTDM })">@item.TenCTDM @*<span class="num-posts">12,256 Jobs</span>*@</a>
+                                    </li>
+                                }
+
+                            }
+                            <li class="content-less">
+                                <a id="btn-category" href="#" onclick="gigincluded4()">Xem thêm (+)</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </aside>
+        </div>
+        <div class="col-md-9 col-sm-9" id="SanPham">
+            @foreach (var item in Model.SanPham)
+            {
+                var ha = Model.TenHinhDaiDien.Where(a => a.MaTaiKhoan == item.MaTaiKhoan).FirstOrDefault();
+                var tentk = Model.TaiKhoan.Where(a => a.MaTaiKhoan == item.MaTaiKhoan).FirstOrDefault();
+                var ha2 = Model.TenHinhDaiDien.Where(a => a.MaSP == item.MaSP).ToList();
+                if (ha != null && tentk != null && ha2 != null)
+                {
+
+                    <div class="col-md-3 gig-card-layout padding-gig-item">
+                        <div>
+                            <div class="gig-wrapper card" data-gig-id="101530405" data-impression-collected="true">
+                                <div>
+                                    <div class="wrap-slider">
+                                        <ul class="slide-img-service">
+                                            @foreach (var item2 in ha2)
+                                            {
+                                                <li>
+                                                    <a href="@Url.Action("ServiceDetails","BaiDang", new {masp =item.MaSP})" target="_self" class="media">
+                                                        <div class="slider">
+                                                            <div class="slides preview" style="">
+                                                                <div class="slide-item active" style="width: auto;">
+                                                                    <img src="~/assets/images/@item2.TenHinhAnh"
+                                                                         alt="@item.MotaSP">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </li>
+                                            }  
+                                        </ul>
+                                        <div class="lSAction">
+                                            <button class="lSPrev slick-arrow slick-prev"></button>
+                                            <button class="lSNext slick-arrow slick-next"></button>
+                                        </div>
+
+                                    </div>
+                                    <div class="seller-info">
+                                        <span class="seller-image">
+                                            <img src="~/assets/images/@ha.TenHinhAnh"
+                                                 alt="bossdesigners">
+                                        </span><span class="seller-name">
+                                            <a href="/bossdesigners?source=gig_cards&amp;referrer_gig_slug=design-3-minimalist-logo-in-6-hrs-with-free-source-files&amp;ref_ctx_id=c244aa59-5484-4035-a731-d5eb5fd5360e"
+                                               rel="nofollow"><span>by&nbsp;</span>@tentk.TenTaiKhoan</a><span class="level hint--bottom level-two-seller" data-hint="Completed at least 50 orders on time with a minimum 4.8 rating">
+                                                Level 2
+                                                Seller
+                                            </span>
+                                        </span>
+                                    </div>
+                                    <h3>
+                                        <a href="@Url.Action("ServiceDetails","BaiDang", new {masp =item.MaSP})" target="_self" title="@item.MotaSP">
+                                            @item.TenSP
+                                        </a>
+                                    </h3>
+                                    <div class="content-info">
+                                        <span class="gig-rating">
+                                            <i class="fa fa-star"></i> 4.8
+                                            <span>(1k+)</span>
+                                        </span>
+
+                                    </div>
+                                    <footer>
+                                        <div class="gig-fav">
+                                            <span class="coll-group">
+
+                                                <a class="tooltip" href="#!" data-tip="Lưu bài đăng"><i class="fa fa-heart-o arrow-shape"></i></a>
+
+                                                <a class="tooltip" href="#!" data-tip="Chia sẽ"><i class="fa fa-share-alt arrow-shape"></i></a>
+
+
+                                            </span>
+                                        </div><a href="" target="_self" class="price-gig" title="$10"><small>Giá từ</small><span class="pricing-item">@item.GiaSP</span> đ</a>
+                                    </footer>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            <ul class="pagination">
+                <li class="active"><a href="#" class="btn btn-common"><i class="ti-angle-left"></i> Trước</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li class="active"><a href="#" class="btn btn-common">Kế tiếp <i class="ti-angle-right"></i></a></li>
+            </ul>
+        </div>
+
+    </div>
+</section>
+<script>
+
+    $(document).ready(function () {
+        var str = $(".pricing-item");
+        for (let i = 0; i < str.length; i++) {
+            var formatstr = str[i].innerHTML.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+            str[i].innerHTML = formatstr;
+
+        }
+
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $(".slide-img-service").lightSlider({
+            item: 1,
+            autoWidth: false,
+            slideMove: 1, // slidemove will be 1 if loop is true
+            slideMargin: 40,
+            addClass: '',
+            mode: "slide",
+            useCSS: true,
+            cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
+            easing: 'linear', //'for jquery animation',////
+
+
+
+            keyPress: false,
+            controls: true,
+            prevHtml: '',
+            nextHtml: '',
+
+            rtl: false,
+            adaptiveHeight: false,
+
+            vertical: false,
+            verticalHeight: 100,
+            vThumbWidth: 235,
+
+            thumbItem: 1,
+            pager: true,
+            gallery: false,
+            galleryMargin: 5,
+            thumbMargin: 5,
+            currentPagerPosition: 'middle',
+
+            enableTouch: true,
+            enableDrag: true,
+            freeMove: true,
+            swipeThreshold: 40,
+
+            responsive: [
+
+
+            ],
+
+            onBeforeStart: function (el) { },
+            onSliderLoad: function (el) { },
+            onBeforeSlide: function (el) { },
+            onAfterSlide: function (el) { },
+            onBeforeNextSlide: function (el) { },
+            onBeforePrevSlide: function (el) { }
+        });
+        $('.slick-prev').click(function () {
+            slider.goToPrevSlide();
+        });
+        $('.slick-next').click(function () {
+            slider.goToNextSlide();
+        });
+    });
+</script>
+
+<script>
+    function autocomplete(inp, arr) {
+        /*the autocomplete function takes two arguments,
+        the text field element and an array of possible autocompleted values:*/
+        var currentFocus;
+        /*execute a function when someone writes in the text field:*/
+        inp.addEventListener("input", function (e) {
+            var a, b, i, val = this.value;
+            /*close any already open lists of autocompleted values*/
+            closeAllLists();
+            if (!val) { return false; }
+            currentFocus = -1;
+            /*create a DIV element that will contain the items (values):*/
+            a = document.createElement("DIV");
+            a.setAttribute("id", this.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+            /*append the DIV element as a child of the autocomplete container:*/
+            this.parentNode.appendChild(a);
+            /*for each item in the array...*/
+            for (i = 0; i < arr.length; i++) {
+                /*check if the item starts with the same letters as the text field value:*/
+                if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                    /*create a DIV element for each matching element:*/
+                    b = document.createElement("DIV");
+                    /*make the matching letters bold:*/
+                    b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                    b.innerHTML += arr[i].substr(val.length);
+                    /*insert a input field that will hold the current array item's value:*/
+                    b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                    /*execute a function when someone clicks on the item value (DIV element):*/
+                    b.addEventListener("click", function (e) {
+                        /*insert the value for the autocomplete text field:*/
+                        inp.value = this.getElementsByTagName("input")[0].value;
+                        /*close the list of autocompleted values,
+                        (or any other open lists of autocompleted values:*/
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                }
+            }
+        });
+        /*execute a function presses a key on the keyboard:*/
+        inp.addEventListener("keydown", function (e) {
+            var x = document.getElementById(this.id + "autocomplete-list");
+            if (x) x = x.getElementsByTagName("div");
+            if (e.keyCode == 40) {
+                /*If the arrow DOWN key is pressed,
+                increase the currentFocus variable:*/
+                currentFocus++;
+                /*and and make the current item more visible:*/
+                addActive(x);
+            } else if (e.keyCode == 38) { //up
+                /*If the arrow UP key is pressed,
+                decrease the currentFocus variable:*/
+                currentFocus--;
+                /*and and make the current item more visible:*/
+                addActive(x);
+            } else if (e.keyCode == 13) {
+                /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                e.preventDefault();
+                if (currentFocus > -1) {
+                    /*and simulate a click on the "active" item:*/
+                    if (x) x[currentFocus].click();
+                }
+            }
+        });
+        function addActive(x) {
+            /*a function to classify an item as "active":*/
+            if (!x) return false;
+            /*start by removing the "active" class on all items:*/
+            removeActive(x);
+            if (currentFocus >= x.length) currentFocus = 0;
+            if (currentFocus < 0) currentFocus = (x.length - 1);
+            /*add class "autocomplete-active":*/
+            x[currentFocus].classList.add("autocomplete-active");
+        }
+        function removeActive(x) {
+            /*a function to remove the "active" class from all autocomplete items:*/
+            for (var i = 0; i < x.length; i++) {
+                x[i].classList.remove("autocomplete-active");
+            }
+        }
+        function closeAllLists(elmnt) {
+            /*close all autocomplete lists in the document,
+            except the one passed as an argument:*/
+            var x = document.getElementsByClassName("autocomplete-items");
+            for (var i = 0; i < x.length; i++) {
+                if (elmnt != x[i] && elmnt != inp) {
+                    x[i].parentNode.removeChild(x[i]);
+                }
+            }
+        }
+        /*execute a function when someone clicks in the document:*/
+        document.addEventListener("click", function (e) {
+            closeAllLists(e.target);
+        });
+    }
+
+    /*An array containing all the country names in the world:*/
+    var countries = ["An Giang", "Bà Rịa - Vũng Tàu", "Bắc Giang", "Bắc Kạn", "Bạc Liêu", " Bắc Ninh", " Bến Tre", "Bình Định", " Bình Dương", " Bình Phước", " Bình Thuận", " Cà Mau", " Cao Bằng", " Đắk Lắk", " Đắk Nông", " Điện Biên", "Đồng Nai", " Đồng Tháp", " Gia Lai", " Hà Giang", "Cần Thơ", "Đà Nẵng", "Hải Phòng ", "Hà Nội", "Hồ Chí Minh"];
+
+    /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+    autocomplete(document.getElementById("myInput"), countries);
+</script>
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 3000);
+    }
+</script>
+
+
+<script>
+    $(document).ready(function () {
+        var a = '@Model.idFilter';
+
+        var frmsubmit = document.getElementById('auto-submit-filter');
+        $(".radio-search, .check-sv, .check-styles").on("change", function filter() {
+            console.log("--------------------------------");
+            var styles = [];
+            var servicers = [];
+            var n = document.getElementById("number").value;
+            var m = document.getElementById("numberTwo").value;
+            timedelivery = document.querySelector('input[name="thoigiangiao"]:checked').value;
+            if (m == "" && n == "") {
+                m = 0;
+                n = 0;
+            }
+            if (m !== 0 && m !== 0) {
+                n = n.replace(/,/g, '');
+                m = m.replace(/,/g, '');
+            }
+            $('.check-styles:checked').each(function () {
+                var resultsvt = $(this).val();
+                styles.push(resultsvt);
+            });
+            $('.check-sv:checked').each(function () {
+                var resultsv = $(this).val();
+                servicers.push(resultsv);
+            });
+            $('.filter-range').click(function () {
+                filter(0, false);
+            });
+            //frmsubmit.submit();
+            var data = { time: timedelivery, style: styles, service: servicers,moneyfrom:n,moneyto:m,id:a };
+            var tat = JSON.stringify(data);
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("FilterByCategory","BaiDang")',
+                contentType: "application/json; charset=utf-8",
+                data: tat,
+                success: function (response) {
+                    option = "";
+                    var dem = 0,tong =0;
+                    for (var i = 0; i < response.First.length; i++) {
+                        var danhgia = response.Fourth.filter(a => a.MaSP == response.First[i].MaSP);
+                        var ha = response.Second.filter(a => a.MaTaiKhoan == response.First[i].MaTaiKhoan);
+                        var tentk = response.Third.filter(a => a.MaTaiKhoan == response.First[i].MaTaiKhoan);
+                        var ha2 = response.Second.filter(a => a.MaSP == response.First[i].MaSP);
+                        if (tentk != null && ha2 != null) {
+                            var id = response.First[i].MaSP;
+                            var link = '@Html.Raw(@Url.Action("ServiceDetails", "BaiDang"))' + '?masp=' + id;
+
+                            var link2 = '@Html.Raw("test")';
+                            option += "<div class='col-md-3 gig-card-layout padding-gig-item'>"
+                                + " <div>"
+                                + "<div class='gig-wrapper card' data-gig-id='101530405' data-impression-collected='true'>"
+                                + "<div>"
+                                + "<a href='" + link + "' target='_self' class='media'>"
+                                + "<div class='slider'>"
+                                + "<span class='arrow next'></span>"
+                                + "<div class='slides preview' style=''>"
+                                + "<div class='slide-item active' style='width: auto;'>"
+                                + "<img src='/assets/images/" + ha2[0].TenHinhAnh + "' alt='" + response.First[i].MotaSP + "'>"
+                                + "</div>"
+                                + "</div><span class='arrow prev'></span>"
+                                + "</div>"
+                                + "</a>"
+                                + "<div class='seller-info'>"
+                                + "<span class='seller-image'>"
+                                + "<img src='/assets/images/" + ha[0].TenHinhAnh +"' alt='bossdesigners'>"
+                                + "</span><span class='seller-name'>"
+                                + "<a href='/bossdesigners?source=gig_cards&amp;referrer_gig_slug=design-3-minimalist-logo-in-6-hrs-with-free-source-files&amp;ref_ctx_id=c244aa59-5484-4035-a731-d5eb5fd5360e' rel='nofollow'><span>by&nbsp;</span>" + tentk[0].TenTaiKhoan + "</a><span class='level hint--bottom level-two-seller' data-hint='Completed at least 50 orders on time with a minimum 4.8 rating'>"
+                                + " Level 2"
+                                + "Seller"
+                                + " </span>"
+                                + " </span>"
+                                + "</div>"
+                                + "<h3>"
+                                + "<a href='/' target='_self' title='" + response.First[i].MotaSP + "'>"
+                                + link2.replace("test",response.First[i].MotaSP) +
+                                +"</a>"
+                                + "</h3>"
+                                + "<div class='content-info'>"
+                                + "<span class='gig-rating'>"
+                                + "<i class='fa fa-star'></i> "+ response.Fifth[i]
+                                + "<span> (" + danhgia.length + "+)</span>"
+                                + "</span>"
+                                + "</div>"
+                                + "<footer>"
+                                + "<div class='gig-fav'>"
+                                + "<span class='coll-group'>"
+                                + " <a class='tooltip' href='#!' data-tip='Lưu bài đăng'><i class='fa fa-heart-o arrow-shape'></i></a>"
+                                + " <a class='tooltip' href='#!' data-tip='Chia sẽ'><i class='fa fa-share-alt arrow-shape'></i></a>"
+                                + "</span>"
+                                + "</div><a href='' target='_self' class='price-gig' title='$10'><small>Giá từ</small><span class='pricing-item'>" + response.First[i].GiaSP + "</span> đ</a>"
+                                + "</footer>"
+                                + "</div>"
+                                + "</div>"
+                                + " </div>"
+                                + "</div>";
+                        }
+                    }
+                    option +="<ul class='pagination'>"
+                        + " <li class='active'><a href='#' class='btn btn-common'><i class='ti-angle-left'></i> Trước</a></li>"
+                        + "<li><a href='#'>1</a></li>"
+                        + " <li><a href='#'>2</a></li>"
+                        + " <li><a href='#'>3</a></li>"
+                        + " <li><a href='#'>4</a></li>"
+                        + "<li><a href='#'>5</a></li>"
+                        + " <li class='active'><a href='#' class='btn btn-common'>Kế tiếp <i class='ti-angle-right'></i></a></li>"
+                        + "</ul>"
+                        + "</div>";
+                    $('#SanPham').removeAttr('disabled').html(option);
+                }
+            });
+
+                });
+
+            });
+
+    @*function test() {
+        var a = '@Model.idFilter';
+        var s = ["test", "test2", "test3"];
+        var dad = { data: s,id:a };
+        var tat = JSON.stringify(dad);
+        $.ajax({
+            type: "POST",
+            url: '@Url.Action("FilterByCategory","BaiDang")',
+            contentType: "application/json; charset=utf-8",
+            data: tat,
+            success: function (response) {
+                var options3 = "";
+            }
+        });
+    }*@
+</script>
+
+<script>
+
+    $(document).ready(function () {
+        var i;
+        var x = document.getElementsByClassName("filer-style");
+        var y = document.getElementsByClassName("filter-radio");
+        var z = document.getElementsByClassName("filer-include");
+        var c = document.getElementsByClassName("fixed-items-category");
+        for (i = 0; i < x.length; i++) {
+            if (i > 2) {
+                x[i].style.display = "none";
+            }
+        }
+        for (i = 0; i < y.length; i++) {
+            if (i > 2) {
+                y[i].style.display = "none";
+            }
+        }
+        for (i = 0; i < z.length; i++) {
+            if (i > 2) {
+                z[i].style.display = "none";
+            }
+        }
+        for (i = 0; i < c.length; i++) {
+            if (i > 4) {
+                c[i].style.display = "none";
+            }
+        }
+    });
+
+    function gigincluded4() {
+        var x = document.getElementsByClassName("fixed-items-category");
+        var i;
+        for (i = 0; i <= x.length; i++) {
+            if (x[i].style.display === "none") {
+                x[i].style.display = "block";
+                document.getElementById("btn-category").innerHTML = "Thu gọn (-)";
+            } else if (x[5].style.display === "block") {
+                for (i = 5; i < x.length; i++) {
+                    x[i].style.display = "none";
+                    document.getElementById("btn-category").innerHTML = "Xem thêm (+)";
+                }
+            }
+        }
+    };
+    function gigincluded() {
+        var x = document.getElementsByClassName("filter-radio");
+        var i;
+        for (i = 0; i <= x.length; i++) {
+            if (x[i].style.display === "none") {
+                x[i].style.display = "block";
+                document.getElementById("btn-radio-add").innerHTML = "Thu gọn (-)";
+            } else if (x[3].style.display === "block") {
+                for (i = 3; i < x.length; i++) {
+                    x[i].style.display = "none";
+                    document.getElementById("btn-radio-add").innerHTML = "Xem thêm (+)";
+                }
+            }
+        }
+    };
+    function gigincluded2() {
+        var x = document.getElementsByClassName("filer-style");
+
+        var i;
+        for (i = 3; i <= x.length; i++) {
+            if (x[i].style.display === "none") {
+                x[i].style.display = "block";
+                document.getElementById("check-btn").innerHTML = "Thu gọn (-)";
+            } else if (x[3].style.display === "block") {
+                for (i = 3; i < x.length; i++) {
+                    x[i].style.display = "none";
+                    document.getElementById("check-btn").innerHTML = "Xem thêm (+)";
+                }
+            }
+        }
+    };
+    function gigincluded3() {
+        var x = document.getElementsByClassName("filer-include");
+        var i;
+        for (i = 0; i <= x.length; i++) {
+            if (x[i].style.display === "none") {
+                x[i].style.display = "block";
+                document.getElementById("include-btn").innerHTML = "Thu gọn (-)";
+            } else if (x[3].style.display === "block") {
+                for (i = 3; i < x.length; i++) {
+                    x[i].style.display = "none";
+                    document.getElementById("include-btn").innerHTML = "Xem thêm (+)";
+                }
+            }
+        }
+    };
+</script>

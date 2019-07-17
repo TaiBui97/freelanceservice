@@ -1,0 +1,11 @@
+﻿@model DACN.Models.BusinessModel.Navigation
+
+<select name="cateID" class="dropdown-product selectpicker show-tick">
+
+    @foreach (var item in Model.listCTDM)
+    {
+        <option value="@item.MaCTDM">@item.TenCTDM</option>
+    }
+
+</select>
+

@@ -1,0 +1,70 @@
+﻿@model DACN.Models.DataModel.GigMetaData
+
+@{
+    ViewBag.Title = "ChinhSua";
+    Layout = "~/Views/Shared/_Layout _Admin.cshtml";
+}
+
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.MaGigMetaData)
+    @Html.ValidationSummary(true)
+    <div class="col-lg-9">
+        <div class="card">
+            <div class="card-header">
+                <strong>Chỉnh sửa GigMetaData </strong>
+            </div>
+            <div class="card-body card-block">
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <label for="hf-email" class=" form-control-label">Mã GigMetaData</label>
+                        @Html.Hidden("MaGigMetaData", Model.MaGigMetaData)
+                    </div>
+                    <div class="col-12 col-md-9">
+                        @Model.MaGigMetaData
+
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="hf-email" class=" form-control-label">Tên GigMetaData</label></div>
+                    <div class="col-12 col-md-9">
+                        @Html.EditorFor(model => model.TenGigMetaData, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.TenGigMetaData, "", new { @class = "text-danger" })
+                        <span class="help-block">Vui lòng nhập tên GigMetaData</span>
+
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="hf-password" class=" form-control-label">Mô tả GigMetaData</label></div>
+                    <div class="col-12 col-md-9">
+                        @Html.EditorFor(model => model.MotaGigMetaData, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.MotaGigMetaData, "", new { @class = "text-danger" })
+                        <span class="help-block">Vui lòng nhập mô tả GigMetaData</span>
+                    </div>
+                </div>
+                <div class="row form-group">
+                    <div class="col col-md-3"><label for="hf-password" class=" form-control-label">Thuộc chi tiết danh mục</label></div>
+                    <div class="col-12 col-md-9">
+                        @Html.DropDownList("MaCTDM", null, new { @class = "form-control" })
+                        <span class="help-block">Vui lòng chọn chi tiết danh mục</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <button style="height:38px" type="submit" class="btn btn-success btn-sm btn-custom">
+                    <i class="fa fa-dot-circle-o"></i> Lưu vào
+                </button>
+                <label style="margin-bottom:0!important;" class="btn btn-danger btn-custom">
+                    <i class="ti-arrow-left"></i>
+                    <a style="color:white; " href="@Url.Action("Index", "QuanLyGigMetaData")">Trở về</a>
+                </label>
+
+            </div>
+        </div>
+
+    </div>
+}

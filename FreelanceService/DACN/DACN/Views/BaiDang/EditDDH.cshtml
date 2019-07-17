@@ -1,0 +1,245 @@
+﻿@model DACN.Models.BusinessModel.EditOrder
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Jobboard">
+    <title>JobBoard - Bootstrap HTML5 Job Portal Template</title>
+    <script src="~/assets/plusins/ckeditor/ckeditor.js"></script>
+    <link rel="shortcut icon" href="~/assets/img/favicon.png">
+    @Styles.Render("~/bundles/core")
+    <link rel="stylesheet" href="~/assets/fonts/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/assets/fonts/themify-icons.css">
+
+</head>
+<body>
+
+    @RenderPage("~/Views/Shared/Header.cshtml")
+
+    @using ((Html.BeginForm("EditDDH", "BaiDang", new { ma = @Model.ddh.MaDDH },
+        FormMethod.Post,
+        new { enctype = "multipart/form-data" })))
+    {
+        <section class="job-detail section">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-8 col-sm-12 col-xs-12">
+                        <div class="content-area">
+                            <div class="clearfix">
+                                <div class="box">
+                                    <h4>Customize Your Package</h4>
+                                    <div>
+                                        <div class="gig-summary">
+                                            <a href="@Url.Action("ServiceDetails", "BaiDang", new { masp = Model.Baidang.MaSP })">
+                                                @if (Model.hinh.TenHinhAnh != null)
+                                                {
+                                                    <img src="~/assets/images/@Model.hinh.TenHinhAnh" alt="" width="150px">
+                                                }
+                                                <div class="user-profile-label">
+                                                    <div class="username-line">
+                                                        @if (Model.Baidang.MotaSP != null)
+                                                        {
+                                                            <a href="@Url.Action("ServiceDetails","BaiDang",new { masp=Model.Baidang.MaSP})" class="seller-link"><small>@Model.Baidang.MotaSP</small></a>
+                                                        }
+
+                                                    </div>
+                                                    <div class="oneliner-wrapper">
+                                                        <div class="ratings-wrapper">
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star checked"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <span class="fa fa-star"></span>
+                                                            <p><strong>4,9</strong>(20 đánh giá)</p>
+                                                        </div>
+                                                    </div>
+                                                    <a href="#" onclick="gigincluded()">View what's included</a>
+                                                </div>
+                                            </a>
+                                            <div class="pricing">
+                                                <label class="quanlity">
+                                                    <span>Qty</span>
+                                                    <select>
+                                                        <option value="1">1</option>
+                                                        <option value="2">2</option>
+                                                        <option value="3">3</option>
+                                                        <option value="4">4</option>
+                                                        <option value="5">5</option>
+                                                        <option value="6">6</option>
+                                                        <option value="7">7</option>
+                                                        <option value="8">8</option>
+                                                        <option value="9">9</option>
+                                                        <option value="10">10</option>
+                                                        <option value="11">11</option>
+                                                        <option value="12">12</option>
+                                                        <option value="13">13</option>
+                                                        <option value="14">14</option>
+                                                        <option value="15">15</option>
+                                                        <option value="16">16</option>
+                                                        <option value="17">17</option>
+                                                        <option value="18">18</option>
+                                                        <option value="19">19</option>
+                                                        <option value="20">20</option>
+                                                    </select>
+                                                    <span class="price-quanlity"><b>$30</b></span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div id="package">
+                                            @if (Model.ctdm.TenCTDM != null)
+                                            {
+                                                <h5>@Model.ctdm.TenCTDM</h5>
+                                            }
+                                            <p>
+                                                @for (int i = 0; i < Model.listmeta.Count; i++)
+                                                {
+                                                    if (Model.listmeta[i] != null)
+                                                    {
+                                                        @Model.listmeta[i].TenMetaData
+                                                        if (i < Model.listmeta.Where(a => a != null).Count() - 1)
+                                                        {
+                                                            <span>,</span>
+                                                        }
+                                                    }
+                                                }
+                                            </p>
+
+                                            @foreach (var item in Model.listGigOffer)
+                                            {
+                                                if (item != null)
+                                                {
+                                                    foreach (var item2 in Model.listctsp)
+                                                    {
+                                                        if (item2.MaGigMetaData == item.MaGigMetaData && item2.TrangThai == false && item2 != null)
+                                                        {
+
+                                                            <ul>
+                                                                <li><i class="ti-check-box"></i>@item.TenGigMetaData</li>
+                                                            </ul>
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                        </div>
+                                        <div class="upgrades">
+
+                                            <h4>Mô Tả</h4>
+                                            <textarea name="MotaDDH">@Model.ddh.MoTaDDH</textarea>
+                                            @*<script>
+                                                    CKEDITOR.replace('MotaDDH');
+                                                </script>*@
+                                        </div>
+                                        <div class="upgrades">
+                                            <h4>Add Extras</h4>
+                                            @foreach (var item in Model.listGigOffer)
+                                            {
+                                                if (item != null)
+                                                {
+                                                    foreach (var item2 in Model.listctsp)
+                                                    {
+
+
+                                                        if (item2.MaGigMetaData == item.MaGigMetaData && item2.TrangThai == true && item2 != null)
+                                                        {
+                                                            <div class="upgrade">
+                                                                <div class="details">
+                                                                    <label><input type="checkbox" name="gigMetaData" value="@item.TenGigMetaData"></label>
+                                                                    <p>@item.TenGigMetaData</p>
+                                                                </div>
+                                                                <div class="pricings">
+                                                                    <span class="price">@item2.GiaCTSP / @item2.SoLuong</span>
+                                                                </div>
+                                                            </div>
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="col-md-4 col-sm-12 col-xs-12">
+                        <aside>
+                            <div class="sidebar">
+                                <div class="box">
+                                    <h2 class="small-title">Summary</h2>
+                                    <ul class="detail-list">
+                                        <li>
+                                            <a>Subtotal</a>
+                                            <span class="type-posts"><a>@Model.Baidang.GiaSP</a></span>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                Service Fee
+                                            </a>
+                                            <span class="type-posts"><a>20000</a></span>
+                                        </li>
+                                        <li>
+                                            <a>Total</a>
+                                            <span class="type-posts" id="totalMoney">320000</span>
+                                        </li>
+                                        <li>
+                                            <a>Delivery Time</a>
+                                            <span class="type-posts"><a>@Model.Baidang.ThoiGianGiao Days</a></span>
+                                        </li>
+                                        <li>
+                                            <input type="submit" class="btn btn-common" onclick="sad()" value="Order Offer" />
+                                        </li>
+                                        <li>
+                                            <small>You won't be charged yet</small>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </section>
+    }
+
+    @RenderPage("~/Views/Shared/Footer.cshtml")
+    @Scripts.Render("~/bundles/js")
+    <script>
+        function gigincluded() {
+            var x = document.getElementById("package");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        function sad() {
+            var x = document.getElementById("totalMoney").innerText;
+            var dad = { money: x };
+            var tat = JSON.stringify(dad);
+            $.ajax({
+                type: "POST",
+                url: '@Url.Action("checkMoney2","BaiDang")',
+                contentType: "application/json; charset=utf-8",
+                data: tat
+            });
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+﻿@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.PagedList<DACN.Models.DataModel.CTDM>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout _Admin.cshtml";
+}
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+
+                    <div class="card-body">
+                        <div class="card-title-cs">
+                            <strong class="card-title">Thêm mới chi tiết danh mục : </strong>
+                            <button class="btn btn-success btn-custom" type="submit">
+                                <a style="color:white; border-radius:8px" href="@Url.Action("ThemMoi", "ChiTietDanhMuc") ">Add </a>
+                            </button>
+
+                        </div>
+                        <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Mã Chi Tiết Danh Mục</th>
+                                    <th>Tên Chi Tiết Danh Mục</th>
+                                    <th>Mã Danh Mục</th>
+                                    <th>Tên Danh mục</th>
+                                    <th style="text-align:center" colspan="3">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MaCTDM)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TenCTDM)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MaDM)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.DanhMuc.TenDM)
+                                    </td>
+                                    <td style="text-align:center">
+                                        <button class="btn btn-success btn-custom" type="submit"><a style="color:white" href="@Url.Action("ChinhSua", "ChiTietDanhMuc", new {  @mactdm = item.MaCTDM }) ">Edit </a></button>
+                                    </td>
+                                    <td style="text-align:center">
+                                        <button class="btn btn-info btn-custom" type="submit"><a style="color:white" href="@Url.Action("HienThi", "ChiTietDanhMuc", new {  @mactdm = item.MaCTDM }) ">View </a></button>
+                                    </td>
+                                    <td style="text-align:center">
+                                        <button class="btn btn-danger btn-custom" type="submit"><a style="color:white" href="@Url.Action("Xoa", "ChiTietDanhMuc", new {  @mactdm = item.MaCTDM }) ">Delete </a></button>
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <div class="MenuTrang">
+                            @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div><!-- .animated -->
+    </div>
+
+</div>

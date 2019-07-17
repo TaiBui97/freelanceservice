@@ -1,0 +1,61 @@
+﻿@model DACN.Models.DataModel.GigMetaData
+
+@{
+    ViewBag.Title = "HienThi";
+    Layout = "~/Views/Shared/_Layout _Admin.cshtml";
+}
+
+<div class="col-lg-9">
+    <div class="card">
+        <div class="card-header">
+            <strong>Hiển thị GigMetaData</strong>
+        </div>
+        <div class="card-body card-block">
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="hf-email" class=" form-control-label">Mã GigMetaData</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    @Html.DisplayFor(model => model.MaGigMetaData)
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="hf-email" class=" form-control-label">Tên GigMetaData</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    @Html.DisplayFor(model => model.TenGigMetaData)
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="hf-email" class=" form-control-label">Mô tả GigMetaData</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    @Html.DisplayFor(model => model.MotaGigMetaData)
+                </div>
+            </div>
+            <div class="row form-group">
+                <div class="col col-md-3">
+                    <label for="hf-email" class=" form-control-label">Thuộc chi tiết danh mục</label>
+                </div>
+                <div class="col-12 col-md-9">
+                    @Html.DisplayFor(model => model.CTDM.TenCTDM)
+                </div>
+            </div>
+
+        </div>
+        <div class="card-footer">
+            <button style="height:38px" type="submit" class="btn btn-success btn-sm btn-custom">
+                <i class="fa fa-dot-circle-o"></i><a style="color:white; margin-left:5px;" href="@Url.Action("ChinhSua", "QuanLyGigMetaData", new {  @magigmeta = Model.MaGigMetaData }) ">Chỉnh sửa</a>
+            </button>
+
+            <label style="margin-bottom:0!important;" class="btn btn-danger btn-custom">
+                <i class="ti-arrow-left"></i>
+                <a style="color:white; " href="@Url.Action("Index", "QuanLyGigMetaData")">Trở về</a>
+            </label>
+
+        </div>
+    </div>
+
+</div>

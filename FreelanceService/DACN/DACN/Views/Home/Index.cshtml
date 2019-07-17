@@ -1,0 +1,871 @@
+﻿
+@{
+    /**/
+
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+<script>
+    $(document).ready(function () {
+        var autoplaySlider = $('#autoplay').lightSlider({
+            item: 5,
+            pauseOnHover: true,
+            onBeforeSlide: function (el) {
+                $('#current').text(el.getCurrentSlideCount());
+            },
+            responsive: [
+                {
+                    breakpoint: 800,
+                    settings: {
+                        item: 3,
+                        slideMove: 1,
+                        slideMargin: 6,
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        item: 2,
+                        slideMove: 1
+                    }
+                }
+            ]
+        });
+        $('#total').text(autoplaySlider.getTotalSlideCount());
+    });
+</script>
+<style>
+
+    .lslide {
+        position: relative;
+    }
+
+        .lslide .caption-img-index {
+            position: absolute;
+            top: 15px;
+            color: white;
+            right: 66px;
+            font-size: 12px;
+            LINE-HEIGHT: 22PX;
+            opacity: 1
+        }
+
+            .lslide .caption-img-index h5 {
+                font-size: 20px;
+            }
+
+    #autoplay li:hover {
+        opacity: 0.85;
+    }
+
+    .video-index {
+        cursor: pointer;
+    }
+
+    .icon-video::after {
+        content: "";
+        display: inline-block;
+        background: url(http://addplaybuttontoimage.way4info.net/Images/Icons/22.png) no-repeat;
+        background-size: 80px;
+        width: 80px;
+        height: 80px;
+        position: absolute;
+        z-index: 0;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+    }
+
+    .slick-arrow {
+        background-color: #fff;
+        position: absolute;
+        z-index: 4;
+        top: 50%;
+        width: 48px;
+        height: 48px;
+        margin-top: -36px;
+        text-align: center;
+        margin-right: 20px;
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+        border: 0;
+    }
+
+    .slick-arrow {
+        border-radius: 30px;
+    }
+
+        .slick-arrow:after {
+            content: "";
+            display: inline-block;
+            background: url('../../assets/img/arrow2.JPG') no-repeat;
+            background-size: 16px 64px;
+            width: 16px;
+            height: 16px;
+            margin-top: 2px;
+        }
+
+        .slick-arrow.slick-next:after {
+            background-position: 0 -48px;
+        }
+
+        .slick-arrow .slick-next {
+        }
+
+    .lSAction > a {
+        margin-right: 27px;
+    }
+
+    .title {
+        background-color: #ff4f57;
+        color: white;
+    }
+</style>
+<section id="intro" class="section-intro" style="background-image: url('../../assets/img/bg/bg-intro-1.jpg');">
+
+    <div class="search-container">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h1>Tìm kiếm dịch vụ phù hợp với bạn</h1><br><h2>Có hơn <strong>12,000</strong> dịch vụ và hàng ngàn việc làm dành cho bạn!</h2>
+                    <div class="content">
+                        <form action="/Home/SearchDrop">
+                            <div class="row">
+                                <div class="col-md-4 col-sm-6">
+                                    <div class="form-group">
+                                        <input class="form-control" type="text" name="search" placeholder="job title / keywords ">
+                                        <i class="ti-time"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="search-category-container">
+                                        <label class="styled-select">
+                                            @Html.Action("NavigationDrop", "Home")
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="col-md-1 col-sm-6">
+                                    <button type="submit" class="btn btn-search-icon"><i class="ti-search"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="popular-jobs">
+                        <b>Từ khóa phổ biến</b>
+                        <a href="#">Web Design</a>
+                        <a href="#">Manager</a>
+                        <a href="#">Programming</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="service-main" class="section">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <div class="service-item">
+                    <div class="icon-wrapper">
+                        <i class="ti-search">
+                        </i>
+                    </div>
+                    <h2>
+                        Điều khoản của bạn
+
+                    </h2>
+                    <p>
+                        Bất cứ việc gì bạn cần đơn giản hóa những việc bạn cần làm, không thành vấn đề về ngân sách của bạn.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <div class="service-item">
+                    <div class="icon-wrapper">
+                        <i class="ti-world">
+                        </i>
+                    </div>
+                    <h2>
+                        Thời gian của bạn
+                    </h2>
+                    <p>
+                        Tìm các dịch vụ dựa trên mục tiêu và thời hạn của bạn, điều đó thật đơn giản.
+                    </p>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <div class="service-item">
+                    <div class="icon-wrapper">
+                        <i class="ti-stats-up">
+                        </i>
+                    </div>
+                    <h2>
+                        Thanh toán an toàn
+
+                    </h2>
+                    <p>
+                        Thanh toán của bạn luôn an toàn, Chợ kĩ năng được xây dựng để bảo vệ sự an tâm của bạn.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="category section">
+    <div class="container">
+        <h2 class="section-title">Tìm kiếm danh mục</h2>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="col-md-3 col-sm-3 col-xs-12 f-category">
+                    <a href="@Url.Action("CategoryDetails", "Home", new { id = 2 })">
+                        <div class="icon">
+                            <i class="ti-home"></i>
+                        </div>
+                        <h3>THIẾT KẾ ĐỒ HỌA</h3>
+                        <p>4286 việc làm</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 f-category">
+                    <a href="@Url.Action("CategoryDetails", "Home", new { id = 32})">
+                        <div class="icon">
+                            <i class="ti-world"></i>
+                        </div>
+                        <h3>TIẾP THỊ KỸ THUẬT SỐ</h3>
+                        <p>2000 việc làm</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 f-category">
+                    <a href="@Url.Action("CategoryDetails", "Home", new { id = 33 })">
+                        <div class="icon">
+                            <i class="ti-book"></i>
+                        </div>
+                        <h3>VIẾT & DỊCH THUẬT</h3>
+                        <p>1450 việc làm</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 f-category">
+                    <a href="@Url.Action("CategoryDetails", "Home", new { id = 36 })">
+                        <div class="icon">
+                            <i class="ti-desktop"></i>
+                        </div>
+                        <h3>LẬP TRÌNH VÀ CÔNG NGHỆ</h3>
+                        <p>5100 việc làm</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 f-category">
+                    <a href="@Url.Action("CategoryDetails", "Home", new { id = 34 })">
+                        <div class="icon">
+                            <i class="ti-brush"></i>
+                        </div>
+                        <h3>VIDEO & ANIMATION</h3>
+                        <p>5079 việc làm</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 f-category">
+                    <a href="@Url.Action("CategoryDetails", "Home", new { id = 38 })">
+                        <div class="icon">
+                            <i class="ti-heart"></i>
+                        </div>
+                        <h3>SỨC KHỎE VÀ ĐỜI SỐNG</h3>
+                        <p>3235 việc làm</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 f-category">
+                    <a href="@Url.Action("CategoryDetails", "Home", new { id = 37 })">
+                        <div class="icon">
+                            <i class="ti-filter"></i>
+                        </div>
+                        <h3>KINH DOANH</h3>
+                        <p>1800 việc làm</p>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-3 col-xs-12 f-category">
+                    <a href="@Url.Action("CategoryDetails", "Home", new { id = 35})">
+                        <div class="icon">
+                            <i class="ti-cup"></i>
+                        </div>
+                        <h3>ÂM NHẠC & ÂM THANH</h3>
+                        <p>4286 việc làm</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="content work-flow pt-6 pb-6">
+    <div class="container container-sm">
+        <h1 class="font-size-40 fw-bold mb-3 mt-3 text-center border-title-top">Cách Thức Hoạt Động</h1>
+        <p class="text-center font-size-16 mb-6 text-gray-575 ">Dịch vụ mua bán kỹ năng làm việc trực tiếp ngay trên <small style="color:#ff4f57">Chợ Kỹ Năng</small> mà cần không phải lo lắng về chất lượng &amp; cách thức thanh toán cho freelancer.</p>
+    </div>
+    <div class="container">
+        <div class="row ml-0 mr-0">
+            <div class="col-md-3 pl-0 pr-0 mb-3">
+                <div class="row ml-0 mr-0">
+                    <div class="col-md-11 pl-0 pr-0">
+                        <div class="card card-content-cus">
+                            <div class="card-header bg-white pl-12 pt-14 pb-14 pr-12">
+                                <p class="text-center"><i class="fa fa-list-alt font-size-64 text-primary"></i></p>
+                                <h3 class="font-size-20 fw-500 text-center">Đăng tuyển</h3>
+                            </div>
+                            <div class="card-body pl-12 pt-0 pb-0 pr-12 text-gray-700">
+                                Hãy mô tả kỹ năng của bạn. Chợ Kỹ Năng sẽ giúp bạn kết nối đến những người cần những kỹ năng của bạn.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 pl-0 pr-0 pt-5 d-none d-md-block arrow-title">
+                        <img src="https://fvstaticws.freelancerviet.vn/fv4tmpl/default/img/icon-arrow.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pl-0 pr-0 mb-3">
+                <div class="row ml-0 mr-0">
+                    <div class="col-md-11 pl-0 pr-0">
+                        <div class="card card-content-cus">
+                            <div class="card-header bg-white pl-12 pt-14 pb-14 pr-12">
+                                <p class="text-center"><i class="fa fa-search font-size-64 text-primary"></i></p>
+                                <h3 class="font-size-20 fw-500 text-center">Thanh toán Chợ Kỹ Năng</h3>
+                            </div>
+                            <div class="card-body pl-12 pt-0 pb-0 pr-12 text-gray-700">
+                                Người mua kỹ năng thanh toán cho Chợ Kỹ Năng. Chợ Kỹ Năng sẽ là người trung gian giúp bạn giữ số tiền đã thanh toán
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 pl-0 pr-0 pt-5 d-none d-md-block arrow-title">
+                        <img src="https://fvstaticws.freelancerviet.vn/fv4tmpl/default/img/icon-arrow.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pl-0 pr-0 mb-3">
+                <div class="row ml-0 mr-0">
+                    <div class="col-md-11 pl-0 pr-0">
+                        <div class="card card-content-cus">
+                            <div class="card-header bg-white pl-12 pt-14 pb-14 pr-12">
+                                <p class="text-center"><i class="fa fa-laptop font-size-64 text-primary"></i></p>
+                                <h3 class="font-size-20 fw-500 text-center">Làm việc</h3>
+                            </div>
+                            <div class="card-body pl-12 pt-0 pb-0 pr-12 text-gray-700">
+                                Freelancer thực hiện công việc với những mô tả dịch vụ và sử dụng công cụ chat real-time để hoàn thành công việc tốt hơn
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 pl-0 pr-0 pt-5 d-none d-md-block arrow-title">
+                        <img src="https://fvstaticws.freelancerviet.vn/fv4tmpl/default/img/icon-arrow.png" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 pl-0 pr-0 mb-3">
+                <div class="row ml-0 mr-0">
+                    <div class="col-md-11 pl-0 pr-0">
+                        <div class="card card-content-cus">
+                            <div class="card-header bg-white pl-12 pt-14 pb-14 pr-12">
+                                <p class="text-center"><i class="fa fa-money font-size-64 text-primary"></i></p>
+                                <h3 class="font-size-20 fw-500 text-center">Thanh toán</h3>
+                            </div>
+                            <div class="card-body pl-12 pt-0 pb-0 pr-12 text-gray-700">
+                                Duyệt thanh toán số tiền cho freelancer theo từng hạng mục công việc hoặc toàn bộ dự án mà freelancer đã hoàn thành.
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1 pl-0 pr-0 pt-5 d-none d-md-block arrow-title">
+                    </div>
+                </div>
+            </div>
+        </div>
+        @*<p class="text-center mb-3 mt-5"><a href="https://freelancerviet.vn/cach-thuc-hoat-dong/nha-tuyen-dung.html">Tìm hiểu thêm &gt;&gt;</a></p>*@
+    </div>
+</section>
+<section class="selling-proposition">
+    <h2 class="section-title"> </h2>
+
+    <div class="container">
+        <div class="col-md-6">
+            <div class="content-section">
+                <h2 style="font-size:24px!important">Hoàn Thành Công Việc Nhanh Hơn Trên Chợ Kỹ Năng Với Sự Tự Tin</h2><br /><br />
+                <ul>
+                    <li>
+                        <h6>Thanh Toán Bảo Mật, An toàn</h6>
+                        <p>
+                            Thanh toán được phát hành cho freelancer sau khi bạn hài lòng và phê duyệt công việc bạn nhận được.
+                        </p>
+                    </li>
+                    <li>
+                        <h6>Biết Giá Trước</h6>
+                        <p>
+                            Tìm bất kỳ dịch vụ nào trong vòng vài phút và biết chính xác những gì bạn sẽ trả. Không có giá hàng giờ, chỉ là một mức giá cố định.
+                        </p>
+                    </li>
+                    <li>
+                        <h6>Chúng tôi hỗ trợ bạn 24/7</h6>
+                        <p>
+                            Chợ Kỹ Năng luôn ở đây cho bạn, bất cứ điều gì từ trả lời bất kỳ câu hỏi nào đến giải quyết mọi vấn đề, bất cứ lúc nào.
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="icon-video">
+                <img data-toggle="modal" data-target="#exampleModal2" class="video-index" src="https://images.unsplash.com/photo-1542330952-bffc55e812b2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80" alt="video's image">
+                <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document" style="width:1300px!important;">
+                        <div class="modal-content">
+
+                            <div class="modal-body" style="padding:0!important">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="padding-top: 40px;float: right;font-size: 36px; line-height: 35px;">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <div class="col-md-12">
+
+                                    <video id="video-1" style="width:100%;height:600px" controls>
+                                        <source src="https://cloudinary.fiverrcdn.com/video/upload/vc_auto,q_70/general_assets/logged_out_homepage/assets/campaign.mp4" type="video/mp4">
+                                    </video>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="category-population">
+    <div class="container">
+        <h2 class="section-title">Danh mục phổ biến</h2>
+        <div class="lSSlideWrapper usingCss" style="transition-timing-function: ease; transition-duration: 400ms;">
+            <ul id="autoplay" class="gallery content-slider list-unstyled clearfix lightSlider lsGrab lSSlide"
+                style="width: 3896px; height: 165px; padding-bottom: 0%; transform: translate3d(-974px, 0px, 0px);">
+                <li class="clone left" style="width: 314.667px; margin-right: 10px;">
+                    <a href="#">
+                        <div class="caption-img-index">
+                            <small>XÂY DỰNG THƯƠNG HIỆU</small>
+                            <h5>
+                                THIẾT KẾ LOGO
+                            </h5>
+                        </div>
+                        <img alt="Logo Design"
+                             src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_250,dpr_1.0/general_assets/logged_out_homepage/assets/sub_category/logodesign@2x.jpg">
+                    </a>
+                </li>
+                <li class="clone left" style="width: 314.667px; margin-right: 10px;">
+                    <a href="#">
+                        <div class="caption-img-index">
+                            <small>TIẾP CẬN KHÁCH HÀNG</small>
+                            <h5>
+                                SOCIAL DESIGN
+                            </h5>
+                        </div>
+                        <img alt="Social Media"
+                             src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_250,dpr_1.0/general_assets/logged_out_homepage/assets/sub_category/social@2x.jpg">
+                    </a>
+                </li>
+                <li class="clone left" style="width: 314.667px; margin-right: 10px;">
+                    <a href="#">
+                        <div class="caption-img-index">
+                            <small>CHIA SẼ THÔNG ĐIỆP</small>
+                            <h5>
+                                THUYẾT MINH FILM
+                            </h5>
+                        </div>
+                        <img alt="Voice Over"
+                             src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_250,dpr_1.0/general_assets/logged_out_homepage/assets/sub_category/voiceover@2x.jpg">
+                    </a>
+
+                </li>
+                <li class="lslide active" style="width: 314.667px; margin-right: 10px;">
+                    <a href="#">
+                        <div class="caption-img-index">
+                            <small>GO GLOBAL</small>
+                            <h5>
+                                DỊCH THUẬT
+                            </h5>
+                        </div>
+                        <img alt="Translation"
+                             src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_250,dpr_1.0/general_assets/logged_out_homepage/assets/sub_category/translation2x.jpg">
+                    </a>
+
+                </li>
+                <li class="lslide slide-re" style="width: 314.667px; margin-right: 10px;">
+                    <a href="#">
+                        <div class="caption-img-index">
+                            <small>TÔ MÀU GIẤC MƠ</small>
+                            <h5>
+
+                                ILLUSTRATION
+                            </h5>
+                        </div>
+                        <img alt="Illustration"
+                             src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_250,dpr_1.0/general_assets/logged_out_homepage/assets/sub_category/illustration2x.jpg">
+                    </a>
+
+                </li>
+                <li class="lslide slide-re" style="width: 314.667px; margin-right: 10px;">
+                    <a href="#">
+                        <div class="caption-img-index">
+                            <small>XÂY DỰNG WEBSITE</small>
+                            <h5>
+                                WORDPRESS
+                            </h5>
+                        </div>
+                        <img alt="Wordpress"
+                             src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_250,dpr_1.0/general_assets/logged_out_homepage/assets/sub_category/wordpress@2x.jpg">
+                    </a>
+
+                </li>
+                <li class="lslide slide-re" style="width: 314.667px; margin-right: 10px;">
+                    <a href="#">
+                        <div class="caption-img-index">
+                            <small>KINH DOANH</small>
+                            <h5>
+                                DATA ENTRY
+                            </h5>
+                        </div>
+                        <img alt="Data Entry"
+                             src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_250,dpr_1.0/general_assets/logged_out_homepage/assets/sub_category/data-entry2x.jpg">
+                    </a>
+
+                </li>
+                <li class="lslide slide-re" style="width: 314.667px; margin-right: 10px;">
+                    <a href="#">
+                        <div class="caption-img-index">
+                            <small>GIỚI THIỆU CÂU CHUYỆN CỦA BẢN</small>
+                            <h5>
+                                COVERS BOOK
+                            </h5>
+                        </div>
+                        <img alt="  "
+                             src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_250,dpr_1.0/general_assets/logged_out_homepage/assets/sub_category/books2x.jpg">
+                    </a>
+
+                </li>
+                <li class="lslide slide-re" style="width: 314.667px; margin-right: 10px;">
+                    <a href="#">
+                        <div class="caption-img-index">
+                            <small>TĂNG TRƯỞNG TRỰC TIẾP</small>
+                            <h5>
+                                SEO
+                            </h5>
+                        </div>
+                        <img alt="SEO"
+                             src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_250,dpr_1.0/general_assets/logged_out_homepage/assets/sub_category/seo@2x.jpg">
+                    </a>
+
+                </li>
+                <li class="clone right slide-re" style="width: 314.667px; margin-right: 10px;">
+                    <a href="#">
+                        <div class="caption-img-index">
+                            <small>THU HÚT KHÁN GIẢ</small>
+                            <h5>
+                                WHITEBOARD
+                            </h5>
+                        </div>
+                        <img alt="Whiteboard"
+                             src="https://fiverr-res.cloudinary.com/q_auto,f_auto,w_250,dpr_1.0/general_assets/logged_out_homepage/assets/sub_category/whiteboard@2x.jpg">
+                    </a>
+
+                </li>
+
+            </ul>
+            <div class="lSAction">
+                <button class="lSPrev slick-arrow slick-prev"></button>
+                <button class="lSNext slick-arrow slick-next"></button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+@*<section class="find-job section">
+        <div class="container">
+            <h2 class="section-title">Hot Jobs</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="job-list">
+                        <div class="thumb">
+                            <a href="job-details.html"><img src="~/assets/img/jobs/img-1.jpg" alt=""></a>
+                        </div>
+                        <div class="job-list-content">
+                            <h4><a href="job-details.html">WordPress Developer Senior </a><span class="full-time">Full-Time</span></h4>
+                            <p>
+                                We do not expect to have a developer that is a designer too, even though we have some already with those skills we just want a truly experienced developer with an eye for design. A developer that is pixel perfect when coding. That can look at the designs and actually see how should look once is coding.
+
+                            </p>
+                            <div class="job-tag">
+                                <div class="pull-left">
+                                    <div class="meta-tag">
+                                        <span><i class="ti-location-pin"></i>Hồ Chí Minh</span>
+                                        <span><i class="ti-time"></i>120k/Giờ</span>
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <div class="icon">
+                                        <i class="ti-heart"></i>
+                                    </div>
+                                    <a href="job-details.html" class="btn btn-common btn-rm">Apply Job</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-list">
+                        <div class="thumb">
+                            <a href="job-details.html"><img src="~/assets/img/jobs/img-2.jpg" alt=""></a>
+                        </div>
+                        <div class="job-list-content">
+                            <h4><a href="job-details.html">Code my one-page animation studio website</a><span class="full-time">Full-Time</span></h4>
+                            <p>
+                                Our current website for our animation studio is very old: [login to view URL]
+                                So our designer just created a new version of it that looks great. It's available in .AI format, layered.
+                            </p>
+                            <div class="job-tag">
+                                <div class="pull-left">
+                                    <div class="meta-tag">
+                                        <span><i class="ti-location-pin"></i>Hồ Chí Minh</span>
+                                        <span><i class="ti-time"></i>60k/Giờ</span>
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <div class="icon">
+                                        <i class="ti-heart"></i>
+                                    </div>
+                                    <a href="job-details.html" class="btn btn-common btn-rm">Apply Job</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-list">
+                        <div class="thumb">
+                            <a href="job-details.html"><img src="~/assets/img/jobs/img-3.jpg" alt=""></a>
+                        </div>
+                        <div class="job-list-content">
+                            <h4><a href="job-details.html">8 Full Time Video Uploaders Needed</a><span class="part-time">Part-Time</span></h4>
+                            <p>
+                                I'm looking to hire 8 full time video uploaders.
+
+                                This job is simple and very well paid.
+
+
+                                You just need to download and upload videos.
+
+                                The only requirement is you need very very very fast internet speed and a powerful computer.
+
+                            </p>
+                            <div class="job-tag">
+                                <div class="pull-left">
+                                    <div class="meta-tag">
+                                        <span><i class="ti-location-pin"></i>Hà Nội</span>
+                                        <span><i class="ti-time"></i>25k/Giờ</span>
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <div class="icon">
+                                        <i class="ti-heart"></i>
+                                    </div>
+                                    <a href="job-details.html" class="btn btn-common btn-rm">Apply Job</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="job-list">
+                        <div class="thumb">
+                            <a href="job-details.html"><img src="~/assets/img/jobs/img-4.jpg" alt=""></a>
+                        </div>
+                        <div class="job-list-content">
+                            <h4><a href="job-details.html">Dịch nội dung sản phẩm online qua tiếng việt</a><span class="full-time">Full-Time</span></h4>
+                            <p>Mình đang bán hàng nhập từ Trung về, nên có nhu cầu dịch thuật các miêu tả và nội dung của nhà cung cấp qua tiếng việt để dùng làm tư liệu để cung cấp cho khách hàng cũng như hợp tác lớn sau này.</p>
+                            <div class="job-tag">
+                                <div class="pull-left">
+                                    <div class="meta-tag">
+                                        <span><i class="ti-location-pin"></i>Hồ Chí Minh</span>
+                                        <span><i class="ti-time"></i>3.000.000đ</span>
+                                    </div>
+                                </div>
+                                <div class="pull-right">
+                                    <div class="icon">
+                                        <i class="ti-heart"></i>
+                                    </div>
+                                    <a href="job-details.html" class="btn btn-common btn-rm">Xem ngay</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="showing pull-left">
+                        <a href="#">Showing <span>6-10</span> Of 24 Jobs</a>
+                    </div>
+                    <ul class="pagination pull-right">
+                        <li class="active"><a href="#" class="btn btn-common"><i class="ti-angle-left"></i> prev</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li class="active"><a href="#" class="btn btn-common">Next <i class="ti-angle-right"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>*@
+
+
+<section id="blog" class="section">
+    <div class="container">
+        <h2 class="section-title">
+            Tin Mới Nhất
+        </h2>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-item">
+                <div class="blog-item-wrapper">
+                    <div class="blog-item-img">
+                        <a href="single-post.html">
+                            <img src="~/assets/img/blog/home-items/img1.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-item-text">
+                        <div class="meta-tags">
+                            <span class="date"><i class="ti-calendar"></i> Dec 20, 2017</span>
+                            <span class="comments"><a href="#"><i class="ti-comment-alt"></i> 5 Comments</a></span>
+                        </div>
+                        <a href="single-post.html">
+                            <h3>
+                                Mẹo để viết một bản lý lịch ấn tượng trực tuyến cho người mới bắt đầu
+                            </h3>
+                        </a>
+                        <p>
+                            Sau đây là sáu mẹo viết sơ yếu lý lịch mà bất kỳ người tìm việc nào cũng nên ...
+                        </p>
+                        <a href="single-post.html" class="btn btn-common btn-rm">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-item">
+                <div class="blog-item-wrapper">
+                    <div class="blog-item-img">
+                        <a href="single-post.html">
+                            <img src="~/assets/img/blog/home-items/img2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-item-text">
+                        <div class="meta-tags">
+                            <span class="date"><i class="ti-calendar"></i> Jan 20, 2018</span>
+                            <span class="comments"><a href="#"><i class="ti-comment-alt"></i> 5 Comments</a></span>
+                        </div>
+                        <a href="single-post.html">
+                            <h3>
+                                Hãy cùng khám phá 5 tính năng mới thú vị trong chủ đề Chợ kĩ năng
+                            </h3>
+                        </a>
+                        <p>
+                            Chợ kĩ năng có điểm độc nhất là các đơn hàng sẽ có giá khởi đầu...
+                        </p>
+                        <a href="single-post.html" class="btn btn-common btn-rm">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 blog-item">
+                <div class="blog-item-wrapper">
+                    <div class="blog-item-img">
+                        <a href="single-post.html">
+                            <img src="~/assets/img/blog/home-items/img3.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="blog-item-text">
+                        <div class="meta-tags">
+                            <span class="date"><i class="ti-calendar"></i> Mar 20, 2018</span>
+                            <span class="comments"><a href="#"><i class="ti-comment-alt"></i> 5 Comments</a></span>
+                        </div>
+                        <a href="single-post.html">
+                            <h3>
+                                Làm thế nào để thuyết phục các nhà tuyển dụng và nhận được công việc mơ ước của bạn
+                            </h3>
+                        </a>
+                        <p>
+                            Bạn cần thêm một chút khéo léo để thuyết phục nhà tuyển dụng trong cuộc ...
+                        </p>
+                        <a href="single-post.html" class="btn btn-common btn-rm">Xem thêm</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<section id="counter" style="background-image: url('../../assets/img/bg/counter-bg.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="counting">
+                    <div class="icon">
+                        <i class="ti-briefcase"></i>
+                    </div>
+                    <div class="desc">
+                        <h2>Dịch vụ</h2>
+                        <h1 class="counter">12050</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="counting">
+                    <div class="icon">
+                        <i class="ti-user"></i>
+                    </div>
+                    <div class="desc">
+                        <h2>Thành viên</h2>
+                        <h1 class="counter">10890</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="counting">
+                    <div class="icon">
+                        <i class="ti-write"></i>
+                    </div>
+                    <div class="desc">
+                        <h2>Hồ sơ tuyển dụng</h2>
+                        <h1 class="counter">700</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="counting">
+                    <div class="icon">
+                        <i class="ti-heart"></i>
+                    </div>
+                    <div class="desc">
+                        <h2>Công ty</h2>
+                        <h1 class="counter">9050</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="infobox section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="info-text">
+                    <h2>BẠN KHÔNG MUỐN BỎ LỞ CHỢ KĨ NĂNG</h2>
+                    <p>Chỉ cần bạn <a href="#">SUBMIT</a> để theo dỗi Chơ kĩ năng</p>
+                </div>
+                <a href="#" class="btn btn-border">Theo dõi qua mail</a>
+            </div>
+        </div>
+    </div>
+</section>

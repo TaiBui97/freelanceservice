@@ -1,0 +1,81 @@
+﻿@*@model IEnumerable<DACN.Models.DataModel.MetaData>*@
+@using PagedList;
+@using PagedList.Mvc;
+@model PagedList.PagedList<DACN.Models.DataModel.MetaData>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout _Admin.cshtml";
+}
+
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+
+                    <div class="card-body">
+                        <div class="card-title-cs">
+                            <strong class="card-title">Thêm mới MetaData : </strong>
+                            <button class="btn btn-success btn-custom" type="submit">
+                                <a style="color:white; border-radius:8px" href="@Url.Action("ThemMoi", "QuanLyMetaData") ">Add </a>
+                            </button>
+
+                        </div>
+
+                        <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                            <thead class="thead-dark">
+                                <tr>
+                                    <th>Tên MetaData</th>
+                                    <th>Mã Chi Tiết Danh Mục</th>
+                                    <th>Tên Chi Tiết Danh Mục</th>
+                                    <th>Mã Loại MetaData</th>
+                                    <th>Tên Loại MetaData</th>
+                                    <th style="text-align:center" colspan="3">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                <tr>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.TenMetaData)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MaCTDM)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.CTDM.TenCTDM)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.MaLoaiMetaData)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.LoaiMetaData.TenLoaiMetaData)
+                                    </td>
+                                    <td style="text-align:center">
+                                        <button class="btn btn-success btn-custom" type="submit"><a style="color:white" href="@Url.Action("ChinhSua", "QuanLyMetaData", new {  @mamd = item.MaMetaData }) ">Edit </a></button>
+                                    </td>
+                                    <td style="text-align:center">
+                                        <button class="btn btn-info btn-custom" type="submit"><a style="color:white" href="@Url.Action("HienThi", "QuanLyMetaData", new {  @mamd = item.MaMetaData }) ">View </a></button>
+                                    </td>
+                                    <td style="text-align:center">
+                                        <button class="btn btn-danger btn-custom" type="submit"><a style="color:white" href="@Url.Action("Xoa", "QuanLyMetaData", new {  @mamd = item.MaMetaData }) ">Delete </a></button>
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                        <div class="MenuTrang">
+                            @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div><!-- .animated -->
+    </div>
+
+</div>

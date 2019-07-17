@@ -1,0 +1,873 @@
+﻿﻿@model DACN.Models.BusinessModel.ChiTietBaiDang
+@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+<style>
+
+    .panel-heading-two {
+        background-color: white !important;
+        font-weight: 600;
+        font-size: 8px;
+        line-height: 22px;
+        color: #555;
+        padding: 10px 18px 10px 18px;
+    }
+
+    .panel-title {
+        border-bottom: 1px solid #ddd;
+        height: 30px;
+    }
+
+        .panel-title a {
+            padding-bottom: 10px
+        }
+</style>
+<style>
+
+    .slick-arrow {
+        opacity: 0;
+        background-color: #fff;
+        position: absolute;
+        z-index: 4;
+        top: 50%;
+        width: 32px;
+        height: 29px;
+        margin-top: -80px;
+        text-align: center;
+        margin-right: 20px;
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+        border: 0;
+    }
+
+    .wrap-slider:hover .slick-arrow {
+        opacity: 0.9;
+        top: 130px;
+        -webkit-transition: top .1s;
+        -o-transition: top .1s;
+        transition: top .1s;
+    }
+
+
+
+    .lslide .gig-card-layout .gig-wrapper .wrap-slider .lSSlideOuter .lSSlideWrapper .lSPager {
+        display: none
+    }
+
+    .slick-arrow:after {
+        content: "";
+        display: inline-block;
+        background: url('../../assets/img/arrow2.JPG') no-repeat;
+        background-size: 16px 64px;
+        width: 16px;
+        height: 16px;
+        margin-top: 5px;
+    }
+
+    .slick-arrow.slick-next:after {
+        background-position: 0 -48px;
+    }
+
+    .slick-next {
+        border-radius: 15px 3px 3px 15px;
+    }
+
+    .slick-prev {
+        border-radius: 3px 15px 15px 3px;
+    }
+
+
+    .lSActionx > a {
+        margin-right: 27px;
+        margin-top: -54px;
+        height: 67px;
+    }
+
+    .lSActionx > .lSPrev {
+        background-position: 0 0;
+        left: 0px !important;
+    }
+
+    .lSActionx > .lSNext {
+        background-position: 0 0;
+        right: -20px !important;
+    }
+
+    .slick-arrows {
+        background-color: #fff;
+        position: absolute;
+        z-index: 4;
+        top: 50%;
+        width: 48px;
+        height: 48px;
+        margin-top: -42px;
+        text-align: center;
+        margin-right: -8px;
+        -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+        box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+        border: 0;
+    }
+
+    .slick-arrows {
+        border-radius: 30px;
+    }
+
+        .slick-arrows:after {
+            content: "";
+            display: inline-block;
+            background: url('../../assets/img/arrow2.JPG') no-repeat;
+            background-size: 16px 64px;
+            width: 16px;
+            height: 16px;
+            margin-top: 2px;
+        }
+
+        .slick-arrows.slick-nexts:after {
+            background-position: 0 -48px;
+        }
+
+    .slick-arrow .slick-next {
+    }
+
+    .lSActions > .lSNexts {
+        background-position: -32px 0;
+        right: 10px;
+    }
+
+    .lSActions > a {
+        margin-right: 27px;
+    }
+
+    .lSAction {
+        display: block !important;
+    }
+</style>
+<script>
+
+    $(document).ready(function () {
+        $('#vertical').lightSlider({
+            gallery: true,
+            item: 1,
+            vertical: true,
+            vThumbWidth: 100,
+            verticalHeight: 400,
+
+            thumbItem: 8,
+            thumbMargin: 4,
+            slideMargin: 0,
+            responsive: [
+                {
+                    breakpoint: 667,
+                    settings: {
+                        vThumbWidth: 50,
+                        verticalHeight: 175,
+
+
+                    }
+                }
+            ]
+
+        });
+    });
+</script>
+@*<div class="page-header" style="background: url('../../assets/img/banner1.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="breadcrumb-wrapper">
+                        <h2 class="product-title">Job Details</h2>
+                        <ol class="breadcrumb">
+                            <li><a href="#"><i class="ti-home"></i> Home</a></li>
+                            <li class="current">Job Details</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>*@
+<header></header>
+<div class="sub-headert">
+    <div class="container">
+        <div class="row">
+            <div id="active-head" class="topnav">
+                <a class="head-two activee" href="#tongquan">Tổng quan</a>
+                <a class="head-two" href="#mota">Mô tả</a>
+                <a class="head-two" href="#faq">FAQ</a>
+                <a class="head-two" href="#danhgia">Đánh giá</a>
+                <a class="head-two" href="#denghi">Đề nghị</a>
+
+                <div class="topnav-right">
+                    <a href="#search"><i class="fa fa-heart-o arrow-shape"></i>Lưu</a>
+                    <a href="#about"><i class="fa fa-share-alt arrow-shape"></i>Chia sẽ</a>
+                    <a href="#about"><i class="ti-alert" style="color:orange"></i>Báo cáo</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="job-detail section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-sm-12 col-xs-12">
+                <div class="content-area">
+                    <div class="clearfix">
+                        <div class="box" id="tongquan">
+                            <!-- modal img -->
+                            <div class="modal fade" id="enlargeImageModal" tabindex="-1" role="dialog" aria-labelledby="enlargeImageModal" aria-hidden="true">
+                                <div class="modal-dialog modal-lg" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <img src="" class="enlargeImageModalSource" style="width: 100%;">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-details">
+                                <ul class="breadcrumbs">
+                                    <li>
+                                        <a href="/?source=breadcrumbs"> Home > </a>
+                                    </li>
+                                    <li><a href="/categories/graphics-design?source=breadcrumbs"> Thiết kế đồ họa </a></li>
+                                </ul>
+                                <div class="header-content pull-left">
+                                    @if (Model.SanPham.TenSP != null)
+                                    {
+                                        <h1 class="title-detail"><a href="#">@Model.SanPham.TenSP</a></h1>
+                                    }
+
+                                </div>
+                                <div class="clearfix">
+                                </div>
+                            </div>
+                            <div class="meta">
+                                <div class="seller-overview">
+                                    <div class="user-profile-image">
+                                        <label class="user-pict user-pict-32 " for="profile_image">
+                                            @if (Model.TenHinhDaiDien.TenHinhAnh != null)
+                                            {
+                                                <img src="~/assets/images/@Model.TenHinhDaiDien.TenHinhAnh"
+                                                     class="user-pict-img" alt="harshas" data-reload="inprogress"><!-- react-text: 230 -->
+                                                <!-- /react-text -->
+                                            }
+                                        </label>
+                                        <div class="profile-name">
+                                            <span class="user-status"><b class="seller-link">@Model.taikhoan.TenTaiKhoan </b></span>
+                                            <span class="clear-item">|</span>
+                                        </div>
+                                    </div>
+                                    <div class="rp-ratting">
+                                        <strong class="strong-review strong-re-rp">5.0</strong>
+                                        <span class="fa fa-star checked ic-rp"></span>
+                                    </div>
+                                    <small class="wrap-item-star">
+                                        <div class="ratings-wrapper rate-rp">
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                        </div>
+                                        @{ 
+                                            int? dem = 0;
+                                            double tong = 0;
+                                            if (Model.listDanhGia.Count>0)
+                                            {
+                                                foreach (var item in Model.listDanhGia)
+                                                {
+                                                    dem += item.Sao;
+                                                }
+                                                tong = (double)dem / Model.listDanhGia.Count;
+                                            }
+
+                                        }
+                                        <strong class="strong-review rate-rp">@Math.Round(tong,1) </strong>
+                                        <span class="user-rev rate-rp">(@Model.listDanhGia.Count đánh giá)</span>
+                                        <span class="clear-item rate-rp">|</span>
+                                        <span class="orders-in-queue">3 đơn hàng trong hàng đợi</span>
+                                        <span class="clear-item">|</span>
+                                        <span>Ngày đăng: @Model.SanPham.NgayTao</span>
+                                    </small>
+                                </div>
+                            </div>
+                            <ul id="vertical">
+                                @if (Model.HinhSanPham != null)
+                                {
+
+                                    for (int i = 0; i < Model.HinhSanPham.Count; i++)
+                                    {
+                                        <li data-thumb="/assets/images/@Model.HinhSanPham[i]">
+                                            <div data-target="#carousel" data-slide-to="@i" class="item ani-img-cate" style="height: auto; width: 100%;max-height: 400px;background-repeat: no-repeat;background-size: 100% 100%;">
+                                                <img src="~/assets/images/@Model.HinhSanPham[i]" style="height: auto;width: 100%; max-height: 400px;background-repeat: no-repeat; background-size: 100% 100%;">
+                                                <div class="slide-fullscreen">
+                                                    Xem ảnh đầy đủ
+                                                </div>
+                                            </div>
+                                        </li>
+                                    }
+                                        }
+                            </ul>
+
+                        </div>
+                        <div class="box" id="mota">
+                            <header>
+                                <h4 class="header-box">Mô Tả Đơn Hàng</h4>
+                            </header>
+                            @if (Model.SanPham.MotaSP != null)
+                                        {
+                                <p class="content-decr">@Html.Raw(@Model.SanPham.MotaSP)</p>
+                            }
+                        </div>
+                        <div class="box" id="faq">
+                            <header>
+                                <h4 class="header-box">FAQ</h4>
+                            </header>
+                            <div class="panel-group" id="accordion">
+                                <div class="panel-default">
+                                    <div class="panel-heading-two">
+                                        <h5 class="panel-title">
+                                            <a class="icon-active" data-toggle="collapse" data-parent="#accordion" href="#collapse1">Concept là gì ?<i class="fa fa-angle-down" style=" float:right"></i></a>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse1" class="panel-collapse collapse in">
+                                        <div class="panel-body">
+                                            Concept là một thiết kế độc đáo của logo của bạn. 2 concept có nghĩa là tôi sẽ cung cấp 2 thiết kế độc đáo khác nhau cho thương hiệu của bạn.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" panel-default">
+                                    <div class="panel-heading-two">
+                                        <h5 class="panel-title">
+                                            <a class="icon-active" data-toggle="collapse" data-parent="#accordion" href="#collapse2">Chỉnh sửa như thế nào ?<i class="fa fa-angle-down" style=" float:right"></i></a>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Một sửa đổi là một thay đổi nhỏ được thực hiện cho một khái niệm đã được thiết kế như thay đổi màu sắc, thay đổi vị trí, thay đổi phông chữ, v.v.
+                                            Một bản sửa đổi không có nghĩa là một thiết kế hoàn toàn mới
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" panel-default">
+                                    <div class="panel-heading-two">
+                                        <h5 class="panel-title">
+                                            <a class="icon-active" data-toggle="collapse" data-parent="#accordion" href="#collapse3">Social media kit là gì ?<i class="fa fa-angle-down" style=" float:right"></i></a>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse3" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Hình ảnh hồ sơ đã sẵn sàng để sử dụng và ảnh bìa có logo của bạn. Theo các cập nhật kích thước mới nhất - hình ảnh được tối ưu hóa để đảm bảo độ phân giải cao nhất cho mỗi nền tảng. Hai nền tảng có thể được quyết định theo sự lựa chọn của bạn.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class=" panel-default">
+                                    <div class="panel-heading-two">
+                                        <h5 class="panel-title">
+                                            <a class="icon-active" data-toggle="collapse" data-parent="#accordion" href="#collapse4">Bạn cần thông tin gì để bắt đầu?<i class="fa fa-angle-down" style=" float:right"></i></a>
+                                        </h5>
+                                    </div>
+                                    <div id="collapse4" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Khi bạn đặt hàng, bạn sẽ cần trả lời một số câu hỏi sẽ giúp tôi hiểu loại logo nào bạn muốn thiết kế.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="box" id="danhgia">
+                            <header style="display:flex">
+                                <h4 class="header-box">
+                                    Đánh Giá
+
+                                </h4>
+                                <div class="filer-review">
+                                    <select class="filer-review-seller">
+                                        <option value="value">Phổ Biến</option>
+                                        <option value="value">Tích Cực</option>
+                                        <option value="value">Tiêu Cực</option>
+                                    </select>
+                                </div>
+
+                            </header>
+                            <div class="cards">
+                                <div class="card-bodys">
+                                    <div class="row">
+                                        @if (Model.listDanhGia.Count > 0)
+                                        {
+                                            var tempList = Model.listDanhGia.OrderByDescending(a => a.NgayBinhLuan).Take(8).ToList();
+                                            foreach (var item in tempList)
+                                            {
+                                                if (item != null)
+                                                {
+                                                    var hinh = Model.listHinhTK.Where(a => a.MaTaiKhoan == item.MaTaiKhoan).FirstOrDefault();
+                                                    var tk = Model.listTaiKhoanDanhGia.Where(a => a.MaTaiKhoan == item.MaTaiKhoan).FirstOrDefault();
+                                                    <div class="wrap-reviews">
+                                                        <div class="col-md-2" style="margin-right:0!important">
+                                                            <div class="user-profile-image" style="float:right!important">
+                                                                <label class="user-pict user-pict-36" for="profile_image">
+                                                                    <img src="~/assets/images/@hinh.TenHinhAnh" class="img img-rounded img-fluid" />
+                                                                </label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-10 " style="padding-left:0!important">
+                                                            <p style="margin:0!important">
+                                                                <a class="float-left" href="https://maniruzzaman-akash.blogspot.com/p/contact.html"><strong>@tk.TenTaiKhoan</strong></a>
+
+                                                                <span class="float-right3"><i class="text-warning fa fa-star"></i>@item.Sao</span>
+                                                            </p>
+                                                            <p class="p-comment">@item.NoiDung</p>
+
+                                                        </div>
+                                                        <div class="cards card-inner">
+                                                            <div class="card-bodys">
+                                                                <div class="row">
+                                                                    <div class="col-md-2" style="margin-right:0!important">
+                                                                        <div class="user-profile-image" style="float:right!important">
+                                                                            <label class="user-pict user-pict-36" for="profile_image">
+                                                                                <img src="~/assets/images/@Model.TenHinhDaiDien.TenHinhAnh" class="img img-rounded img-fluid" />
+                                                                            </label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-10" style="padding-left:0!important">
+                                                                        <p class="p-comment" style="margin:0!important">
+                                                                            <a href="https://maniruzzaman-akash.blogspot.com/p/contact.html">
+                                                                                <strong>@Model.taikhoan.TenTaiKhoan</strong>
+                                                                            </a>
+                                                                        </p>
+                                                                        <p class="p-comment">Cảm ơn những nhận xét đặc biệt của bạn, Đó là một hành trình tuyệt vời và trải nghiệm tuyệt vời. Cảm ơn một lần nữa vì đã là một khách hàng tuyệt vời. </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <hr class="wrap-review" />
+                                                        </div>
+                                                    </div>
+                                                }
+                                            }
+                                            <div class="wrap-reviews">
+                                                <a href="#!" class="js-gtm-event-auto" data-gtm-category="gig-page-gig_tracking_type" data-gtm-action="click" data-gtm-label="reviews-show-more">+ Xem Thêm</a>
+                                            </div>
+                                        }
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-12 col-xs-12 ">
+                <aside>
+                    <div class="sidebar">
+                        <div class="box">
+                            <div class="text-box">
+                                @if (Model.SanPham.TenSP != null)
+                                {
+                                    <h4><a href="#">@Model.SanPham.TenSP</a></h4>
+                                }
+                                <p style="color:black!important">
+                                    @Model.SanPham.MotaSP2
+                                </p>
+                                @foreach (var item in Model.TenMetaData)
+                                {
+                                    if (item != null)
+                                    {
+                                        <p class="p-comment" style="margin:0!important;padding:0!important">Đơn hàng gồm :</p>
+                                        <ul>
+                                            <li>
+                                                <span><i class="fa fa-check"></i>@item</span>
+                                            </li>
+                                        </ul>
+                                    }
+                                }
+                                <div class="cover-title">
+                                    <div>
+                                        <a href="#" class="text"><i class="fa fa-map-marker"></i>Hà Nội</a>
+                                    </div>
+                                    <div>
+                                        <a href="#" z class="text"><i class="fa fa-calendar"></i>@Model.SanPham.ThoiGianGiao Giao Hàng</a>
+                                    </div>
+                                    <div>
+                                        <a href="#" z class="text"><i class="fa fa-refresh fa-lg"></i>@Model.SanPham.SoLanSua Sửa đổi</a>
+                                    </div>
+                                    <div>
+                                        @if (Model.SanPham.GiaSP != null)
+                                        {
+                                            <strong class="price"><i class="fa fa-money"></i><span class="pricing-item">@Model.SanPham.GiaSP</span> đ </strong>
+
+                                        }
+                                    </div>
+                                </div>
+                                <a href="@Url.Action("OrderOffer", "BaiDang", new {masp=Model.SanPham.MaSP})" class="btn btn-common btn-sm">Tiếp tục (<span class="pricing-item">@Model.SanPham.GiaSP</span> )</a>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+                <aside>
+                    <div class="sidebar">
+                        <div class="box">
+                            <div class="seller-card">
+                                @*<div style="position: absolute; right: 0px; height: 20px; left: 0px;">
+                                        <div class="user-online-indicator " data-user-id="66626159">
+                                            <i class="fa fa-circle"></i> online
+                                        </div>
+                                    </div>*@
+                                <div class="user-profile-info">
+                                    <div>
+                                        <div class="user-profile-image">
+                                            <label class="user-pict user-pict-150 " for="profile_image">
+                                                @if (Model.TenHinhDaiDien.TenHinhAnh != null)
+                                                {
+                                                    <img src="~/assets/images/@Model.TenHinhDaiDien.TenHinhAnh"
+                                                         class="user-pict-img" alt="@Model.taikhoan.TenTaiKhoan">
+                                                }
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="user-profile-label">
+                                        <div class="username-line"><a href="/fantasticpro1" class="seller-link" rel="nofollow,noindex">@Model.taikhoan.TenTaiKhoan</a></div>
+                                        <div class="oneliner-wrapper">
+                                            <small class="oneliner">Social Media Manager</small>
+                                            <div class="ratings-wrapper">
+                                                <small class="wrap-item-star padding-mid">
+                                                    <div class="ratings-wrapper" style="padding:0 5px 0 0!important">
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                        <span class="fa fa-star checked"></span>
+                                                    </div>
+                                                    <strong class="strong-review" style="color:black; font-weight:600">@Math.Round(tong,1)</strong>
+                                                    <span class="user-rev" style="color:#999">(@Model.listDanhGia.Count đánh giá)</span>
+                                                </small>
+                                            </div>
+                                            <div class="buttons-wrapper" style="color:#999">
+                                                <a href="#" class="btn-contact" data-toggle="modal" data-target="#exampleModal" data-whatever="@*@mdo*@">Liên hệ ngay</a>
+                                            </div>
+                                            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                <div class="modal-dialog" role="document">
+                                                    <div class="modal-content">
+                                                        <div class="modal-header">
+                                                            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                            </button>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                            <form>
+                                                                <div class="form-group">
+                                                                    <label for="recipient-name" class="col-form-label">Recipient:</label>
+                                                                    <input type="text" class="form-control" id="recipient-name">
+                                                                </div>
+                                                                <div class="form-group">
+                                                                    <label for="message-text" class="col-form-label">Tin nhắn:</label>
+                                                                    <textarea class="form-control" id="message-text"></textarea>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Xóa</button>
+                                                            <button type="button" class="btn btn-primary">Gửi tin nhắn</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="user-stats-desc">
+                                    <ul class="user-stats cus-user-stats">
+                                        <li class="location">
+                                            Nơi sống
+                                            <strong style="padding:0!important">Hồ Chí Minh</strong>
+                                        </li>
+                                        <li class="member-since">
+                                            Bắt đầu
+                                            <strong style="padding:0!important">10 - 2017</strong>
+                                        </li>
+                                        <li class="response-time">
+                                            Thời gian phản hồi
+                                            <strong style="padding:0!important">1 giờ</strong>
+                                        </li>
+                                        <li class="recent-delivery">
+                                            Đơn hàng hoàn thành gần đây
+                                            <strong style="padding:0!important">3 ngày</strong>
+                                        </li>
+                                    </ul>
+                                    <article class="seller-desc ">
+                                        <div class="inner">I provide Online Marketing Management to businesses trying to generate new costumers from online sources. I believe in trust, responsibility and hard work.I cooperate with people to fill the gap between a weak business and a successful one.</div>
+                                        <a href="#!" class="read-more">+ See More</a>
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 ">
+                <section class="category-population">
+                    <div class="container" id="denghi">
+                        <h3 class="section-title">Đề xuất cho bạn trong <a style="color:#00698c" href="#">Thiết Kế Logo</a></h3>
+                        <div class="lSSlideWrapper usingCss" style="transition-timing-function: ease; transition-duration: 400ms;">
+                            <ul id="autoplay" class="gallery content-slider list-unstyled clearfix lightSlider lsGrab lSSlide"
+                                style="width: 3896px; height: 165px; padding-bottom: 0%; transform: translate3d(-974px, 0px, 0px);">
+                                @foreach (var item in Model.randomBaiDang)
+                                    {
+                                        int? dem2 = 0, tong2 = 0;
+                                        var tk = Model.listTKRandom.Where(a => a.MaTaiKhoan == item.MaTaiKhoan).FirstOrDefault();
+                                        var hinhAnh = Model.randomHinhBD.Where(a => a.MaSP == item.MaSP).FirstOrDefault();
+                                        var ha = Model.listHinhTKRandom.Where(a => a.MaTaiKhoan == tk.MaTaiKhoan).FirstOrDefault();
+                                        if (Model.listDanhGiaRandom!=null)
+                                        {
+                                            var danhgia = Model.listDanhGiaRandom.Where(a => a.MaSP == item.MaSP).ToList();
+                                            if (danhgia.Count > 0)
+                                            {
+                                                foreach (var item2 in danhgia)
+                                                {
+
+                                                    dem2 += item2.Sao;
+                                                }
+                                                tong2 = dem2 / Model.listDanhGiaRandom.Count;
+                                            }
+
+                                        }
+
+                                    <li class="lslide lslide-rp" style="width: 314.667px; margin-right: 10px;">
+                                        <div class="col-md-3 gig-card-layout padding-gig-item padding-gig-rp">
+                                            <div>
+                                                <div class="gig-wrapper card" data-gig-id="101530405" data-impression-collected="true">
+                                                    <div>
+                                                        <div class="wrap-slider">
+                                                            <ul class="slide-img-service">
+                                                                <li>
+                                                                    <a href="@Url.Action("ServiceDetails","BaiDang", new {masp =3})" target="_self" class="media">
+                                                                        <div class="slider">
+                                                                            <div class="slides preview" style="">
+                                                                                <div class="slide-item active" style="width: auto;">
+                                                                                    <img src="~/assets/images/@hinhAnh.TenHinhAnh"
+                                                                                         alt="s">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="@Url.Action("ServiceDetails","BaiDang", new {masp =5})" target="_self" class="media">
+                                                                        <div class="slider">
+                                                                            <span class="arrow next"></span>
+                                                                            <div class="slides preview" style="">
+                                                                                <div class="slide-item active" style="width: auto;">
+                                                                                    <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/104695363/original/29b50a1c0e04a9010f29617a9fabde3fa88c5bba.jpg"
+                                                                                         alt="">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                                <li>
+                                                                    <a href="@Url.Action("ServiceDetails","BaiDang", new {masp =5})" target="_self" class="media">
+                                                                        <div class="slider">
+                                                                            <div class="slides preview" style="">
+                                                                                <div class="slide-item active" style="width: auto;">
+                                                                                    <img src="https://fiverr-res.cloudinary.com/t_gig_cards_web,q_auto,f_auto/gigs/104695363/original/29b50a1c0e04a9010f29617a9fabde3fa88c5bba.jpg"
+                                                                                         alt="">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="lSActionx">
+                                                                <button class="lSPrev slick-arrow slick-prev"></button>
+                                                                <button class="lSNext slick-arrow slick-next"></button>
+                                                            </div>
+                                                        </div>
+                                                        <div class="seller-info">
+                                                            <span class="seller-image">
+                                                                <img src="~/assets/images/@ha.TenHinhAnh"
+                                                                     alt="bossdesigners">
+                                                            </span><span class="seller-name">
+                                                                <a href="/bossdesigners?source=gig_cards&amp;referrer_gig_slug=design-3-minimalist-logo-in-6-hrs-with-free-source-files&amp;ref_ctx_id=c244aa59-5484-4035-a731-d5eb5fd5360e"
+                                                                   rel="nofollow"><span>by&nbsp;</span>@tk.TenTaiKhoan</a><span class="level hint--bottom level-two-seller" data-hint="Completed at least 50 orders on time with a minimum 4.8 rating">
+                                                                    Level 2
+                                                                    Seller
+                                                                </span>
+                                                            </span>
+                                                        </div>
+                                                        <h3>
+                                                            <a href="@Url.Action("ServiceDetails","BaiDang", new {masp =5})" target="_self" title="">
+                                                                @item.MotaSP
+                                                            </a>
+                                                        </h3>
+                                                        <div class="content-info">
+                                                            <span class="gig-rating">
+                                                                <i class="fa fa-star"></i> @tong2
+                                                                @if (Model.listDanhGiaRandom!=null)
+                                                                {
+                                                                    <span>(@Model.listDanhGiaRandom.Count+)</span>
+                                                                }
+                                                                else
+                                                                {
+                                                                    <span>(0+)</span>
+                                                                }
+                                                            </span>
+                                                        </div>
+                                                        <footer>
+                                                            <div class="gig-fav">
+                                                                <span class="coll-group">
+                                                                    <a class="tooltip" href="#!" data-tip="Lưu bài đăng"><i class="fa fa-heart-o arrow-shape"></i></a>
+                                                                    <a class="tooltip" href="#!" data-tip="Chia sẽ"><i class="fa fa-share-alt arrow-shape"></i></a>
+                                                                </span>
+                                                            </div><a href="" target="_self" class="price-gig" title="$10"><small>Giá từ</small><span class="pricing-item">@item.GiaSP</span> đ</a>
+                                                        </footer>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                }
+                            </ul>
+                            <div class="lSActions">
+                                <button id="next-slide-a" class="lSPrevs slick-arrows slick-prevs"></button>
+                                <button id="prev-slide-a" class="lSNexts slick-arrows slick-nexts"></button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+
+    $(document).ready(function () {
+        var str = $(".pricing-item");
+        for (let i = 0; i < str.length; i++) {
+            var formatstr = str[i].innerHTML.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+            str[i].innerHTML = formatstr;
+
+        }
+
+    });
+</script>
+<script>
+
+    // Add active class to the current button (highlight it)
+    var header = document.getElementById("active-head");
+    var btns = header.getElementsByClassName("head-two");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            var current = document.getElementsByClassName("activee");
+            current[0].className = current[0].className.replace(" activee", "");
+            this.className += " activee";
+        });
+    }
+</script>
+<script>
+
+    var header = document.getElementById("accordion");
+    var btns = header.getElementsByClassName("icon-active");
+    for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            $("i", this).toggleClass("fa-angle-up fa-angle-down");
+        });
+    }
+</script>
+<script>
+    $(document).ready(function () {
+        var autoplaySlider = $('#autoplay').lightSlider({
+            item: 5,
+            pauseOnHover: true,
+            pager: false,
+
+            responsive: [
+                {
+                    breakpoint: 667,
+                    settings: {
+                        item: 1,
+                        slideMove: 1,
+                        slideMargin: 6,
+                    }
+                },
+
+            ],
+            onBeforeSlide: function (el) {
+                $('#current').text(el.getCurrentSlideCount());
+            }
+        });
+        $('#total').text(autoplaySlider.getTotalSlideCount());
+        $('#next-slide-a').click(function () {
+            slider.goToPrevSlide();
+        });
+        $('#pre-slide-a').click(function () {
+            slider.goToNextSlide();
+        });
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $(".slide-img-service").lightSlider({
+            item: 1,
+            autoWidth: false,
+            slideMove: 1, // slidemove will be 1 if loop is true
+            slideMargin: 40,
+            addClass: '',
+            mode: "slide",
+            useCSS: true,
+            cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
+            easing: 'linear', //'for jquery animation',////
+
+
+
+            keyPress: false,
+            controls: true,
+            prevHtml: '',
+            nextHtml: '',
+
+            rtl: false,
+            adaptiveHeight: false,
+
+            vertical: false,
+            verticalHeight: 100,
+            vThumbWidth: 235,
+
+            thumbItem: 1,
+            pager: false,
+            gallery: false,
+            galleryMargin: 5,
+            thumbMargin: 5,
+            currentPagerPosition: 'middle',
+
+            enableTouch: true,
+            enableDrag: true,
+            freeMove: true,
+            swipeThreshold: 40,
+
+            responsive: [],
+
+            onBeforeStart: function (el) { },
+            onSliderLoad: function (el) { },
+            onBeforeSlide: function (el) { },
+            onAfterSlide: function (el) { },
+            onBeforeNextSlide: function (el) { },
+            onBeforePrevSlide: function (el) { }
+        });
+
+    });
+</script>
+<script>
+    $("a[href^='#']").click(function (e) {
+        e.preventDefault();
+
+        var position = $($(this).attr("href")).offset().top;
+
+        $("body, html").animate({
+            scrollTop: position
+
+        } /* speed */);
+    });
+</script>

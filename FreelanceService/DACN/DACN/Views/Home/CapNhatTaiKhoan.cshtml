@@ -1,0 +1,33 @@
+﻿@model DACN.Models.DataModel.TaiKhoan
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>CapNhatTaiKhoan</title>
+</head>
+<body>
+    <div>
+        <h4>TaiKhoan</h4>
+        <hr />
+        <form action="" method="POST">
+            Tên Tài Khoản : <input type="text" value="@Model.TenTaiKhoan" name="tentaikhoan"/>  <br />          
+            Mật khẩu : <input type="text" value="@Model.MatKhau" name="matkhau"/><br /> 
+            Email : <input type="text" value="@Model.Email" name="email"/><br /> 
+            SDT : <input type="text" value="@Model.SDT" name="sdt"/><br /> 
+            Địa chỉ : <input type="text" value="@Model.DiaChi" name="diachi"/><br /> 
+            Số Tiền : <input type="text" value="@Model.SoTien" name="sotien"/><br /> 
+            Số TK Ngân Hàng : <input type="text" value="@Model.SoTKNganHang" name="sotknganhang"/><br /> 
+            Tên TK Ngân Hàng : <input type="text" value="@Model.TenTkNganHang" name="tentknganhang"/><br /> 
+            Mã Mật Khẩu : <input type="text" value="@Model.MaMatKhau" name="mamatkhau"/><br /> 
+            <input type="submit" value="Xác Nhận" />
+           @Html.ActionLink("Back to List", "Index")
+        </form> 
+    </div>
+</body>
+</html>

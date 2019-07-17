@@ -1,0 +1,46 @@
+﻿@model DACN.Models.BusinessModel.Navigation
+
+@foreach (var item in Model.listDM)
+{
+    int dem2 = 0;
+    var dem = Model.listCTDM.Where(a => a.MaDM == item.MaDM).ToList();
+
+    <li class="slide">
+        <div class="dropdown">
+
+            <a href="@Url.Action("CategoryDetails", "Home", new { id = item.MaDM })" class="dropbtn">@item.TenDM</a>
+
+            <div class="dropdown-content">
+                <ul class="col-sm-6">
+
+                    @for (int i = 0; i < dem.Count; i++)
+                    {
+
+
+                        if (i <= dem.Count / 2)
+                        {
+                            <li><a href="@Url.Action("ServiceCategory", "BaiDang", new { id = dem[i].MaCTDM })">@dem[i].TenCTDM</a></li>
+
+
+                        }
+                        else
+                        {
+                            dem2 = i;
+                            break;
+                        }
+
+                    }
+
+                </ul>
+                <ul class="col-sm-6">
+
+                    @for (int i = dem2; i < dem.Count; i++)
+                    {
+                        <li><a href="@Url.Action("ServiceCategory", "BaiDang", new {id = dem[i].MaCTDM })">@dem[i].TenCTDM</a></li>
+                    }
+
+                </ul>
+            </div>
+        </div>
+    </li>
+}

@@ -1,0 +1,840 @@
+F:\dacn\DACN\DACN\bin\ApplicationInsights.config
+F:\dacn\DACN\DACN\bin\DACN.dll.config
+F:\dacn\DACN\DACN\bin\DACN.dll
+F:\dacn\DACN\DACN\bin\DACN.pdb
+F:\dacn\DACN\DACN\bin\roslyn\csc.exe
+F:\dacn\DACN\DACN\bin\roslyn\csc.exe.config
+F:\dacn\DACN\DACN\bin\roslyn\csc.rsp
+F:\dacn\DACN\DACN\bin\roslyn\csi.exe
+F:\dacn\DACN\DACN\bin\roslyn\csi.exe.config
+F:\dacn\DACN\DACN\bin\roslyn\csi.rsp
+F:\dacn\DACN\DACN\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+F:\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+F:\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\dacn\DACN\DACN\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\dacn\DACN\DACN\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+F:\dacn\DACN\DACN\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+F:\dacn\DACN\DACN\bin\roslyn\Microsoft.Managed.Core.targets
+F:\dacn\DACN\DACN\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\dacn\DACN\DACN\bin\roslyn\Microsoft.Win32.Primitives.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.AppContext.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Collections.Immutable.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Console.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.StackTrace.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Globalization.Calendars.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.IO.Compression.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.IO.Compression.ZipFile.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.IO.FileSystem.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.IO.FileSystem.Primitives.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Net.Http.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Net.Sockets.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Reflection.Metadata.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Encoding.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Primitives.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Text.Encoding.CodePages.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Threading.Tasks.Extensions.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.ValueTuple.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Xml.ReaderWriter.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Xml.XmlDocument.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Xml.XPath.dll
+F:\dacn\DACN\DACN\bin\roslyn\System.Xml.XPath.XDocument.dll
+F:\dacn\DACN\DACN\bin\roslyn\vbc.exe
+F:\dacn\DACN\DACN\bin\roslyn\vbc.exe.config
+F:\dacn\DACN\DACN\bin\roslyn\vbc.rsp
+F:\dacn\DACN\DACN\bin\roslyn\VBCSCompiler.exe
+F:\dacn\DACN\DACN\bin\roslyn\VBCSCompiler.exe.config
+F:\dacn\DACN\DACN\bin\Antlr3.Runtime.dll
+F:\dacn\DACN\DACN\bin\EntityFramework.dll
+F:\dacn\DACN\DACN\bin\EntityFramework.SqlServer.dll
+F:\dacn\DACN\DACN\bin\Microsoft.AI.Agent.Intercept.dll
+F:\dacn\DACN\DACN\bin\Microsoft.AI.DependencyCollector.dll
+F:\dacn\DACN\DACN\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\dacn\DACN\DACN\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\dacn\DACN\DACN\bin\Microsoft.AI.Web.dll
+F:\dacn\DACN\DACN\bin\Microsoft.AI.WindowsServer.dll
+F:\dacn\DACN\DACN\bin\Microsoft.ApplicationInsights.dll
+F:\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.dll
+F:\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+F:\dacn\DACN\DACN\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+F:\dacn\DACN\DACN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\dacn\DACN\DACN\bin\Microsoft.Owin.dll
+F:\dacn\DACN\DACN\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\dacn\DACN\DACN\bin\Microsoft.Owin.Security.dll
+F:\dacn\DACN\DACN\bin\Microsoft.Web.Infrastructure.dll
+F:\dacn\DACN\DACN\bin\Newtonsoft.Json.dll
+F:\dacn\DACN\DACN\bin\Owin.dll
+F:\dacn\DACN\DACN\bin\PagedList.dll
+F:\dacn\DACN\DACN\bin\PagedList.Mvc.dll
+F:\dacn\DACN\DACN\bin\System.Diagnostics.DiagnosticSource.dll
+F:\dacn\DACN\DACN\bin\System.Web.Helpers.dll
+F:\dacn\DACN\DACN\bin\System.Web.Mvc.dll
+F:\dacn\DACN\DACN\bin\System.Web.Optimization.dll
+F:\dacn\DACN\DACN\bin\System.Web.Razor.dll
+F:\dacn\DACN\DACN\bin\System.Web.WebPages.Deployment.dll
+F:\dacn\DACN\DACN\bin\System.Web.WebPages.dll
+F:\dacn\DACN\DACN\bin\System.Web.WebPages.Razor.dll
+F:\dacn\DACN\DACN\bin\WebGrease.dll
+F:\dacn\DACN\DACN\bin\EntityFramework.xml
+F:\dacn\DACN\DACN\bin\EntityFramework.SqlServer.xml
+F:\dacn\DACN\DACN\bin\Microsoft.AI.DependencyCollector.xml
+F:\dacn\DACN\DACN\bin\Microsoft.AI.PerfCounterCollector.xml
+F:\dacn\DACN\DACN\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\dacn\DACN\DACN\bin\Microsoft.AI.Web.xml
+F:\dacn\DACN\DACN\bin\Microsoft.AI.WindowsServer.xml
+F:\dacn\DACN\DACN\bin\Microsoft.ApplicationInsights.xml
+F:\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.pdb
+F:\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.xml
+F:\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+F:\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+F:\dacn\DACN\DACN\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+F:\dacn\DACN\DACN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\dacn\DACN\DACN\bin\Microsoft.Owin.xml
+F:\dacn\DACN\DACN\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\dacn\DACN\DACN\bin\Microsoft.Owin.Security.xml
+F:\dacn\DACN\DACN\bin\Newtonsoft.Json.xml
+F:\dacn\DACN\DACN\bin\PagedList.xml
+F:\dacn\DACN\DACN\bin\PagedList.Mvc.xml
+F:\dacn\DACN\DACN\bin\System.Diagnostics.DiagnosticSource.xml
+F:\dacn\DACN\DACN\bin\System.Web.Helpers.xml
+F:\dacn\DACN\DACN\bin\System.Web.Mvc.xml
+F:\dacn\DACN\DACN\bin\System.Web.Razor.xml
+F:\dacn\DACN\DACN\bin\System.Web.WebPages.xml
+F:\dacn\DACN\DACN\bin\System.Web.WebPages.Deployment.xml
+F:\dacn\DACN\DACN\bin\System.Web.WebPages.Razor.xml
+F:\dacn\DACN\DACN\bin\System.Web.Optimization.xml
+F:\dacn\DACN\DACN\bin\Antlr3.Runtime.pdb
+F:\dacn\DACN\DACN\obj\Debug\DACN.csproj.CoreCompileInputs.cache
+F:\dacn\DACN\DACN\obj\Debug\DACN.csproj.CopyComplete
+F:\dacn\DACN\DACN\obj\Debug\DACN.dll
+F:\dacn\DACN\DACN\obj\Debug\DACN.pdb
+F:\dacn\DACN\DACN\obj\Debug\DACN.csprojAssemblyReference.cache
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\ApplicationInsights.config
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\DACN.dll.config
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\DACN.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\DACN.pdb
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\csc.exe
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\csc.exe.config
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\csc.rsp
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\csi.exe
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\csi.exe.config
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\csi.rsp
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.AppContext.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Console.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.IO.Compression.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Net.Http.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Net.Sockets.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.ValueTuple.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Xml.XPath.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\vbc.exe
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\vbc.exe.config
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\vbc.rsp
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\VBCSCompiler.exe
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Antlr3.Runtime.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\EntityFramework.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\EntityFramework.SqlServer.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AI.Web.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.ApplicationInsights.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.Owin.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.Owin.Security.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Newtonsoft.Json.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Owin.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\PagedList.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\PagedList.Mvc.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\System.Web.Helpers.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\System.Web.Mvc.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\System.Web.Optimization.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\System.Web.Razor.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\System.Web.WebPages.Deployment.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\System.Web.WebPages.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\System.Web.WebPages.Razor.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\WebGrease.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\EntityFramework.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\EntityFramework.SqlServer.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AI.PerfCounterCollector.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AI.Web.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.ApplicationInsights.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.Owin.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Microsoft.Owin.Security.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Newtonsoft.Json.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\PagedList.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\PagedList.Mvc.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\System.Web.Helpers.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\System.Web.Mvc.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\System.Web.Razor.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\System.Web.WebPages.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\System.Web.WebPages.Deployment.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\System.Web.WebPages.Razor.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\System.Web.Optimization.xml
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\bin\Antlr3.Runtime.pdb
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\obj\Debug\DACN.csprojAssemblyReference.cache
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\obj\Debug\DACN.Migrations.createdb.resources
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\obj\Debug\DACN.csproj.GenerateResource.cache
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\obj\Debug\DACN.csproj.CoreCompileInputs.cache
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\obj\Debug\DACN.csproj.CopyComplete
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\obj\Debug\DACN.dll
+C:\Users\tai\Desktop\New folder\dacn\DACN\DACN\obj\Debug\DACN.pdb
+D:\dacn\DACN\DACN\bin\ApplicationInsights.config
+D:\dacn\DACN\DACN\bin\DACN.dll.config
+D:\dacn\DACN\DACN\bin\DACN.dll
+D:\dacn\DACN\DACN\bin\DACN.pdb
+D:\dacn\DACN\DACN\bin\roslyn\csc.exe
+D:\dacn\DACN\DACN\bin\roslyn\csc.exe.config
+D:\dacn\DACN\DACN\bin\roslyn\csc.rsp
+D:\dacn\DACN\DACN\bin\roslyn\csi.exe
+D:\dacn\DACN\DACN\bin\roslyn\csi.exe.config
+D:\dacn\DACN\DACN\bin\roslyn\csi.rsp
+D:\dacn\DACN\DACN\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\dacn\DACN\DACN\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\dacn\DACN\DACN\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\dacn\DACN\DACN\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\dacn\DACN\DACN\bin\roslyn\Microsoft.Managed.Core.targets
+D:\dacn\DACN\DACN\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\dacn\DACN\DACN\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.AppContext.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Collections.Immutable.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Console.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Globalization.Calendars.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.IO.Compression.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.IO.Compression.ZipFile.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.IO.FileSystem.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Net.Http.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Net.Sockets.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Reflection.Metadata.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Threading.Tasks.Extensions.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.ValueTuple.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Xml.XmlDocument.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Xml.XPath.dll
+D:\dacn\DACN\DACN\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\dacn\DACN\DACN\bin\roslyn\vbc.exe
+D:\dacn\DACN\DACN\bin\roslyn\vbc.exe.config
+D:\dacn\DACN\DACN\bin\roslyn\vbc.rsp
+D:\dacn\DACN\DACN\bin\roslyn\VBCSCompiler.exe
+D:\dacn\DACN\DACN\bin\roslyn\VBCSCompiler.exe.config
+D:\dacn\DACN\DACN\bin\Antlr3.Runtime.dll
+D:\dacn\DACN\DACN\bin\EntityFramework.dll
+D:\dacn\DACN\DACN\bin\EntityFramework.SqlServer.dll
+D:\dacn\DACN\DACN\bin\Microsoft.AI.Agent.Intercept.dll
+D:\dacn\DACN\DACN\bin\Microsoft.AI.DependencyCollector.dll
+D:\dacn\DACN\DACN\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\dacn\DACN\DACN\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\dacn\DACN\DACN\bin\Microsoft.AI.Web.dll
+D:\dacn\DACN\DACN\bin\Microsoft.AI.WindowsServer.dll
+D:\dacn\DACN\DACN\bin\Microsoft.ApplicationInsights.dll
+D:\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.dll
+D:\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+D:\dacn\DACN\DACN\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+D:\dacn\DACN\DACN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\dacn\DACN\DACN\bin\Microsoft.Owin.dll
+D:\dacn\DACN\DACN\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\dacn\DACN\DACN\bin\Microsoft.Owin.Security.dll
+D:\dacn\DACN\DACN\bin\Microsoft.Web.Infrastructure.dll
+D:\dacn\DACN\DACN\bin\Newtonsoft.Json.dll
+D:\dacn\DACN\DACN\bin\Owin.dll
+D:\dacn\DACN\DACN\bin\PagedList.dll
+D:\dacn\DACN\DACN\bin\PagedList.Mvc.dll
+D:\dacn\DACN\DACN\bin\System.Diagnostics.DiagnosticSource.dll
+D:\dacn\DACN\DACN\bin\System.Web.Helpers.dll
+D:\dacn\DACN\DACN\bin\System.Web.Mvc.dll
+D:\dacn\DACN\DACN\bin\System.Web.Optimization.dll
+D:\dacn\DACN\DACN\bin\System.Web.Razor.dll
+D:\dacn\DACN\DACN\bin\System.Web.WebPages.Deployment.dll
+D:\dacn\DACN\DACN\bin\System.Web.WebPages.dll
+D:\dacn\DACN\DACN\bin\System.Web.WebPages.Razor.dll
+D:\dacn\DACN\DACN\bin\WebGrease.dll
+D:\dacn\DACN\DACN\bin\EntityFramework.xml
+D:\dacn\DACN\DACN\bin\EntityFramework.SqlServer.xml
+D:\dacn\DACN\DACN\bin\Microsoft.AI.DependencyCollector.xml
+D:\dacn\DACN\DACN\bin\Microsoft.AI.PerfCounterCollector.xml
+D:\dacn\DACN\DACN\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\dacn\DACN\DACN\bin\Microsoft.AI.Web.xml
+D:\dacn\DACN\DACN\bin\Microsoft.AI.WindowsServer.xml
+D:\dacn\DACN\DACN\bin\Microsoft.ApplicationInsights.xml
+D:\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.pdb
+D:\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.xml
+D:\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+D:\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+D:\dacn\DACN\DACN\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+D:\dacn\DACN\DACN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\dacn\DACN\DACN\bin\Microsoft.Owin.xml
+D:\dacn\DACN\DACN\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\dacn\DACN\DACN\bin\Microsoft.Owin.Security.xml
+D:\dacn\DACN\DACN\bin\Newtonsoft.Json.xml
+D:\dacn\DACN\DACN\bin\PagedList.xml
+D:\dacn\DACN\DACN\bin\PagedList.Mvc.xml
+D:\dacn\DACN\DACN\bin\System.Diagnostics.DiagnosticSource.xml
+D:\dacn\DACN\DACN\bin\System.Web.Helpers.xml
+D:\dacn\DACN\DACN\bin\System.Web.Mvc.xml
+D:\dacn\DACN\DACN\bin\System.Web.Razor.xml
+D:\dacn\DACN\DACN\bin\System.Web.WebPages.xml
+D:\dacn\DACN\DACN\bin\System.Web.WebPages.Deployment.xml
+D:\dacn\DACN\DACN\bin\System.Web.WebPages.Razor.xml
+D:\dacn\DACN\DACN\bin\System.Web.Optimization.xml
+D:\dacn\DACN\DACN\bin\Antlr3.Runtime.pdb
+D:\dacn\DACN\DACN\obj\Debug\DACN.csprojAssemblyReference.cache
+D:\dacn\DACN\DACN\obj\Debug\DACN.csproj.CoreCompileInputs.cache
+D:\dacn\DACN\DACN\obj\Debug\DACN.csproj.CopyComplete
+D:\dacn\DACN\DACN\obj\Debug\DACN.dll
+D:\dacn\DACN\DACN\obj\Debug\DACN.pdb
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\ApplicationInsights.config
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\DACN.dll.config
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\DACN.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\DACN.pdb
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\csc.exe
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\csc.exe.config
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\csc.rsp
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\csi.exe
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\csi.exe.config
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\csi.rsp
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.AppContext.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Console.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.IO.Compression.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Net.Http.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Net.Sockets.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.ValueTuple.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Xml.XPath.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\vbc.exe
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\vbc.exe.config
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\vbc.rsp
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\VBCSCompiler.exe
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Antlr3.Runtime.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\EntityFramework.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\EntityFramework.SqlServer.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AI.Web.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.ApplicationInsights.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.Owin.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.Owin.Security.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Newtonsoft.Json.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Owin.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\PagedList.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\PagedList.Mvc.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\System.Web.Helpers.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\System.Web.Mvc.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\System.Web.Optimization.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\System.Web.Razor.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\System.Web.WebPages.Deployment.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\System.Web.WebPages.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\System.Web.WebPages.Razor.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\WebGrease.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\EntityFramework.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\EntityFramework.SqlServer.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AI.PerfCounterCollector.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AI.Web.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.ApplicationInsights.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.Owin.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Microsoft.Owin.Security.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Newtonsoft.Json.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\PagedList.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\PagedList.Mvc.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\System.Web.Helpers.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\System.Web.Mvc.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\System.Web.Razor.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\System.Web.WebPages.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\System.Web.WebPages.Deployment.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\System.Web.WebPages.Razor.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\System.Web.Optimization.xml
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\bin\Antlr3.Runtime.pdb
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\obj\Debug\DACN.csprojAssemblyReference.cache
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\obj\Debug\DACN.Migrations.createdb.resources
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\obj\Debug\DACN.csproj.GenerateResource.cache
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\obj\Debug\DACN.csproj.CoreCompileInputs.cache
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\obj\Debug\DACN.csproj.CopyComplete
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\obj\Debug\DACN.dll
+C:\Users\tai\Desktop\ganlast\dacn\DACN\DACN\obj\Debug\DACN.pdb
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\ApplicationInsights.config
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\DACN.dll.config
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\DACN.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\DACN.pdb
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\csc.exe
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\csc.exe.config
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\csc.rsp
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\csi.exe
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\csi.exe.config
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\csi.rsp
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.AppContext.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Console.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.IO.Compression.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Net.Http.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Net.Sockets.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.ValueTuple.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Xml.XPath.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\vbc.exe
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\vbc.exe.config
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\vbc.rsp
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\VBCSCompiler.exe
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Antlr3.Runtime.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\EntityFramework.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\EntityFramework.SqlServer.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AI.Web.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.ApplicationInsights.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.Owin.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.Owin.Security.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Newtonsoft.Json.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Owin.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\PagedList.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\PagedList.Mvc.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\System.Web.Helpers.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\System.Web.Mvc.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\System.Web.Optimization.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\System.Web.Razor.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\System.Web.WebPages.Deployment.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\System.Web.WebPages.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\System.Web.WebPages.Razor.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\WebGrease.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\EntityFramework.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\EntityFramework.SqlServer.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AI.PerfCounterCollector.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AI.Web.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.ApplicationInsights.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.Owin.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Microsoft.Owin.Security.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Newtonsoft.Json.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\PagedList.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\PagedList.Mvc.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\System.Web.Helpers.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\System.Web.Mvc.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\System.Web.Razor.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\System.Web.WebPages.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\System.Web.WebPages.Deployment.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\System.Web.WebPages.Razor.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\System.Web.Optimization.xml
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\bin\Antlr3.Runtime.pdb
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\obj\Debug\DACN.csprojAssemblyReference.cache
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\obj\Debug\DACN.Migrations.createdb.resources
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\obj\Debug\DACN.csproj.GenerateResource.cache
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\obj\Debug\DACN.csproj.CoreCompileInputs.cache
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\obj\Debug\DACN.csproj.CopyComplete
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\obj\Debug\DACN.dll
+C:\Users\tai\Desktop\pair code\dacn\DACN\DACN\obj\Debug\DACN.pdb
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\ApplicationInsights.config
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\DACN.dll.config
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\DACN.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\DACN.pdb
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\csc.exe
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\csc.exe.config
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\csc.rsp
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\csi.exe
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\csi.exe.config
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\csi.rsp
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.AppContext.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Console.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.IO.Compression.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Net.Http.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Net.Sockets.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.ValueTuple.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Xml.XPath.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\vbc.exe
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\vbc.exe.config
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\vbc.rsp
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\VBCSCompiler.exe
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Antlr3.Runtime.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\EntityFramework.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\EntityFramework.SqlServer.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AI.Web.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.ApplicationInsights.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.Owin.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.Owin.Security.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Newtonsoft.Json.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Owin.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\PagedList.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\PagedList.Mvc.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\System.Web.Helpers.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\System.Web.Mvc.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\System.Web.Optimization.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\System.Web.Razor.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\System.Web.WebPages.Deployment.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\System.Web.WebPages.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\System.Web.WebPages.Razor.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\WebGrease.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\EntityFramework.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\EntityFramework.SqlServer.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AI.PerfCounterCollector.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AI.Web.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.ApplicationInsights.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.Owin.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Microsoft.Owin.Security.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Newtonsoft.Json.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\PagedList.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\PagedList.Mvc.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\System.Web.Helpers.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\System.Web.Mvc.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\System.Web.Razor.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\System.Web.WebPages.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\System.Web.WebPages.Deployment.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\System.Web.WebPages.Razor.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\System.Web.Optimization.xml
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\bin\Antlr3.Runtime.pdb
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\obj\Debug\DACN.csprojAssemblyReference.cache
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\obj\Debug\DACN.Migrations.createdb.resources
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\obj\Debug\DACN.csproj.GenerateResource.cache
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\obj\Debug\DACN.csproj.CoreCompileInputs.cache
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\obj\Debug\DACN.csproj.CopyComplete
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\obj\Debug\DACN.dll
+C:\Users\tai\Desktop\newdeskkk\dacn\DACN\DACN\obj\Debug\DACN.pdb
+D:\dacn\DACN\DACN\obj\Debug\DACN.Migrations.createdb.resources
+D:\dacn\DACN\DACN\obj\Debug\DACN.csproj.GenerateResource.cache
+F:\dacn\DACN\DACN\obj\Debug\DACN.Migrations.createdb.resources
+F:\dacn\DACN\DACN\obj\Debug\DACN.csproj.GenerateResource.cache
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\ApplicationInsights.config
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\DACN.dll.config
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\DACN.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\DACN.pdb
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\csc.exe
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\csc.exe.config
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\csc.rsp
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\csi.exe
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\csi.exe.config
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\csi.rsp
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.AppContext.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Console.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.DiagnosticSource.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Globalization.Calendars.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.IO.Compression.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.IO.Compression.ZipFile.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Net.Http.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Net.Sockets.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Threading.Tasks.Extensions.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.ValueTuple.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Xml.XPath.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\vbc.exe
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\vbc.exe.config
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\vbc.rsp
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\VBCSCompiler.exe
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Antlr3.Runtime.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\EntityFramework.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\EntityFramework.SqlServer.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AI.Web.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.ApplicationInsights.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AspNet.TelemetryCorrelation.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.Owin.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.Owin.Security.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Newtonsoft.Json.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Owin.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\PagedList.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\PagedList.Mvc.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\System.Diagnostics.DiagnosticSource.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\System.Web.Helpers.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\System.Web.Mvc.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\System.Web.Optimization.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\System.Web.Razor.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\System.Web.WebPages.Deployment.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\System.Web.WebPages.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\System.Web.WebPages.Razor.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\WebGrease.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\EntityFramework.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\EntityFramework.SqlServer.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AI.PerfCounterCollector.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AI.Web.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.ApplicationInsights.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.pdb
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.pdb
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.AspNet.TelemetryCorrelation.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.Owin.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Microsoft.Owin.Security.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Newtonsoft.Json.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\PagedList.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\PagedList.Mvc.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\System.Diagnostics.DiagnosticSource.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\System.Web.Helpers.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\System.Web.Mvc.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\System.Web.Razor.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\System.Web.WebPages.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\System.Web.WebPages.Deployment.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\System.Web.WebPages.Razor.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\System.Web.Optimization.xml
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\bin\Antlr3.Runtime.pdb
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\obj\Debug\DACN.csprojAssemblyReference.cache
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\obj\Debug\DACN.Migrations.createdb.resources
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\obj\Debug\DACN.csproj.GenerateResource.cache
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\obj\Debug\DACN.csproj.CoreCompileInputs.cache
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\obj\Debug\DACN.csproj.CopyComplete
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\obj\Debug\DACN.dll
+C:\Users\tai\Desktop\New folder (4)\dacn\DACN\DACN\obj\Debug\DACN.pdb

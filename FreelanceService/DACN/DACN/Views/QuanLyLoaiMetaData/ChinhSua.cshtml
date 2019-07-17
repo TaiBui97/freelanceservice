@@ -1,0 +1,47 @@
+﻿@model DACN.Models.DataModel.LoaiMetaData
+
+@{
+    ViewBag.Title = "ChinhSua";
+    Layout = "~/Views/Shared/_Layout _Admin.cshtml";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.MaLoaiMetaData)
+    @Html.ValidationSummary(true)
+    <div class="col-lg-9">
+        <div class="card">
+            <div class="card-header">
+                <strong>Chỉnh sửa MetaData</strong>
+            </div>
+            <div class="card-body card-block">
+                <div class="row form-group">
+                    <div class="col col-md-3">
+                        <label for="hf-email" class=" form-control-label">Tên MetaData</label>
+                    </div>
+                    <div class="col-12 col-md-9">
+                        @Html.EditorFor(model => model.TenLoaiMetaData, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.TenLoaiMetaData, "", new { @class = "text-danger" })
+                        <span class="help-block">Vui lòng nhập tên MetaData</span>
+
+                    </div>
+                </div>
+                
+            </div>
+            <div class="card-footer">
+                <button style="height:38px" type="submit" class="btn btn-success btn-sm btn-custom">
+                    <i class="fa fa-dot-circle-o"></i> Lưu vào
+                </button>
+                <label style="margin-bottom:0!important;" class="btn btn-danger btn-custom">
+                    <i class="ti-arrow-left"></i>
+                    <a style="color:white; " href="@Url.Action("Index", "QuanLyLoaiMetaData")">Trở về</a>
+                </label>
+
+            </div>
+        </div>
+
+    </div>
+}

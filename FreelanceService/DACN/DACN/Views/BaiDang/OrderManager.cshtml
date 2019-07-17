@@ -1,0 +1,638 @@
+﻿@model DACN.Models.BusinessModel.QuanLyDDH
+@{
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+
+
+<section class="job-detail section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+                <article class="db-new-content">
+                    <header class="db-new-header">
+                        <h1 class="alt">Quản lý bán hàng</h1>
+                        <div class="search fake-hint-wrap rf">
+                            <form action="">
+                                <input name="act_search_query" type="search" value="" placeholder="Tìm kiếm lịch sử...">
+                                <a href="#!" class="btn-search"><i class="ti-search"></i></a>
+                            </form>
+                        </div>
+                    </header>
+                    <div class="db-new-filters">
+                        <ul class="tabs js-db-status-tabs">
+                            <li class="active"><a data-toggle="tab" href="#priority">Đơn Hàng Của Tôi</a></li>
+                            <li><a data-toggle="tab" href="#cancelled">Bài Đăng Của Tôi</a></li>
+                            <li><a data-toggle="tab" href="#active">Đơn Hàng Của Khách</a></li>
+                            <li><a data-toggle="tab" href="#late">Bài Đăng Thành Công</a></li>
+                            <li><a data-toggle="tab" href="#money">Thống Kê Tiền</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+                        <div class="db-new-main-table tab-pane fade in active" id="priority">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Tên Người Bán</th>
+                                        <th>Nội Dung</th>
+                                        <th>Ngày Đặt</th>
+                                        <th>Ngày Bắt Đầu</th>
+                                        <th>Ngày Giao</th>
+                                        <th>Giá</th>
+                                        <th>Tình Trạng</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.myListDDH)
+                                    {
+                                        if (item != null)
+                                        {
+                                            var sp = Model.myBuyerListSP.Where(a => a.MaSP == item.MaSP).FirstOrDefault();
+                                            var tk = Model.myBuyerListTK.Where(a => a.MaTaiKhoan == sp.MaTaiKhoan).FirstOrDefault();
+                                            <tr>
+                                                @if (tk != null)
+                                                {
+                                                    <td>@tk.TenTaiKhoan</td>
+                                                }
+                                                <td>@item.MoTaDDH</td>
+                                                <td>@String.Format("{0:dd/MM/yyyy}", item.NgayDat)</td>
+                                                <td>@String.Format("{0:dd/MM/yyyy}", item.NgayBatDau)</td>
+                                                <td>@String.Format("{0:dd/MM/yyyy}", item.NgayGiao)</td>
+                                                <td class="pricing-item">@item.GiaDDH đ</td>
+                                                @if (item.TrangThai == true && item.Delete == false)
+                                                {
+                                                    <td>Đã Giao</td>
+                                                    <td class="btn-table">
+                                                        <a href="@Url.Action("OrderDetails", "BaiDang", new { ma =item.MaDDH})" class="btn btn-success">
+                                                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                            Xem chi tiết
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalEdit">
+                                                            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                                            Gửi báo cáo
+                                                        </a>
+                                                        <div class="modal fade" id="exampleModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title cus-title" id="exampleModalLabel">
+                                                                            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                                                            Bạn có thể báo cáo bài đăng sau khi chọn vấn đề.
+                                                                        </h5>
+                                                                        <button type="button" class="close" id="close-form" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="wrap-btn-rp">
+                                                                            <button class="btn-rp-order" data-button="" id="reportSex">Ảnh khỏa thân</button>
+                                                                            <button class="btn-rp-order" data-button="Bạo lực">Bạo lực</button>
+                                                                            <button class="btn-rp-order" data-button="Bài đăng giả">Bài đăng giả</button>
+                                                                            <button class="btn-rp-order" data-button="Spam">Spam</button>
+                                                                            <button class="btn-rp-order" data-button="" id="reportForbidden">Bài đăng trái phép</button>
+                                                                            <button class="btn-rp-order" data-button="" id="reportWords">Ngôn từ gây thù ghét</button>
+                                                                            <button class="btn-rp-order" data-button="Khủng bố">Khủng bố</button>
+                                                                            <button class="btn-rp-order" data-button="Khác" id="reportOthers">Khác</button>
+                                                                        </div>
+                                                                        <div class="content-btn-rp">
+                                                                            <div class="service-sex">
+                                                                                <div class="rp-tt">
+                                                                                    Hãy giúp chúng tôi hiểu vấn đề.
+                                                                                </div>
+                                                                                <button class="btn-rp-order-child" data-button="Khỏa thân : tôi ">Tôi</button>
+                                                                                <button class="btn-rp-order-child" data-button="Khỏa thân : ảnh khỏa thân người lớn ">Ảnh khỏa thân người lớn</button>
+                                                                                <button class="btn-rp-order-child" data-button="Khỏa thân : gợi dục ">Gợi dục</button>
+                                                                                <button class="btn-rp-order-child" data-button="Khỏa thân : hoạt động tình dục ">Hoạt động tình dục</button>
+                                                                                <button class="btn-rp-order-child" data-button="Khỏa thân : dịch vụ tình dục">Dịch vụ tình dục</button>
+                                                                                <button class="btn-rp-order-child" data-button="Khỏa thân : chia sẽ ảnh riêng tư ">Chia sẽ hình ảnh riêng tư</button>
+                                                                            </div>
+                                                                            <div class="service-forbidden">
+                                                                                <div class="rp-tt">
+                                                                                    Hãy giúp chúng tôi hiểu vấn đề.
+                                                                                </div>
+                                                                                <button class="btn-rp-order-child" data-button="Trái phép : ma túy ">Ma túy</button>
+                                                                                <button class="btn-rp-order-child" data-button="Trái phép : súng">Súng</button>
+                                                                                <button class="btn-rp-order-child" data-button="Trái phép : gợi dục ">Gợi dục</button>
+                                                                                <button class="btn-rp-order-child" data-button="Trái phép : động vật tuyệt chủng ">Động vật có nguy cơ tuyệt chủng</button>
+                                                                                <button class="btn-rp-order-child" data-button="Trái phép : khác ">Khác</button>
+                                                                            </div>
+                                                                            <div class="service-words">
+                                                                                <div class="rp-tt">
+                                                                                    Hãy giúp chúng tôi hiểu vấn đề.
+                                                                                </div>
+                                                                                <button class="btn-rp-order-child" data-button="Ngôn từ : chủng tộc ">Chủng tộc hoặc sắc tộc</button>
+                                                                                <button class="btn-rp-order-child" data-button="Ngôn từ : nguồn gốc quốc gia ">Nguồn gốc quốc gia</button>
+                                                                                <button class="btn-rp-order-child" data-button="Ngôn từ : tôn giáo ">Thành phần tôn giáo</button>
+                                                                                <button class="btn-rp-order-child" data-button="Ngôn từ : giai cấp ">Phân chia giai cấp</button>
+                                                                                <button class="btn-rp-order-child" data-button="Ngôn từ : tình dục ">Thiên hướng tình dục</button>
+                                                                                <button class="btn-rp-order-child" data-button="Ngôn từ : khuyết tật hoặc bệnh tất ">Tình trạng khuyết tật hoặc bệnh tật</button>
+                                                                                <button class="btn-rp-order-child" data-button="Ngôn từ : khác ">Hạng mục khác</button>
+                                                                            </div>
+                                                                            <div class="service-others">
+                                                                                <div class="rp-tt">
+                                                                                    Hãy giúp chúng tôi hiểu vấn đề.
+                                                                                </div>
+
+                                                                                <textarea cols="80" rows="6" id="txt-report" class="text-rp"></textarea>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="additon-info">
+
+                                                                            <div class="rp-tt">
+                                                                                Hãy để lại thông tin để chúng tôi phản hồi với bạn!
+                                                                            </div>
+                                                                            <input class="info-txt" type="text" id="contactrp" value="" />
+                                                                        </div>
+                                                                        <div class="warning-rp">
+                                                                            <i class="fa fa-info-circle" aria-hidden="true"></i>Trường hợp khẳng cấp liên hệ ngay chúng tôi qua hotline website.
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
+                                                                        <button type="submit" class="btn btn-primary submit-report" onclick="sad(@item.MaDDH)">Gửi</button>
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                }
+                                                else if (item.TrangThai == false && item.Delete == false)
+                                                {
+                                                    <td>Đang Chờ Giao</td>
+                                                    <td class="btn-table">
+                                                        <a href="@Url.Action("OrderDetails", "BaiDang", new { ma =item.MaDDH})" class="btn btn-success">
+                                                            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                                                            Xem chi tiết
+                                                        </a>
+                                                    </td>
+                                                    <td>
+                                                        <a href="#" class="btn btn-warning" data-toggle="modal" data-target="#exampleModalEdit">
+                                                            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                                            Gửi báo cáo
+                                                        </a>
+                                                        <div class="modal fade" id="exampleModalEdit" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title cus-title" id="exampleModalLabel">
+                                                                            <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                                                                            Bạn có thể báo cáo bài đăng sau khi chọn vấn đề.
+                                                                        </h5>
+                                                                        <button type="button" class="close" id="close-form" data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
+                                                                    </div>
+                                                                    <div class="modal-body">
+                                                                        <div class="wrap-btn-rp">
+                                                                            <button class="btn-rp-order" data-button="" id="reportSex" name="typeData">Ảnh khỏa thân</button>
+                                                                            <button class="btn-rp-order" data-button="Bạo lực" name="typeData">Bạo lực</button>
+                                                                            <button class="btn-rp-order" data-button="Bài đăng giả" name="typeData">Bài đăng giả</button>
+                                                                            <button class="btn-rp-order" data-button="Spam" name="typeData">Spam</button>
+                                                                            <button class="btn-rp-order" data-button="" id="reportForbidden" name="typeData">Bài đăng trái phép</button>
+                                                                            <button class="btn-rp-order" data-button="" id="reportWords" name="typeData">Ngôn từ gây thù ghét</button>
+                                                                            <button class="btn-rp-order" data-button="Khủng bố" name="typeData">Khủng bố</button>
+                                                                            <button class="btn-rp-order" data-button="Khác" id="reportOthers" name="typeData">Khác</button>
+                                                                        </div>
+                                                                        <div class="content-btn-rp">
+                                                                            <div class="service-sex">
+                                                                                <div class="rp-tt">
+                                                                                    Hãy giúp chúng tôi hiểu vấn đề.
+                                                                                </div>
+                                                                                <button class="btn-rp-order-child" data-button="Khỏa thân : tôi " name="txtOthers">Tôi</button>
+                                                                                <button class="btn-rp-order-child" data-button="Khỏa thân : ảnh khỏa thân người lớn " name="txtOthers">Ảnh khỏa thân người lớn</button>
+                                                                                <button class="btn-rp-order-child" data-button="Khỏa thân : gợi dục " name="txtOthers">Gợi dục</button>
+                                                                                <button class="btn-rp-order-child" data-button="Khỏa thân : hoạt động tình dục " name="txtOthers">Hoạt động tình dục</button>
+                                                                                <button class="btn-rp-order-child" data-button="Khỏa thân : dịch vụ tình dục" name="txtOthers">Dịch vụ tình dục</button>
+                                                                                <button class="btn-rp-order-child" data-button="Khỏa thân : chia sẽ ảnh riêng tư " name="txtOthers">Chia sẽ hình ảnh riêng tư</button>
+                                                                            </div>
+                                                                            <div class="service-forbidden">
+                                                                                <div class="rp-tt">
+                                                                                    Hãy giúp chúng tôi hiểu vấn đề.
+                                                                                </div>
+                                                                                <button class="btn-rp-order-child" data-button="Trái phép : ma túy " name="txtOthers">Ma túy</button>
+                                                                                <button class="btn-rp-order-child" data-button="Trái phép : súng" name="txtOthers">Súng</button>
+                                                                                <button class="btn-rp-order-child" data-button="Trái phép : gợi dục " name="txtOthers">Gợi dục</button>
+                                                                                <button class="btn-rp-order-child" data-button="Trái phép : động vật tuyệt chủng " name="txtOthers">Động vật có nguy cơ tuyệt chủng</button>
+                                                                                <button class="btn-rp-order-child" data-button="Trái phép : khác " name="txtOthers">Khác</button>
+                                                                            </div>
+                                                                            <div class="service-words">
+                                                                                <div class="rp-tt">
+                                                                                    Hãy giúp chúng tôi hiểu vấn đề.
+                                                                                </div>
+                                                                                <button class="btn-rp-order-child" data-button="Ngôn từ : chủng tộc " name="txtOthers">Chủng tộc hoặc sắc tộc</button>
+                                                                                <button class="btn-rp-order-child" data-button="Ngôn từ : nguồn gốc quốc gia " name="txtOthers">Nguồn gốc quốc gia</button>
+                                                                                <button class="btn-rp-order-child" data-button="Ngôn từ : tôn giáo " name="txtOthers">Thành phần tôn giáo</button>
+                                                                                <button class="btn-rp-order-child" data-button="Ngôn từ : giai cấp " name="txtOthers">Phân chia giai cấp</button>
+                                                                                <button class="btn-rp-order-child" data-button="Ngôn từ : tình dục " name="txtOthers">Thiên hướng tình dục</button>
+                                                                                <button class="btn-rp-order-child" data-button="Ngôn từ : khuyết tật hoặc bệnh tất " name="txtOthers">Tình trạng khuyết tật hoặc bệnh tật</button>
+                                                                                <button class="btn-rp-order-child" data-button="Ngôn từ : khác " name="txtOthers">Hạng mục khác</button>
+                                                                            </div>
+                                                                            <div class="service-others">
+                                                                                <div class="rp-tt">
+                                                                                    Hãy giúp chúng tôi hiểu vấn đề.
+                                                                                </div>
+
+                                                                                <textarea cols="80" rows="6" id="txt-report" class="text-rp" name="txtOthers"></textarea>
+                                                                            </div>
+
+                                                                        </div>
+                                                                        <div class="additon-info">
+
+                                                                            <div class="rp-tt">
+                                                                                Hãy để lại thông tin để chúng tôi phản hồi với bạn!
+                                                                            </div>
+                                                                            <input class="info-txt" type="text" id="contactrp" value="" name="txtContact" />
+                                                                        </div>
+                                                                        <div class="warning-rp">
+                                                                            <i class="fa fa-info-circle" aria-hidden="true"></i>Trường hợp khẳng cấp liên hệ ngay chúng tôi qua hotline website.
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Thoát</button>
+                                                                        <button type="submit" class="btn btn-primary submit-report" onclick="sad(@item.MaDDH)">Gửi</button>
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
+                                                        </div>
+                                                    </td>
+                                                }
+                                                else if (item.TrangThai == false && item.Delete == null)
+                                                {
+                                                    <td>Đang Chờ Nhận Đơn</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                }
+                                                else if (item.TrangThai == false && item.Delete == true)
+                                                {
+                                                    <td>Từ Chối Nhận Đơn</td>
+                                                    <td></td>
+                                                    <td></td>
+                                                }
+                                            </tr>
+                                        }
+
+                                    }
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="db-new-main-table tab-pane fade" id="active">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Bài Đăng</th>
+                                        <th>Tên Khách</th>
+                                        <th>Nội Dung</th>
+                                        <th>Ngày Đặt</th>
+                                        <th>Ngày Bắt Đầu</th>
+                                        <th>Ngày Giao</th>
+                                        <th>Giá</th>
+                                        <th>Tình Trạng</th>
+                                        <th></th>
+                                        @foreach (var item in Model.myListDDH)
+                                        {
+                                            if (item != null && item.TrangThai == false && item.Delete == null)
+                                            {
+                                                <th></th>
+                                            }
+                                        }
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.customerListDDH)
+                                    {
+
+                                        if (item != null && item.Delete != true)
+                                        {
+                                            var tk = Model.customerListTK.Where(a => a.MaTaiKhoan == item.MaTaiKhoan).FirstOrDefault();
+                                            <tr>
+                                                <td>@item.SanPham.TenSP</td>
+                                                @if (tk != null)
+                                                {
+                                                    <td>@tk.TenTaiKhoan</td>
+                                                }
+                                                <td>@item.MoTaDDH</td>
+                                                <td>@String.Format("{0:dd/MM/yyyy}", item.NgayDat)</td>
+                                                <td>@String.Format("{0:dd/MM/yyyy}", item.NgayBatDau)</td>
+                                                <td>@String.Format("{0:dd/MM/yyyy}", item.NgayGiao)</td>
+                                                <td class="pricing-item" >@item.GiaDDH đ</td>
+                                                @if (item.TrangThai == true && item.Delete == false)
+                                                {
+                                                    <td>Đã Giao</td>
+                                                    <td> <input type="button" onclick="location.href='@Url.Action("OrderDetails", "BaiDang", new { ma = item.MaDDH})'" class="btn btn-common" value="Chi Tiết" /></td>
+                                                }
+                                                else if (item.TrangThai == false && item.Delete == false)
+                                                {
+                                                    <td>Đang Chờ Giao</td>
+                                                    <td> <input type="button" onclick="location.href='@Url.Action("OrderDetails", "BaiDang", new { ma = item.MaDDH})'" class="btn btn-common" value="Chi Tiết" /></td>
+                                                }
+                                                else if (item.TrangThai == false && item.Delete == null)
+                                                {
+                                                    <td>Đang Chờ Nhận Đơn</td>
+                                                    <td>
+                                                        <input data-toggle="modal" data-target="#submitOffer" type="button" class="btn btn-common" value="Nhận Đơn" />
+                                                        <div class="modal fade" id="submitOffer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog" role="document" style="width:800px!important;">
+                                                                <div class="modal-content" style="height:180px!important">
+                                                                    <form>
+                                                                        <div class="modal-header">
+                                                                            <h5 class="modal-title" id="exampleModalLabel">Thông báo đơn hàng</h5>
+                                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                <span aria-hidden="true">&times;</span>
+                                                                            </button>
+                                                                        </div>
+                                                                        <div class="modal-body">
+                                                                            <div class="form-group col-md-12">
+                                                                                <label for="recipient-name" class="col-form-label" style="
+    font-size: 18px;
+    line-height: 20px;
+    color: #444;
+    font-weight: 500;
+">Bạn sẽ phải chịu hoàn toàn trách nhiệm với đơn hàng bạn nhận. Vui lòng suy nghĩ kĩ trước khi chọn!</label>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer footer-magrin" style="display:inline-flex;float:right">
+                                                                            <button class="btn btn-danger btn-custom" onclick="location.href='@Url.Action("HuyDonHang", "BaiDang", new { ma = item.MaDDH})'" type="button" data-dismiss="modal"><a style="color:white" href="#">Hủy đơn hàng</a></button>
+                                                                            <button id="acceptService" class="btn btn-success btn-custom" onclick="location.href='@Url.Action("ChapNhanDonHang", "BaiDang", new { ma = item.MaDDH})'" type="button"><a style="color:white" href="#">Chấp nhận đơn hàng</a></button>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </td>
+                                                }
+
+                                            </tr>
+                                        }
+
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="db-new-main-table tab-pane fade" id="late">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Tên Người Mua</th>
+                                        <th>Mã Đơn Hàng</th>
+                                        <th>Mã Bài Đăng</th>
+                                        <th>Giá Đơn Hàng</th>
+                                        <th>Ngày Đặt</th>
+                                        <th>Ngày Bắt Đầu</th>
+                                        <th>Ngày Kết Thúc</th>
+                                        <th>Tình Trạng</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.customerListDDH)
+                                    {
+                                        if (item != null && item.TrangThai == true && item.Delete != true)
+                                        {
+                                            var sp = Model.myListSP.Where(a => a.MaSP == item.MaSP).FirstOrDefault();
+                                            <tr>
+                                                @if (item != null)
+                                                {
+                                                    <td>@Model.customerListTK.FirstOrDefault(a => a.MaTaiKhoan == item.MaTaiKhoan)</td>
+                                                }
+                                                <td>@item.MaDDH</td>
+                                                <td>@item.MaSP</td>
+                                                <td class="pricing-item">@item.GiaDDH đ</td>
+                                                <td>@String.Format("{0:dd/MM/yyyy}", item.NgayDat)</td>
+                                                <td>@String.Format("{0:dd/MM/yyyy}", item.NgayBatDau)</td>
+                                                <td>@String.Format("{0:dd/MM/yyyy}", item.NgayGiao)</td>
+                                                <td>Đã Giao</td>
+
+                                            </tr>
+                                        }
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="db-new-main-table tab-pane fade" id="cancelled">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Người Đăng</th>
+                                        <th>Tiêu Đề</th>
+                                        <th>Mô Tả Chung</th>
+                                        <th>Giá</th>
+                                        <th>Ngày Tạo</th>
+                                        <th>Ngày Sửa</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    @foreach (var item in Model.myListSP)
+                                    {
+                                        if (item != null)
+                                        {
+
+                                            <tr>
+                                                @if (Model.myTk != null)
+                                                {
+                                                    <td>@Model.myTk.TenTaiKhoan</td>
+                                                }
+                                                <td>@item.TenSP</td>
+                                                <td>@item.MotaSP</td>
+                                                <td class="pricing-item">@item.GiaSP đ</td>
+                                                <td>@String.Format("{0:dd/MM/yyyy}", item.NgayTao)</td>
+                                                <td>@String.Format("{0:dd/MM/yyyy}", item.NgaySua)</td>
+                                            </tr>
+                                        }
+
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="db-new-main-table tab-pane fade" id="money">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Bài Đăng</th>
+                                        <th>Tên Khách</th>
+                                        <th>Nội Dung</th>
+                                        <th>Ngày Đặt</th>
+                                        <th>Ngày Bắt Đầu</th>
+                                        <th>Ngày Giao</th>
+                                        <th>Giá</th>
+                                        <th>Tình Trạng</th>
+                                        <th>Ngày Nhận Tiền</th>
+                                        <th>Số Tiền Nhận</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.customerListDDH)
+                                    {
+
+                                        if (item != null && item.TrangThai == true)
+                                        {
+                                            var tk = Model.customerListTK.Where(a => a.MaTaiKhoan == item.MaTaiKhoan).FirstOrDefault();
+                                            <tr>
+                                                <td>@item.SanPham.TenSP</td>
+                                                @if (tk != null)
+                                                {
+                                                    <td>@tk.TenTaiKhoan</td>
+                                                }
+                                                <td>@item.MoTaDDH</td>
+                                                <td>@String.Format("{0:dd/MM/yyyy}", item.NgayDat)</td>
+                                                <td>@String.Format("{0:dd/MM/yyyy}", item.NgayBatDau)</td>
+                                                <td>@String.Format("{0:dd/MM/yyyy}", item.NgayGiao)</td>
+                                                <td class="pricing-item">@item.GiaDDH đ</td>
+                                                <td>Đã Giao</td>
+                                                @if (item.NgayNhanTien == null)
+                                                {
+                                                    <td>Chưa Nhận</td>
+                                                }
+                                                else
+                                                {
+                                                    <td>
+                                                        @String.Format("{0:dd/MM/yyyy}", item.NgayNhanTien)
+                                                    </td>
+                                                }
+                                                @if (item.SoTienNhan == null)
+                                                {
+                                                    <td>Chưa Nhận</td>
+                                                }
+                                                else
+                                                {
+                                                    <td>@item.SoTienNhan</td>
+                                                }
+
+                                            </tr>
+                                        }
+
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function gigincluded() {
+        var x = document.getElementById("package");
+        if (x.style.display === "none") {
+            x.style.display = "block";
+        } else {
+            x.style.display = "none";
+        }
+    }
+</script>
+
+<script>
+    $(document).ready(function () {
+        var btnReport = document.getElementsByClassName("btn-rp-order");
+        $('.btn-rp-order').on('click', function () {
+            $(".service-sex").hide();
+            $(".service-forbidden").hide();
+            $(".service-words").hide();
+            $(".service-others").hide();
+
+            $('.btn-rp-order').removeClass('active-rp');
+            $(this).addClass('active-rp');
+        });
+        $('#reportSex').on('click', function () {
+            $(".service-sex").show();
+        });
+
+        $('#reportForbidden').on('click', function () {
+            $(".service-forbidden").show();
+        });
+        $('#reportWords').on('click', function () {
+            $(".service-words").show();
+        });
+        $('#reportWords').on('click', function () {
+
+            $(".service-words").show();
+        });
+        $('#reportOthers').on('click', function () {
+            $(".service-others").show();
+        });
+
+        $('.btn-rp-order-child').on('click', function () {
+
+
+            $('.btn-rp-order-child').removeClass('active-rp');
+            $(this).addClass('active-rp');
+        });
+
+
+
+    });
+</script>
+<script>
+    var typeData = "";
+    var txtOthers = "";
+    var txtContact = "";
+    $('.btn-rp-order,.btn-rp-order-child').click(function () {
+        typeData = $(this).attr('data-button');
+        if (typeData === "") return;
+        
+    });
+    function sad(id) {
+            txtOthers = $.trim($("#txt-report").val());
+            txtContact = $.trim($("#contactrp").val());
+            console.log(id);
+            console.log(typeData);
+            console.log(txtOthers);
+            console.log(txtContact);
+            var dad = { MaDDH : id, typeData: typeData, txtOthers: txtOthers,txtContact:txtContact };
+            var tat = JSON.stringify(dad);
+              $.ajax({
+                    type: "POST",
+                    url: '@Url.Action("ToCao","BaiDang")',
+                    contentType: "application/json; charset=utf-8",
+                    data: tat,
+                  success: function (response) {
+                      $('#close-form').click();
+                      Swal.fire({
+                          position: 'top-end',
+                          type: 'success',
+                          title: 'Bạn đã gửi thành công !',
+                          showConfirmButton: false,
+                          timer: 1500
+                      })
+                  }
+              });
+        }
+    $('#acceptService').click(function () {
+        Swal.fire({
+            position: 'top-end',
+            type: 'success',
+            title: 'Nhận đơn hàng thành công!',
+            showConfirmButton: false,
+            timer: 2000
+        })
+
+    });
+</script>
+<script>
+
+    $(document).ready(function () {
+        var str = $(".pricing-item");
+        for (let i = 0; i < str.length; i++) {
+            var formatstr = str[i].innerHTML.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+            str[i].innerHTML = formatstr;
+
+        }
+
+    });
+</script>

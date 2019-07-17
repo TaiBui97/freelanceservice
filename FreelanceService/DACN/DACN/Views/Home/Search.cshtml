@@ -1,0 +1,540 @@
+﻿
+
+@model DACN.Models.BusinessModel.DanhSachBaiDang
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Jobboard">
+    <title>Chợ kỹ năng</title>
+    <link rel="shortcut icon" href="~/assets/img/favicon.png">
+    @Styles.Render("~/bundles/core")
+    <style>
+
+        .slick-arrow {
+            opacity: 0;
+            background-color: #fff;
+            position: absolute;
+            z-index: 4;
+            top: 50%;
+            width: 32px;
+            height: 29px;
+            margin-top: -80px;
+            text-align: center;
+            margin-right: 20px;
+            -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+            border: 0;
+        }
+
+        .wrap-slider:hover .slick-arrow {
+            opacity: 0.9;
+            top: 130px;
+            -webkit-transition: top .1s;
+            -o-transition: top .1s;
+            transition: top .1s;
+        }
+
+
+        .lSPager {
+            display: none;
+        }
+
+        .slick-arrow:after {
+            content: "";
+            display: inline-block;
+            background: url('../../assets/img/arrows.svg') no-repeat;
+            background-size: 16px 64px;
+            width: 16px;
+            height: 16px;
+            margin-top: 5px;
+        }
+
+        .slick-arrow.slick-next:after {
+            background-position: 0 -48px;
+        }
+
+        .slick-next {
+            border-radius: 15px 3px 3px 15px;
+        }
+
+        .slick-prev {
+            border-radius: 3px 15px 15px 3px;
+        }
+
+
+        .lSAction > a {
+            margin-right: 27px;
+        }
+
+        .lSAction > .lSPrev {
+            background-position: 0 0;
+            left: 0px !important;
+        }
+
+        .lSAction > .lSNext {
+            background-position: 0 0;
+            right: -20px !important;
+        }
+
+        .slick-arrow {
+            opacity: 0;
+            background-color: #fff;
+            position: absolute;
+            z-index: 4;
+            top: 50%;
+            width: 32px;
+            height: 29px;
+            margin-top: -80px;
+            text-align: center;
+            margin-right: 20px;
+            -webkit-box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+            box-shadow: 0 2px 5px 0 rgba(0,0,0,.15);
+            border: 0;
+        }
+
+        .wrap-slider:hover .slick-arrow {
+            opacity: 0.9;
+            top: 130px;
+            -webkit-transition: top .1s;
+            -o-transition: top .1s;
+            transition: top .1s;
+        }
+
+
+        .lSPager {
+            display: none;
+        }
+
+        .slick-arrow:after {
+            content: "";
+            display: inline-block;
+            background: url('../../assets/img/arrow2.JPG') no-repeat;
+            background-size: 16px 64px;
+            width: 16px;
+            height: 16px;
+            margin-top: 5px;
+        }
+
+        .slick-arrow.slick-next:after {
+            background-position: 0 -48px;
+        }
+
+        .slick-next {
+            border-radius: 15px 3px 3px 15px;
+        }
+
+        .slick-prev {
+            border-radius: 3px 15px 15px 3px;
+        }
+
+
+        .lSAction > a {
+            margin-right: 27px;
+        }
+
+        .lSAction > .lSPrev {
+            background-position: 0 0;
+            left: 0px !important;
+        }
+
+        .lSAction > .lSNext {
+            background-position: 0 0;
+            right: -20px !important;
+        }
+    </style>
+    <link rel="stylesheet" href="~/assets/fonts/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/assets/fonts/themify-icons.css">
+</head>
+<body>
+
+    @RenderPage("~/Views/Shared/Header.cshtml")
+
+
+
+    <section class="job-browse section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9 col-sm-9" id="SanPham">
+                    @foreach (var item in Model.SanPham)
+                    {
+                        var ha = Model.TenHinhDaiDien.Where(a => a.MaTaiKhoan == item.MaTaiKhoan).FirstOrDefault();
+                        var tentk = Model.TaiKhoan.Where(a => a.MaTaiKhoan == item.MaTaiKhoan).FirstOrDefault();
+                        var ha2 = Model.TenHinhDaiDien.Where(a => a.MaSP == item.MaSP).ToList();
+                        if (ha != null && tentk != null && ha2 != null)
+                        {
+
+                            <div class="col-md-3 gig-card-layout padding-gig-item">
+                                <div>
+                                    <div class="gig-wrapper card" data-gig-id="101530405" data-impression-collected="true">
+                                        <div>
+                                            <div class="wrap-slider">
+                                                <ul class="slide-img-service">
+                                                    @foreach (var item2 in ha2)
+                                                    {
+                                                        <li>
+                                                            <a href="@Url.Action("ServiceDetails","BaiDang", new {masp =item.MaSP})" target="_self" class="media">
+                                                                <div class="slider">
+                                                                    <div class="slides preview" style="">
+                                                                        <div class="slide-item active" style="width: auto;">
+                                                                            <img src="~/assets/images/@item2.TenHinhAnh"
+                                                                                 alt="@item.MotaSP">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    }
+                                                </ul>
+                                                <div class="lSAction">
+                                                    <button class="lSPrev slick-arrow slick-prev"></button>
+                                                    <button class="lSNext slick-arrow slick-next"></button>
+                                                </div>
+
+                                            </div>
+                                            <div class="seller-info">
+                                                <span class="seller-image">
+                                                    <img src="~/assets/images/@ha.TenHinhAnh"
+                                                         alt="bossdesigners">
+                                                </span><span class="seller-name">
+                                                    <a href="/bossdesigners?source=gig_cards&amp;referrer_gig_slug=design-3-minimalist-logo-in-6-hrs-with-free-source-files&amp;ref_ctx_id=c244aa59-5484-4035-a731-d5eb5fd5360e"
+                                                       rel="nofollow"><span>by&nbsp;</span>@tentk.TenTaiKhoan</a><span class="level hint--bottom level-two-seller" data-hint="Completed at least 50 orders on time with a minimum 4.8 rating">
+                                                        Level 2
+                                                        Seller
+                                                    </span>
+                                                </span>
+                                            </div>
+                                            <h3>
+                                                <a href="@Url.Action("ServiceDetails","BaiDang", new {masp =item.MaSP})" target="_self" title="@item.MotaSP">
+                                                    @item.MotaSP
+                                                </a>
+                                            </h3>
+                                            <div class="content-info">
+                                                <span class="gig-rating">
+                                                    <i class="fa fa-star"></i> 4.8
+                                                    <span>(1k+)</span>
+                                                </span>
+
+                                            </div>
+                                            <footer>
+                                                <div class="gig-fav">
+                                                    <span class="coll-group">
+
+                                                        <a class="tooltip" href="#!" data-tip="Lưu bài đăng"><i class="fa fa-heart-o arrow-shape"></i></a>
+
+                                                        <a class="tooltip" href="#!" data-tip="Chia sẽ"><i class="fa fa-share-alt arrow-shape"></i></a>
+
+
+                                                    </span>
+                                                </div><a href="" target="_self" class="price-gig" title="$10"><small>Giá từ</small><span class="pricing-item">@item.GiaSP</span> đ</a>
+                                            </footer>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+                    <ul class="pagination">
+                        <li class="active"><a href="#" class="btn btn-common"><i class="ti-angle-left"></i> Trước</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li class="active"><a href="#" class="btn btn-common">Kế tiếp <i class="ti-angle-right"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- side bar -->
+                <div class="col-md-3 col-sm-4">
+                    <aside>
+                        <div class="sidebar">
+                            <div class="inner-box">
+                                <h3>Danh Mục</h3>
+                                <ul class="cat-list">
+                                    <li>
+                                        <a href="#">Finance <span class="num-posts">4,287 Jobs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Techonologies <span class="num-posts">4,256 Jobs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Art/Design<span class="num-posts">3,245 Jobs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Science <span class="num-posts">4,256 Jobs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Education Training <span class="num-posts">4,560 Jobs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Logistics <span class="num-posts">3,256 Jobs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Food Services <span class="num-posts">1,256 Jobs</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="inner-box">
+                                <h3>Thống kê công việc</h3>
+                                <ul class="cat-list">
+                                    <li>
+                                        <a href="#">Full Time <span class="num-posts">12,256 Jobs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Part Time <span class="num-posts">6,510 Jobs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Freelancer <span class="num-posts">1,171 Jobs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Internship <span class="num-posts">876 Jobs</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="inner-box">
+                                <h3>Địa điểm</h3>
+                                <ul class="cat-list">
+                                    <li>
+                                        <a href="#">New York <span class="num-posts">4,197 Jobs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">San Francisco <span class="num-posts">2,256 Jobs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">San Diego <span class="num-posts">3,278 Jobs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Los Angeles <span class="num-posts">5,294 Jobs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Chicago <span class="num-posts">1,746 Jobs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Houston <span class="num-posts">871 Jobs</span></a>
+                                    </li>
+                                    <li>
+                                        <a href="#">New Orleans <span class="num-posts">2,163 Jobs</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    @RenderPage("~/Views/Shared/Footer.cshtml")
+    @Scripts.Render("~/bundles/js")
+
+</body>
+<script>
+
+    $(document).ready(function () {
+        var str = $(".pricing-item");
+        for (let i = 0; i < str.length; i++) {
+            var formatstr = str[i].innerHTML.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+            str[i].innerHTML = formatstr;
+
+        }
+
+    });
+</script>
+<script>
+    $(document).ready(function () {
+        $(".slide-img-service").lightSlider({
+            item: 1,
+            autoWidth: false,
+            slideMove: 1, // slidemove will be 1 if loop is true
+            slideMargin: 40,
+            addClass: '',
+            mode: "slide",
+            useCSS: true,
+            cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
+            easing: 'linear', //'for jquery animation',////
+
+
+
+            keyPress: false,
+            controls: true,
+            prevHtml: '',
+            nextHtml: '',
+
+            rtl: false,
+            adaptiveHeight: false,
+
+            vertical: false,
+            verticalHeight: 100,
+            vThumbWidth: 235,
+
+            thumbItem: 1,
+            pager: true,
+            gallery: false,
+            galleryMargin: 5,
+            thumbMargin: 5,
+            currentPagerPosition: 'middle',
+
+            enableTouch: true,
+            enableDrag: true,
+            freeMove: true,
+            swipeThreshold: 40,
+
+            responsive: [
+
+
+            ],
+
+            onBeforeStart: function (el) { },
+            onSliderLoad: function (el) { },
+            onBeforeSlide: function (el) { },
+            onAfterSlide: function (el) { },
+            onBeforeNextSlide: function (el) { },
+            onBeforePrevSlide: function (el) { }
+        });
+        $('.slick-prev').click(function () {
+            slider.goToPrevSlide();
+        });
+        $('.slick-next').click(function () {
+            slider.goToNextSlide();
+        });
+    });
+</script>
+
+<script>
+    function autocomplete(inp, arr) {
+        /*the autocomplete function takes two arguments,
+        the text field element and an array of possible autocompleted values:*/
+        var currentFocus;
+        /*execute a function when someone writes in the text field:*/
+        inp.addEventListener("input", function (e) {
+            var a, b, i, val = this.value;
+            /*close any already open lists of autocompleted values*/
+            closeAllLists();
+            if (!val) { return false; }
+            currentFocus = -1;
+            /*create a DIV element that will contain the items (values):*/
+            a = document.createElement("DIV");
+            a.setAttribute("id", this.id + "autocomplete-list");
+            a.setAttribute("class", "autocomplete-items");
+            /*append the DIV element as a child of the autocomplete container:*/
+            this.parentNode.appendChild(a);
+            /*for each item in the array...*/
+            for (i = 0; i < arr.length; i++) {
+                /*check if the item starts with the same letters as the text field value:*/
+                if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                    /*create a DIV element for each matching element:*/
+                    b = document.createElement("DIV");
+                    /*make the matching letters bold:*/
+                    b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+                    b.innerHTML += arr[i].substr(val.length);
+                    /*insert a input field that will hold the current array item's value:*/
+                    b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                    /*execute a function when someone clicks on the item value (DIV element):*/
+                    b.addEventListener("click", function (e) {
+                        /*insert the value for the autocomplete text field:*/
+                        inp.value = this.getElementsByTagName("input")[0].value;
+                        /*close the list of autocompleted values,
+                        (or any other open lists of autocompleted values:*/
+                        closeAllLists();
+                    });
+                    a.appendChild(b);
+                }
+            }
+        });
+        /*execute a function presses a key on the keyboard:*/
+        inp.addEventListener("keydown", function (e) {
+            var x = document.getElementById(this.id + "autocomplete-list");
+            if (x) x = x.getElementsByTagName("div");
+            if (e.keyCode == 40) {
+                /*If the arrow DOWN key is pressed,
+                increase the currentFocus variable:*/
+                currentFocus++;
+                /*and and make the current item more visible:*/
+                addActive(x);
+            } else if (e.keyCode == 38) { //up
+                /*If the arrow UP key is pressed,
+                decrease the currentFocus variable:*/
+                currentFocus--;
+                /*and and make the current item more visible:*/
+                addActive(x);
+            } else if (e.keyCode == 13) {
+                /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                e.preventDefault();
+                if (currentFocus > -1) {
+                    /*and simulate a click on the "active" item:*/
+                    if (x) x[currentFocus].click();
+                }
+            }
+        });
+        function addActive(x) {
+            /*a function to classify an item as "active":*/
+            if (!x) return false;
+            /*start by removing the "active" class on all items:*/
+            removeActive(x);
+            if (currentFocus >= x.length) currentFocus = 0;
+            if (currentFocus < 0) currentFocus = (x.length - 1);
+            /*add class "autocomplete-active":*/
+            x[currentFocus].classList.add("autocomplete-active");
+        }
+        function removeActive(x) {
+            /*a function to remove the "active" class from all autocomplete items:*/
+            for (var i = 0; i < x.length; i++) {
+                x[i].classList.remove("autocomplete-active");
+            }
+        }
+        function closeAllLists(elmnt) {
+            /*close all autocomplete lists in the document,
+            except the one passed as an argument:*/
+            var x = document.getElementsByClassName("autocomplete-items");
+            for (var i = 0; i < x.length; i++) {
+                if (elmnt != x[i] && elmnt != inp) {
+                    x[i].parentNode.removeChild(x[i]);
+                }
+            }
+        }
+        /*execute a function when someone clicks in the document:*/
+        document.addEventListener("click", function (e) {
+            closeAllLists(e.target);
+        });
+    }
+
+    /*An array containing all the country names in the world:*/
+    var countries = ["An Giang", "Bà Rịa - Vũng Tàu", "Bắc Giang", "Bắc Kạn", "Bạc Liêu", " Bắc Ninh", " Bến Tre", "Bình Định", " Bình Dương", " Bình Phước", " Bình Thuận", " Cà Mau", " Cao Bằng", " Đắk Lắk", " Đắk Nông", " Điện Biên", "Đồng Nai", " Đồng Tháp", " Gia Lai", " Hà Giang", "Cần Thơ", "Đà Nẵng", "Hải Phòng ", "Hà Nội", "Hồ Chí Minh"];
+
+    /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+    autocomplete(document.getElementById("myInput"), countries);
+</script>
+<script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) { slideIndex = 1 }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+        setTimeout(showSlides, 3000);
+    }
+</script>
+</html>

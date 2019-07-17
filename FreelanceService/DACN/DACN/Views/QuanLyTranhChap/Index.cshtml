@@ -1,0 +1,86 @@
+﻿
+@model DACN.Models.BusinessModel.DanhSachTranhChap
+@{
+    /**/
+
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout _Admin.cshtml";
+}
+<div class="content mt-3">
+    <div class="animated fadeIn">
+        <div class="row">
+
+            <div class="col-md-12">
+                <div class="card">
+
+                    <div class="card-body">
+                    <table id="bootstrap-data-table-export" class="table table-striped table-bordered">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Mã Đơn Hàng</th>
+                                <th>Tên Người Bán</th>
+                                <th>Tên Người Mua</th>
+                                <th>Trạng Thái</th>
+                                <th>Nội Dung Tranh Chấp</th>
+                                <th>Thông Tin Liện Hệ</th>
+                                <th>Thời Gian</th>
+                                <th style="text-align:center" colspan="3">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.tranhChaps)
+                            {
+
+                                if (item != null)
+                                {
+                                    var donhang = Model.donDatHangs.Where(a => a.MaDDH == item.MaDDH).FirstOrDefault();
+                                    var tempBD = Model.listSanPham.Where(a => a.MaSP == donhang.MaSP).FirstOrDefault();
+                                    var buyer = Model.Buyer.Where(a => a.MaTaiKhoan == donhang.MaTaiKhoan).FirstOrDefault();
+                                    var seller = Model.Seller.Where(a => a.MaTaiKhoan == tempBD.MaTaiKhoan).FirstOrDefault();
+                            <tr>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.MaDDH)
+                                </td>
+                                <td>
+
+                                    @Html.DisplayFor(modelItem => seller.TenTaiKhoan)
+                                </td>
+                                <td>
+
+                                    @Html.DisplayFor(modelItem => buyer.TenTaiKhoan)
+                                </td>
+                                @if (item.TrangThai == true)
+                                {
+                                    <td>Đã giải quyết</td>
+                                }
+                                else
+                                {
+                                    <td>Chưa giải quyết</td>
+                                }
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NoiDung)
+                                </td>
+                                <td>
+                                    @item.LienHe
+                                </td>
+                                <td>@String.Format("{0:dd/MM/yyyy}", item.ThoiGian)</td>
+                                <td style="text-align:center">
+                                    <button class="btn btn-success btn-custom" type="submit"><a style="color:white" href="@Url.Action("ChiTiet", "QuanLyTranhChap", new {  maddh = item.MaDDH }) ">Xem Chi Tiết</a></button>
+                                </td>
+                            </tr>
+                                }
+
+                            }
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+            </div>
+
+
+
+        </div><!-- .animated -->
+    </div>
+
+</div>
+

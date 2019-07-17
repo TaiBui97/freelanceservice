@@ -1,0 +1,99 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="author" content="Jobboard">
+    <title>JobBoard - Bootstrap HTML5 Job Portal Template</title>
+
+    <link rel="shortcut icon" href="~/assets/img/favicon.png">
+    <link rel="stylesheet" href="~/assets/fonts/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/assets/fonts/themify-icons.css">
+    @Styles.Render("~/bundles/core")
+
+</head>
+<body>
+    @RenderPage("~/Views/Shared/Header.cshtml")
+
+    <div id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <div class="right-sideabr">
+                        <div class="inner-box">
+                            <img src="~/assets/img/resume/img-1.jpg" class="img-circle" alt="" width="250" height="250">
+                            <h3 class="name-account">
+                                John
+                            </h3>
+                            <div class="button-wrap">
+                                <a class="btn-large-standard" href="">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i>Chỉnh sữa thông tin
+                                </a>
+                            </div>
+                            <hr>
+                            <ul class="lest item">
+                                <li>
+                                    <div id="flex-info-account">
+                                        <p><i class="fa fa-map-marker" aria-hidden="true"></i>Đến từ</p>
+                                    </div>
+                                    <strong>Ha Noi</strong>
+                                </li>
+                                <li>
+                                    <div id="flex-info-account">
+                                        <p><i class="fa fa-user" aria-hidden="true"></i>Thành vi</p>
+                                    </div>
+                                    <strong>2018</strong>
+                                </li>
+                            </ul>
+                            <ul class="lest">
+                                <li><a href="@Url.Action("Suathongtin","Home")">Cập nhật tài khoản</a></li>
+                                <li><a href="@Url.Action("BookMarked","Home")">Đã lưu</a></li>
+                                <li><a href="@Url.Action("Notifications","Home")">Thông báo<span class="notinumber">2</span></a></li>
+                                <li><a href="@Url.Action("ChanglePassword","Home")">Thay đỗi mật khẩu</a></li>
+                                <li><a href="@Url.Action("Logout","Home")">Đăng xuất</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="inner-box">
+
+                            <ul class="lest item">
+                                <li>
+                                    <aside>
+                                        <h5>
+                                            Mô tả
+                                            <a class="add" href="@Url.Action(" SuaMoTa","Home")">Chỉnh sữa mô tả</a>
+                                        </h5>
+                                    </aside>
+                                    <hr>
+                                    <section>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa voluptatum eveniet eum repellendus aliquam, similique a maiores deserunt.</p>
+                                    </section>
+                                </li>
+                                <li>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-8 col-sm-8 col-xs-12">
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @RenderPage("~/Views/Shared/Footer.cshtml")
+    @Scripts.Render("~/bundles/js")
+
+    
+</body>
+
+</html>

@@ -1,0 +1,672 @@
+﻿@model DACN.Models.BusinessModel.ChiTietTranhChap
+@using Newtonsoft.Json
+@using System.Linq
+@{
+    ViewBag.Title = "ChiTiet";
+    Layout = "~/Views/Shared/_Layout _Admin.cshtml";
+}
+@Styles.Render("~/bundles/core")
+@Scripts.Render("~/bundles/js")
+<style>
+    #message-popup {
+        display: none !important
+    }
+
+    .tabbable-panel {
+        border: 1px solid #eee;
+        padding: 10px;
+    }
+
+    /* Default mode */
+    .nav-tabs {
+        background-color: white !important;
+    }
+
+    .tabbable-line > .nav-tabs {
+        border: none;
+        margin: 0px;
+    }
+
+        .tabbable-line > .nav-tabs > li {
+            margin-right: 2px;
+        }
+
+            .tabbable-line > .nav-tabs > li > a {
+                border: 0;
+                margin-right: 0;
+                color: #737373;
+            }
+
+                .tabbable-line > .nav-tabs > li > a > i {
+                    color: #a6a6a6;
+                }
+
+            .tabbable-line > .nav-tabs > li.open, .tabbable-line > .nav-tabs > li:hover {
+                border-bottom: 4px solid #fbcdcf;
+            }
+
+                .tabbable-line > .nav-tabs > li.open > a, .tabbable-line > .nav-tabs > li:hover > a {
+                    border: 0;
+                    background: none !important;
+                    color: #333333;
+                }
+
+                    .tabbable-line > .nav-tabs > li.open > a > i, .tabbable-line > .nav-tabs > li:hover > a > i {
+                        color: #a6a6a6;
+                    }
+
+                .tabbable-line > .nav-tabs > li.open .dropdown-menu, .tabbable-line > .nav-tabs > li:hover .dropdown-menu {
+                    margin-top: 0px;
+                }
+
+            .tabbable-line > .nav-tabs > li.active {
+                border-bottom: 4px solid #f3565d;
+                position: relative;
+            }
+
+                .tabbable-line > .nav-tabs > li.active > a {
+                    border: 0;
+                    color: #333333;
+                }
+
+                    .tabbable-line > .nav-tabs > li.active > a > i {
+                        color: #404040;
+                    }
+
+    .tabbable-line > .tab-content {
+        margin-top: -3px;
+        background-color: #fff;
+        border: 0;
+        border-top: 1px solid #eee;
+        padding: 15px 0;
+    }
+
+    .portlet .tabbable-line > .tab-content {
+        padding-bottom: 0;
+    }
+
+    .demo {
+        width: 800px;
+    }
+
+    ul {
+        list-style: none outside none;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    li {
+        display: block;
+        margin-right: 6px;
+        cursor: pointer;
+    }
+
+    img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+
+    .accordion {
+        background-color: #eee;
+        color: #444;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+    }
+
+        .active, .accordion:hover {
+            background-color: white;
+        }
+
+    .actives {
+        background-color: #ff4f57 !important;
+        color: white !important
+    }
+
+    .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+    }
+
+    .sidebar-stick {
+        height: 763px;
+        margin-bottom: 50px;
+    }
+
+        .sidebar-stick .sidebar {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 140px;
+        }
+
+    .thumbnail {
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+    }
+
+    #result, #result2 {
+        display: flex;
+    }
+
+    .img-order {
+        margin: 10px;
+        transition: all .2s ease-in-out;
+    }
+
+        .img-order:hover {
+            transform: scale(1.1);
+        }
+
+    input[type="file"] {
+        display: none;
+    }
+
+    .custom-file-upload {
+        border: none;
+        display: inline-block;
+        padding: 6px 12px;
+        cursor: pointer;
+        background-color: #64b448;
+        color: white;
+        border-radius: 4px;
+        margin-top: 5px;
+    }
+
+
+    .tab .nav-tabs {
+        display: inline-block;
+        border-bottom: none;
+        position: relative;
+    }
+
+        .tab .nav-tabs li {
+            margin-bottom: 0;
+        }
+
+            .tab .nav-tabs li a {
+                display: block;
+                padding: 20px 50px;
+                border: none;
+                border-radius: 0;
+                font-size: 14px;
+                font-weight: 700;
+                color: #444;
+                margin-right: 0;
+                z-index: 1;
+                transition: all 0.3s ease 0s;
+            }
+
+                .tab .nav-tabs li a i {
+                    ]]] display: block;
+                    font-size: 40px;
+                    color: #ff4f57;
+                    margin-bottom: 15px;
+                }
+
+                .tab .nav-tabs li.active a,
+                .tab .nav-tabs li a:hover {
+                    border: none;
+                    background: transparent;
+                }
+
+                .tab .nav-tabs li a:before,
+                .tab .nav-tabs li a:after {
+                    content: "";
+                    width: 0;
+                    border-top: 3px solid #ff4f57;
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    transition: all 0.3s ease 0s;
+                }
+
+                .tab .nav-tabs li a:after {
+                    left: auto;
+                    right: 0;
+                }
+
+                .tab .nav-tabs li.active a:before,
+                .tab .nav-tabs li a:hover:before,
+                .tab .nav-tabs li.active a:after,
+                .tab .nav-tabs li a:hover:after {
+                    width: 50%;
+                }
+
+    .tab .tab-content {
+        padding: 20px;
+        margin-top: -5px;
+        border-radius: 0 0 5px 5px;
+        font-size: 15px;
+        color: #757575;
+        line-height: 30px;
+    }
+
+        .tab .tab-content h3 {
+            font-size: 24px;
+            margin-top: 0;
+        }
+</style>
+<section class="section">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-md-2 col-sm-2">
+                <aside class="sidebar-stick ">
+
+                    <div class="sidebar">
+                        <button class="accordion accordion-hover">Mô Tả Khách Hàng<i class="fa fa-angle-down" style=" float:right"></i></button>
+                        <div class="panel">
+                            <ul class="items">
+                                <li>
+                                    @if (Model.donDatHang.MoTaDDH != null)
+                                    {
+                                        @Model.donDatHang.MoTaDDH
+
+                                    }
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button class="accordion accordion-hover">Mô Tả Dịch Vụ<i class="fa fa-angle-down" style=" float:right"></i></button>
+                        <div class="panel">
+                            <ul class="cat-list decrip">
+                                <li>
+                                    @if (Model.Baidang.MotaSP2 != null)
+                                    {
+                                        @Model.Baidang.MotaSP2
+
+                                    }
+                                </li>
+                            </ul>
+                        </div>
+
+                        <button class="accordion accordion-hover">Dịch Vụ Cập Nhật Thêm<i class="fa fa-angle-down" style=" float:right"></i></button>
+                        <div class="panel">
+                            <ul class="items">
+                                @foreach (var item in Model.listgigkh)
+                                {
+                                    var gia = Model.listGia.Where(a => a.MaGigMetaData == item.MaGigMetaData).Select(a => a.GiaCTSP).FirstOrDefault();
+                                    if (item.TenGigMetaData != null)
+                                    {
+                                        <li>
+                                            <a href="#">@item.TenGigMetaData</a>
+                                            <span class="num-posts">@gia</span>
+
+                                        </li>
+
+                                    }
+                                }
+                            </ul>
+                        </div>
+                        <button class="accordion accordion-hover">Metadata<i class="fa fa-angle-down" style=" float:right"></i></button>
+                        <div class="panel">
+                            <ul class="cat-list cate-detail detail-meta">
+                                @foreach (var item in Model.listgigbd)
+                                {
+
+                                    if (item.TenGigMetaData != null)
+                                    {
+
+                                        <li><i class="ti-check-box"></i>@item.TenGigMetaData</li>
+                                    }
+                                }
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    @*<div class="inner-box">
+                            <h2 class="small-title">Thông tin tài khoản</h2>
+                            <ul class="cat-list cate-detail">
+                                <li>
+                                    <div class="summary">
+                                        <a href="#">
+                                            <figure>
+                                                <img src="https://fiverr-res.cloudinary.com/t_profile_original,q_auto,f_auto/attachments/profile/photo/26df98d83195392c99eb83e392f39fd5-1515300504997/d9661fe8-a1fa-452a-ad24-9806b1894bec.png" alt="Alternate Text" />
+                                                <figcaption class="font-accent">Admin</figcaption>
+                                            </figure>
+                                        </a>
+                                        <a href="#" class="user-name-msg">Admin</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="#">Đánh giá</a>
+                                    <span class="num-posts"></span>
+                                </li>
+                                <li>
+                                    <a href="#">Đến từ</a>
+                                    <span class="num-posts"></span>
+                                </li>
+                                <li>
+                                    <a href="#">Ngôn ngữ</a>
+                                    <span class="num-posts"></span>
+                                </li>
+                                <li>
+                                    <a href="#">Tệp đã chia sẻ</a>
+                                    <span class="num-posts"></span>
+                                </li>
+
+
+                            </ul>
+                        </div>*@
+                </aside>
+            </div>
+            <div class="col-md-10">
+                <div class="tab" role="tabpanel">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs tab-custom" role="tablist">
+                        <li role="presentation" class="active"><a href="#Section1" aria-controls="home" role="tab" data-toggle="tab">Mô Tả Bổ Sung</a></li>
+                        <li role="presentation"><a href="#Section2" aria-controls="profile" role="tab" data-toggle="tab"> Tiến độ công việc</a></li>
+                        <li role="presentation"><a href="#Section3" aria-controls="messages" role="tab" data-toggle="tab">Minh chứng hoàn thành</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <div class="tab-content tabs">
+                        <div role="tabpanel" class="tab-pane fade in active" id="Section1">
+                            <div class="content-area">
+                                <div class="clearfix">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>Nội Dung</th>
+                                                <th>Thời Gian</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                @foreach (var item in Model.listMoTa)
+                                                {
+                                                    if (item != null)
+                                                    {
+                                                        <td>@item.MoTa</td>
+                                                        <td>@item.ThoiGian</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td></td>
+                                                        <td></td>
+                                                    }
+                                                }
+
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="Section2">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Tên Người Gửi</th>
+                                        <th>Nội dung</th>
+                                        <th>Tiến Độ</th>
+                                        <th>Ngày gửi</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        @foreach (var item in Model.listTienDo)
+                                        {
+                                            if (item != null)
+                                            {
+                                                if (Model.tkMinhChung != null)
+                                                {
+                                                    <td>@Model.tkMinhChung.TenTaiKhoan</td>
+                                                }
+                                                else
+                                                {
+                                                    <td></td>
+                                                }
+                                                <td>@item.NoiDung</td>
+                                                <td>@item.MucTienDo %</td>
+                                                <td>@item.NgayGui</td>
+                                                <td>
+                                                    <button class="btn btn-success btn-custom" data-toggle="modal" data-target="#exampleModal3" type="button"><a style="color:white" href="#">Hình Ảnh</a></button>
+                                                    <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                        <div class="modal-dialog" role="document" style="width:1300px!important;">
+                                                            <div class="modal-content">
+
+                                                                <div class="col-md-12">
+
+                                                                    <div class="tab table-panel" style="
+    background-color: white;">
+                                                                        <div class="tab table-line">
+                                                                            <div class="modal-header">
+                                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                                    <span aria-hidden="true">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <ul class="nav nav-tabs ">
+                                                                                <li>
+                                                                                    <a href="#tab_default_5" data-toggle="tab">
+                                                                                        HÌNH ẢNH
+                                                                                    </a>
+                                                                                </li>
+                                                                            </ul>
+                                                                            <div class="tab-content">
+                                                                                <div class="tab-pane active">
+                                                                                    <div class="wrap-img">
+                                                                                        <ul style="display:flex;flex-wrap: wrap;">
+                                                                                            @foreach (var item2 in Model.listHinhTienDo)
+                                                                                            {
+                                                                                                if (item2.MaTienDo == item.MaTienDo)
+                                                                                                {
+                                                                                                    <li style="margin:10px "> <img src="~/assets/images/@item2.TenHinhAnh" alt="Alternate Text" style="width:160px; height=160px;" /></li>
+                                                                                                }
+                                                                                            }
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                            }
+                                            else
+                                            {
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                                <td></td>
+                                            }
+                                        }
+
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                        <div role="tabpanel" class="tab-pane fade" id="Section3">
+                            <div class="">
+                                <table class="table table-hover table-rp">
+                                    <thead>
+                                        <tr>
+                                            <th>Tên Người Gửi</th>
+                                            <th>Nội Dung</th>
+                                            <th>Ngày Gửi</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.listDHHT)
+                                        {
+                                            <tr>
+                                                @if (item != null)
+                                                {
+
+                                                    if (Model.tkMinhChung != null)
+                                                    {
+                                                        <td>@Model.tkMinhChung.TenTaiKhoan</td>
+                                                    }
+                                                    else
+                                                    {
+                                                        <td></td>
+                                                    }
+                                                    <td>@item.NoiDungDHHT</td>
+                                                    <td>@String.Format("{0:dd/MM/yyyy}", item.NgayHoanThanh)</td>
+
+                                                }
+                                                else
+                                                {
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
+
+                                                }
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            @{
+                var idbuyer = Session["mataikhoan"];
+            }
+            @if (Model.tkBuyer.MaTaiKhoan != int.Parse(idbuyer.ToString()))
+            {
+                <button class="btn btn-danger btn-custom" data-toggle="modal" data-target="#exampleModal" type="button"><a style="color:white" href="#">Gửi minh chứng </a></button>
+                <button class="btn btn-danger btn-custom" data-toggle="modal" data-target="#exampleModalTwo" type="button"><a style="color:white" href="#">Báo cáo tiến độ </a></button>
+                using (Html.BeginForm("BaoCao", "BaiDang", new { MaDDH = Model.donDatHang.MaDDH }, FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    <div class="modal fade" id="exampleModalTwo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document" style="width:1300px!important;">
+                            <div class="modal-content">
+
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Upload tiến độ công việc</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="wrapper-content" style="display:flex">
+                                        <div class="form-group" style="width:50%; margin-right:10px">
+                                            <label for="recipient-name" class="col-form-label">Tiến độ hoàn thành (%)</label>
+                                            <input type="number" min="1" max="100" class="form-control" id="" name="tiendo">
+                                        </div>
+
+                                    </div>
+
+                                    <div class="form-group col-md-12">
+                                        <label for="recipient-name" class="col-form-label">Upload file ảnh :</label><br />
+                                        <input id="filesImage" type="file" name="anhbaocao" multiple="multiple" />
+                                        <output id="result2" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="message-text" class="col-form-label">Nội dung</label>
+                                        <textarea class="form-control" id="message-text" rows="7" name="noidungbaocao"></textarea>
+                                    </div>
+                                </div>
+                                <div class="modal-footer footer-magrin">
+                                    <button class="btn btn-danger btn-custom" type="button" data-dismiss="modal"><a style="color:white" href="#">Hủy bỏ</a></button>
+                                    <button class="btn btn-success btn-custom" type="submit"><a style="color:white" href="#">Gửi báo cáo tiến độ</a></button>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                }
+            }
+            else
+            {
+                <button class="btn btn-danger btn-custom" data-toggle="modal" type="button"><a style="color:white" href="@Url.Action("HoanThanh","BaiDang",new { MaDDH = Model.donDatHang.MaDDH })">Hoàn thành đơn hàng</a></button>
+            }
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document" style="width:1300px!important;">
+                    <div class="modal-content">
+                        @using (Html.BeginForm("OrderDetails", "BaiDang", new
+                        {
+                            madonhang = Model.donDatHang.MaDDH
+                        }, FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Upload file minh chứng</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="wrapper-content" style="display:flex">
+                                    <div class="form-group" style="width:50%; margin-right:10px">
+                                        <label for="recipient-name" class="col-form-label">Url :</label>
+                                        <input type="text" class="form-control" id="" name="urlchinh">
+                                    </div>
+                                    <div class="form-group " style="width:50%">
+                                        <label for="recipient-name" class="col-form-label">Url 2 :</label>
+                                        <input type="text" class="form-control" id="" name="urlduphong">
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-12">
+                                    <label for="recipient-name" class="col-form-label">Upload file ảnh :</label><br />
+                                    <input id="filesImage" type="file" name="fileUpload" multiple="multiple" />
+                                    <output id="result2" />
+                                </div>
+                                <div class="form-group">
+                                    <label for="message-text" class="col-form-label">Tin nhắn:</label>
+                                    <textarea class="form-control" id="message-text" rows="7" name="noidung"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal-footer footer-magrin">
+                                <button class="btn btn-danger btn-custom" type="button" data-dismiss="modal"><a style="color:white" href="#">Hủy bỏ</a></button>
+                                <button class="btn btn-success btn-custom" type="submit">Gửi minh chứng</button>
+
+                            </div>
+                        }
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var arrow = document.getElementsByClassName("icon-down-up");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+            this.classList.toggle("actives");
+            $("i", this).toggleClass("fa-angle-up fa-angle-down");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
+<script>
+    $('#lightSlider').lightSlider({
+        gallery: true,
+        item: 1,
+        loop: true,
+        slideMargin: 0,
+        thumbItem: 4
+    });
+</script>

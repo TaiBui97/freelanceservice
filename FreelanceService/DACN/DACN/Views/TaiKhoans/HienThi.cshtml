@@ -1,0 +1,99 @@
+﻿@model DACN.Models.DataModel.TaiKhoan
+
+@{
+    ViewBag.Title = "HienThi";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Hiển thị tài khoản</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @*@Html.DisplayNameFor(model => model.TenTaiKhoan)*@
+            Tên tài khoản:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTaiKhoan)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.MatKhau)*@
+            Mật khảu:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MatKhau)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.Email)*@
+            Email:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.SDT)*@
+            Số điện thoại:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.DiaChi)*@
+            Địa chỉ:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.SoTien)*@
+            Số tiền:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoTien)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.SoTKNganHang)*@
+            Số tài khoản ngân hàng:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SoTKNganHang)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.TenTkNganHang)*@
+            Tên tài khoản ngân hàng
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TenTkNganHang)
+        </dd>
+
+        <dt>
+            @*@Html.DisplayNameFor(model => model.MaMatKhau)*@
+            Mã mật khẩu:
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaMatKhau)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Chỉnh Sửa", "ChinhSua", new { id = Model.MaTaiKhoan }) |
+    @Html.ActionLink("Trở về", "Index")
+</p>
